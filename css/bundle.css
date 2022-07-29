@@ -1546,8 +1546,13 @@ button {
   \***************************************************************************************************************************************************************************************************/
 nav.navbar {
   background: #000000;
-  height: 80px; }
+  height: 80px;
+  padding: 0; }
   nav.navbar .container-fluid {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding-left: 0;
     padding-right: 0; }
   nav.navbar svg.icon.check {

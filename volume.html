@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300&amp;family=Noto+Sans+TC:wght@400;500;700&amp;family=Roboto&amp;display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+  <title>ONCOR</title>
+  <body class="volume_control volume">
+    <nav class="back_navbar fixed-top d-flex align-items-center">
+      <div class="container-fluid p-0 justify-content-between justify-content-md-start position-relative">
+        <button class="navbar-toggler" id="backToPre" type="button">
+          <svg class="icon back" aria-hidden="true">
+            <use xlink:href="#back"></use>
+          </svg>
+        </button>
+        <h6 class="pos_center">音量</h6>
+      </div>
+    </nav>
+    <div class="main container container-md">
+      <div class="row justify-content-center">
+        <div class="volume_controller" id="id">
+          <button class="volume_btn" id="volumeMinus">
+            <svg class="icon minus" aria-hidden="true">
+              <use xlink:href="#minus"></use>
+            </svg>
+          </button>
+          <div class="progress_wrapper">
+            <h6 class="font_sub_gray">音量</h6>
+            <div class="dot_wrapper flex_center mt_12">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+          <button class="volume_btn" id="volumePlus">
+            <svg class="icon plus" aria-hidden="true">
+              <use xlink:href="#plus"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="microphone_mode text-center">
+          <h6 class="font_sub_gray">重低音</h6>
+          <div class="microphone_mode_btn_wrapper flex_center">
+            <button class="stroke_btn selected">關
+            </button>
+            <button class="stroke_btn">弱
+            </button>
+          </div>
+          <div class="microphone_mode_btn_wrapper flex_center">
+            <button class="stroke_btn">中
+            </button>
+            <button class="stroke_btn">強
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom_tab bottom_tab_sub">
+      <div class="tab_wrapper"><a class="active_tab d-flex flex-column align-items-center" role="button" href="song.html" id="home">
+          <svg class="icon mr_16 mr_m_0" aria-hidden="true">
+            <use xlink:href="#home"></use>
+          </svg><span>回主頁</span></a><a class="active_tab d-flex flex-column align-items-center" role="button" href="#.html" id="music">
+          <svg class="icon mr_16 mr_m_0" aria-hidden="true">
+            <use xlink:href="#music"></use>
+          </svg><span>歌曲</span></a>
+        <button class="active_tab request_song d-flex flex-column align-items-center">
+          <svg class="icon mr_16 mr_m_0" aria-hidden="true">
+            <use xlink:href="#broadcast-w"></use>
+          </svg>
+          <div class="title flex_center"><span class="m-0">已點歌</span>
+            <div class="badge">10</div>
+          </div>
+        </button>
+      </div>
+    </div>
+  </body>
+<script defer="defer" src="bundle.js"></script><link href="./css/bundle.css" rel="stylesheet"></head>

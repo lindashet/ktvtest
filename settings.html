@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300&amp;family=Noto+Sans+TC:wght@400;500;700&amp;family=Roboto&amp;display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+  <title>ONCOR</title>
+  <body class="volume_control settings">
+    <nav class="back_navbar fixed-top d-flex align-items-center">
+      <div class="container-fluid p-0 justify-content-between justify-content-md-start position-relative">
+        <button class="navbar-toggler" id="backToPre" type="button">
+          <svg class="icon back" aria-hidden="true">
+            <use xlink:href="#back"></use>
+          </svg>
+        </button>
+        <h6 class="pos_center">環控</h6>
+      </div>
+    </nav>
+    <div class="main container">
+      <div class="row justify-content-center position-relative text-center">
+        <h6 class="font_sub_gray light title_mt">基礎燈光</h6>
+        <div class="btn_group_wrapper circle_btn flex_between_center">
+          <button class="setting_btn setting_circle_btn">明亮
+          </button>
+          <button class="setting_btn setting_circle_btn selected">極暗
+          </button>
+          <button class="setting_btn setting_circle_btn">情挑
+          </button>
+          <button class="setting_btn setting_circle_btn">極暗
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="container container-md">
+      <div class="row justify-content-center position-relative">
+        <h6 class="font_sub_gray light title_mt text-center">情境燈光</h6>
+        <h6 class="font_sub_gray text-left">抒情燈光</h6>
+        <div class="btn_group_wrapper square_btn flex_between_center text-left">
+          <button class="setting_btn setting_square_btn">氣息
+          </button>
+          <button class="setting_btn setting_square_btn">脈搏
+          </button>
+          <button class="setting_btn setting_square_btn selected">極暗
+          </button>
+          <button class="setting_btn setting_square_btn">氣息
+          </button>
+        </div>
+      </div>
+      <div class="row justify-content-center position-relative">
+        <h6 class="font_sub_gray title_mt text-left">歡唱燈光</h6>
+        <div class="btn_group_wrapper square_btn flex_between_center text-left">
+          <button class="setting_btn setting_square_btn">嫣紅
+          </button>
+          <button class="setting_btn setting_square_btn">流明
+          </button>
+          <button class="setting_btn setting_square_btn">燈火
+          </button>
+          <button class="setting_btn setting_square_btn">耳語
+          </button>
+        </div>
+      </div>
+      <div class="row justify-content-center position-relative">
+        <h6 class="font_sub_gray title_mt text-left">節奏燈光</h6>
+        <div class="btn_group_wrapper square_btn flex_between_center text-left">
+          <button class="setting_btn setting_square_btn">極光
+          </button>
+          <button class="setting_btn setting_square_btn">蕩漾
+          </button>
+          <button class="setting_btn setting_square_btn">舞動
+          </button>
+          <button class="setting_btn setting_square_btn">回歸
+          </button>
+        </div>
+      </div>
+      <div class="row justify-content-center position-relative">
+        <h6 class="font_sub_gray title_mt text-left">派對燈光</h6>
+        <div class="btn_group_wrapper circle_btn flex_between_center text-left">
+          <button class="setting_btn setting_square_btn">巨星
+          </button>
+          <button class="setting_btn setting_square_btn">交鋒
+          </button>
+          <button class="setting_btn setting_square_btn">飛星
+          </button>
+          <button class="setting_btn setting_square_btn">霓虹
+          </button>
+        </div>
+      </div>
+      <div class="row justify-content-center flex_center">
+        <div class="btn_group_wrapper stroke title_mt flex_between_center text-left">
+          <button class="stroke_btn selected">自動燈光
+          </button>
+          <button class="stroke_btn">關閉
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="bottom_tab bottom_tab_settings">
+      <div class="tab_sheet font_sm_party">歡呼特效</div>
+      <div class="tab_wrapper">
+        <button class="setting_icon_btn d-flex flex-column align-items-center">
+          <div class="circle">
+            <svg class="icon mr_16 mr_m_0" aria-hidden="true">
+              <use xlink:href="#hands"></use>
+            </svg>
+          </div><span class="font_sm_gray">歡呼鼓掌</span>
+        </button>
+        <button class="setting_icon_btn d-flex flex-column align-items-center">
+          <div class="circle">
+            <svg class="icon mr_16 mr_m_0" aria-hidden="true">
+              <use xlink:href="#shine"></use>
+            </svg>
+          </div><span class="font_sm_gray">閃光四溢</span>
+        </button>
+        <button class="setting_icon_btn d-flex flex-column align-items-center">
+          <div class="circle">
+            <svg class="icon mr_16 mr_m_0" aria-hidden="true">
+              <use xlink:href="#noise"></use>
+            </svg>
+          </div><span class="font_sm_gray">號角響起</span>
+        </button>
+      </div>
+    </div>
+  </body>
+<script defer="defer" src="bundle.js"></script><link href="./css/bundle.css" rel="stylesheet"></head>

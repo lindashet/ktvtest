@@ -108,8 +108,9 @@
   height: 8.76vh; }
 
 .setting_btn {
-  width: 8.76vh;
-  height: 8.76vh;
+  width: 7.76vh;
+  height: 7.76vh;
+  padding: 0;
   letter-spacing: 0.5vh;
   font-size: 1.65vh;
   color: #a8a7a7;
@@ -1985,7 +1986,7 @@ nav.navbar {
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!../node_modules/sass-loader/dist/cjs.js!./scss/components/bottom_tab_settings.scss ***!
   \************************************************************************************************************************************************************************************************************/
 .bottom_tab.bottom_tab_settings {
-  height: calc(12.5vh + 25px); }
+  height: calc(10.5vh + 25px); }
   .bottom_tab.bottom_tab_settings .tab_wrapper {
     -webkit-box-shadow: 0px -3px 4px rgba(0, 0, 0, 0.35);
             box-shadow: 0px -3px 4px rgba(0, 0, 0, 0.35); }
@@ -2001,36 +2002,19 @@ nav.navbar {
     padding-left: 40px; }
   .bottom_tab.bottom_tab_settings .tab_wrapper {
     background: #000000;
-    height: 12.5vh; }
+    height: 10.5vh; }
   .bottom_tab.bottom_tab_settings .setting_icon_btn {
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
         -ms-flex-positive: 1;
             flex-grow: 1; }
 
-@media screen and (max-width: 350px) {
-  .bottom_tab {
-    height: 90px; }
-    .bottom_tab .tab_bg_wrapper {
-      height: 68px; }
-      .bottom_tab .tab_bg_wrapper .tab_bg_img {
-        width: 107px; }
-    .bottom_tab .tab_wrapper {
-      height: 68px; }
-    .bottom_tab .main_button {
-      width: 62px; }
-      .bottom_tab .main_button .circle {
-        width: 62px;
-        height: 62px; }
-    .bottom_tab .main_button_space {
-      width: 62px; } }
-
 /*!*************************************************************************************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!../node_modules/sass-loader/dist/cjs.js!./scss/components/back_nav.scss ***!
   \*************************************************************************************************************************************************************************************************/
 nav.back_navbar {
   background-color: #000000;
-  height: 64px; }
+  height: 7vh; }
   nav.back_navbar svg.back {
     width: 22px;
     height: 22px; }
@@ -2119,11 +2103,11 @@ nav.back_navbar {
     margin-right: 0.4vh; }
 
 .volume_control.settings * {
-  line-height: 3vh; }
+  line-height: 2vh; }
 
 .volume_control.settings .main.container {
-  margin-top: 7.5vh; }
+  margin-top: 7vh; }
 
 .volume_control.settings nav.back_navbar {
-  height: 7.5vh; }
+  height: 7vh; }
 

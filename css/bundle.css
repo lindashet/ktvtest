@@ -1392,6 +1392,16 @@ img.avator {
   position: absolute;
   width: 100%; }
 
+a,
+a:link,
+a:visited,
+a:hover,
+a:active,
+a:focus {
+  color: #a8a7a7;
+  text-decoration: none;
+  outline: none; }
+
 a {
   color: #ffffff;
   text-decoration: none;

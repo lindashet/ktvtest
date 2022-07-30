@@ -282,6 +282,7 @@ nav.nav_category {
   height: 70px;
   background: #151515;
   position: fixed;
+  z-index: 1030;
   top: 7vh; }
   nav.nav_category .expand_btn {
     width: 70px;
@@ -327,15 +328,16 @@ nav.nav_category {
     nav.nav_category .category_wrapper ul {
       margin: 0 !important; }
     nav.nav_category .category_wrapper .nav-link {
-      height: 7.6vw;
+      height: 30px;
       font-size: 0.8125rem;
       border: 1px solid #a8a7a7;
       color: #a8a7a7;
       border-radius: 3.8vh;
-      line-height: 13px;
+      white-space: nowrap;
       margin-left: 5px;
       margin-right: 5px;
-      white-space: nowrap; }
+      padding-top: 0;
+      padding-bottom: 0; }
       nav.nav_category .category_wrapper .nav-link:active {
         border: 1px solid #db00ff;
         color: #db00ff; }
@@ -356,6 +358,29 @@ nav.nav_category {
   font-size: 0.75rem;
   text-align: center;
   line-height: 1.5rem; }
+
+.singer_card {
+  display: block;
+  height: 24px;
+  position: relative;
+  line-height: 24px;
+  width: 100%;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  padding-left: 16px; }
+  .singer_card:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    background: #db00ff;
+    width: 5px;
+    height: 100%; }
 
 .toasty {
   background-image: -o-linear-gradient(316.64deg, #111011 15.19%, #292929 84.91%);
@@ -1392,6 +1417,31 @@ nav.nav_category {
   line-height: 24px;
   letter-spacing: 1px; }
 
+.font_sub_gray {
+  font-size: 0.6875rem;
+  color: #a8a7a7;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 1px; }
+
+.font_songlist_light {
+  font-size: 0.875rem;
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 1px; }
+
+/*!*****************************************************************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!../node_modules/sass-loader/dist/cjs.js!./scss/common/page.scss ***!
+  \*****************************************************************************************************************************************************************************************/
+.song_bg {
+  background: #151515;
+  background-attachment: fixed; }
+
+.song_nav_margin {
+  margin-top: calc(7vh + 70px);
+  margin-bottom: 30px; }
+
 /*!*********************************************************************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!../node_modules/sass-loader/dist/cjs.js!./scss/all.scss ***!
   \*********************************************************************************************************************************************************************************/
@@ -2149,12 +2199,18 @@ nav.back_navbar {
   nav.back_navbar svg.back {
     width: 22px;
     height: 22px; }
+  nav.back_navbar svg.arrow-g {
+    width: 10px;
+    height: 5px;
+    color: #a8a7a7; }
   nav.back_navbar h5 {
     font-size: 1.125rem;
     color: #ffffff;
     font-weight: 700;
     line-height: 24px;
     letter-spacing: 2px; }
+  nav.back_navbar .main_title h5 {
+    margin-right: 6px; }
 
 /*!********************************************************************************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!../node_modules/sass-loader/dist/cjs.js!./scss/volume_control.scss ***!
@@ -2238,15 +2294,4 @@ nav.back_navbar {
   font-size: 1.54vh;
   margin-top: 1vh;
   margin-bottom: 1vh; }
-
-/*!***************************************************************************************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!../node_modules/sass-loader/dist/cjs.js!./scss/song_list.scss ***!
-  \***************************************************************************************************************************************************************************************/
-.song_list {
-  background-image: -o-linear-gradient(313.03deg, #111011 15.14%, #222222 95.09%);
-  background-image: linear-gradient(136.97deg, #111011 15.14%, #222222 95.09%);
-  background-attachment: fixed; }
-  .song_list .main.container-fluid {
-    margin-top: calc(7vh + 70px);
-    margin-bottom: 30px; }
 

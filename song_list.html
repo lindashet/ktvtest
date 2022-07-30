@@ -11,9 +11,9 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
   <title>ONCOR</title>
-  <body class="song_list" ontouchstart="">
+  <body class="song_list song_bg" ontouchstart="">
     <nav class="back_navbar fixed-top d-flex align-items-center">
-      <div class="container-fluid p-0 justify-content-between justify-content-md-start position-relative">
+      <div class="container-fluid p-0 d-flex justify-content-start align-items-center position-relative">
         <button class="navbar-toggler" id="backToPre" type="button">
           <svg class="icon back" aria-hidden="true">
             <use xlink:href="#back"></use>
@@ -54,103 +54,103 @@
         </ul>
       </div>
     </nav>
-    <div class="main container-fluid p_0">
+    <div class="main container-fluid p_0 song_nav_margin">
       <div class="container">
         <div class="tab-content" id="pills-tabContent">
           <div class="tab-pane fade show active" id="pills-new" role="tabpanel" aria-labelledby="pliis-newtab">
             <h5 class="font_title_light">新歌快報</h5>
-            <div class="row"><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/KTV-1-NewRelease-01.png" alt="">
-                <h6>國語</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/KTV-1-NewRelease-02.png" alt="">
-                <h6>台語</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/KTV-1-NewRelease-03.png" alt="">
-                <h6>英語</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/cantonese.png" alt="">
-                <h6>粵語</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/KTV-1-NewRelease-08.png" alt="">
+            <div class="row"><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/KTV-1-NewRelease-01.png" alt="">
+                <h6>國語</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/KTV-1-NewRelease-02.png" alt="">
+                <h6>台語</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/KTV-1-NewRelease-03.png" alt="">
+                <h6>英語</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/cantonese.png" alt="">
+                <h6>粵語</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/KTV-1-NewRelease-08.png" alt="">
                 <h6>其他</h6></a>
             </div>
           </div>
           <div class="tab-pane fade" id="pills-ranking" role="tabpanel" aria-labelledby="pliis-rankingtab">
             <h5 class="font_title_light">排行榜</h5>
-            <div class="row"><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/new-ranking.png" alt="">
-                <h6>新歌</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/chinese-ranking.png" alt="">
-                <h6>國語</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/taiwanese-ranking.png" alt="">
-                <h6>台語</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/english-ranking.png" alt="">
-                <h6>英語</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/cantonese.png" alt="">
-                <h6>粵語</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/japanese-ranking.png" alt="">
-                <h6>日語</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/korean-ranking.png" alt="">
+            <div class="row"><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/new-ranking.png" alt="">
+                <h6>新歌</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/chinese-ranking.png" alt="">
+                <h6>國語</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/taiwanese-ranking.png" alt="">
+                <h6>台語</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/english-ranking.png" alt="">
+                <h6>英語</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/cantonese.png" alt="">
+                <h6>粵語</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/japanese-ranking.png" alt="">
+                <h6>日語</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/korean-ranking.png" alt="">
                 <h6>韓語</h6></a>
             </div>
           </div>
           <div class="tab-pane fade" id="pills-theme" role="tabpanel" aria-labelledby="pliis-themetab">
             <h5 class="font_title_light">主題點歌</h5>
-            <div class="row"><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/KTV-2-Themes-09.png" alt="">
-                <h6>男女合唱</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/KTV-2-Themes-02.png" alt="">
-                <h6>悲傷釋放</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/KTV-2-Themes-sweet.png" alt="">
-                <h6>甜蜜特調</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/KTV-2-Themes-04.png" alt="">
-                <h6>彩虹國歌</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/KTV-2-Themes-05.png" alt="">
-                <h6>姊妹淘聚會</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/KTV-default.png" alt="">
-                <h6>親情至上</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/KTV-2-Themes-08.png" alt="">
-                <h6>男人KTV</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/KTV-2-Themes-08-2.png" alt="">
-                <h6>有故事的女人</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/KTV-2-Themes-09-2.png" alt="">
-                <h6>抖音洗腦</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/KTV-2-Themes-10-1.png" alt="">
-                <h6>音痴也可以</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/KTV-2-Themes-11.png" alt="">
-                <h6>台灣嘻哈饒舌</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/KTV-2-Themes-01.png" alt="">
-                <h6>台灣搖滾樂團</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/KTV-default.png" alt="">
-                <h6>嗨歌不累</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/KTV-2-Themes-14.png" alt="">
-                <h6>喝酒乾了吧</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/KTV-2-Themes-15.png" alt="">
-                <h6>時事迷因</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/KTV-2-Themes-16.png" alt="">
-                <h6>憤怒燃燒</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/KTV-2-Themes-17.png" alt="">
-                <h6>生日你最大</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/KTV-2-Themes-18.png" alt="">
-                <h6>畢業驪歌</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/KTV-2-Themes-12.png" alt="">
-                <h6>電視電影主題曲</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/KTV-2-Themes-20.png" alt="">
-                <h6>中國好歌聲</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/KTV-2-Themes-21.png" alt="">
-                <h6>金曲 GMA 精選</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/KTV-2-Themes-22.png" alt="">
-                <h6>演唱會歌單</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/KTV-3-Bestof-04.png" alt="">
-                <h6>七年級生精選</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/KTV-3-Bestof-05.png" alt="">
-                <h6>八年級生精選</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/KTV-3-Bestof-062.png" alt="">
+            <div class="row"><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/KTV-2-Themes-09.png" alt="">
+                <h6>男女合唱</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/KTV-2-Themes-02.png" alt="">
+                <h6>悲傷釋放</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/KTV-2-Themes-sweet.png" alt="">
+                <h6>甜蜜特調</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/KTV-2-Themes-04.png" alt="">
+                <h6>彩虹國歌</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/KTV-2-Themes-05.png" alt="">
+                <h6>姊妹淘聚會</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/KTV-default.png" alt="">
+                <h6>親情至上</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/KTV-2-Themes-08.png" alt="">
+                <h6>男人KTV</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/KTV-2-Themes-08-2.png" alt="">
+                <h6>有故事的女人</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/KTV-2-Themes-09-2.png" alt="">
+                <h6>抖音洗腦</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/KTV-2-Themes-10-1.png" alt="">
+                <h6>音痴也可以</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/KTV-2-Themes-11.png" alt="">
+                <h6>台灣嘻哈饒舌</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/KTV-2-Themes-01.png" alt="">
+                <h6>台灣搖滾樂團</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/KTV-default.png" alt="">
+                <h6>嗨歌不累</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/KTV-2-Themes-14.png" alt="">
+                <h6>喝酒乾了吧</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/KTV-2-Themes-15.png" alt="">
+                <h6>時事迷因</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/KTV-2-Themes-16.png" alt="">
+                <h6>憤怒燃燒</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/KTV-2-Themes-17.png" alt="">
+                <h6>生日你最大</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/KTV-2-Themes-18.png" alt="">
+                <h6>畢業驪歌</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/KTV-2-Themes-12.png" alt="">
+                <h6>電視電影主題曲</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/KTV-2-Themes-20.png" alt="">
+                <h6>中國好歌聲</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/KTV-2-Themes-21.png" alt="">
+                <h6>金曲 GMA 精選</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/KTV-2-Themes-22.png" alt="">
+                <h6>演唱會歌單</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/KTV-3-Bestof-04.png" alt="">
+                <h6>七年級生精選</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/KTV-3-Bestof-05.png" alt="">
+                <h6>八年級生精選</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/KTV-3-Bestof-062.png" alt="">
                 <h6>九年級生精選</h6></a>
             </div>
           </div>
           <div class="tab-pane fade" id="pills-party" role="tabpanel" aria-labelledby="pliis-partytab">
             <h5 class="font_title_light">電音 PARTY 排行</h5>
-            <div class="row"><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/KTV-4-Party-01.png" alt="">
-                <h6>ULTRA</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/KTV-4-Party-02.png" alt="">
-                <h6>EDC</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/KTV-4-Party-03.png" alt="">
+            <div class="row"><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/KTV-4-Party-01.png" alt="">
+                <h6>ULTRA</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/KTV-4-Party-02.png" alt="">
+                <h6>EDC</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/KTV-4-Party-03.png" alt="">
                 <h6>Tomorrowland</h6></a>
             </div>
           </div>
           <div class="tab-pane fade" id="pills-dj" role="tabpanel" aria-labelledby="pliis-djtab">
             <h5 class="font_title_light">TheLoop DJ 精選</h5>
-            <div class="row"><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/BUBBLE_theLOOP_1200x1200.png" alt="">
-                <h6>Bubble</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/CINDI_theLOOP_1200x1200.png" alt="">
-                <h6>Cyndi</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/EYCK_theLOOP_1200x1200.png" alt="">
-                <h6>EYCK</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/GIN_theLOOP_1200x1200.png" alt="">
-                <h6>Gin</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/RARA_theLOOP_1200x1200.png" alt="">
-                <h6>RaRa</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/RAYRAY_theLOOP_1200x1200-2.png" alt="">
-                <h6>RayRay</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/REASON_theLOOP_1200x1200-2.png" alt="">
-                <h6>Reason</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/SHORTY_theLOOP_1200x1200.png" alt="">
-                <h6>Shorty</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/T-TIME_theLOOP_1200x1200.png" alt="">
-                <h6>T-TIME</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/USAL_theLOOP_1200x1200.png" alt="">
-                <h6>Usal</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/VONIK_BELL_theLOOP_1200x1200.png" alt="">
-                <h6>Vonik and MC Bell</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/VONIK_theLOOP_1200x1200.png" alt="">
-                <h6>Vonik</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/BELL_theLOOP_1200x1200.png" alt="">
-                <h6>MC Bell</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/WADE_theLOOP_1200x1200.png" alt="">
-                <h6>Wade</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/ZEINT_theLOOP_1200x1200.png" alt="">
+            <div class="row"><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/BUBBLE_theLOOP_1200x1200.png" alt="">
+                <h6>Bubble</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/CINDI_theLOOP_1200x1200.png" alt="">
+                <h6>Cyndi</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/EYCK_theLOOP_1200x1200.png" alt="">
+                <h6>EYCK</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/GIN_theLOOP_1200x1200.png" alt="">
+                <h6>Gin</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/RARA_theLOOP_1200x1200.png" alt="">
+                <h6>RaRa</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/RAYRAY_theLOOP_1200x1200-2.png" alt="">
+                <h6>RayRay</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/REASON_theLOOP_1200x1200-2.png" alt="">
+                <h6>Reason</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/SHORTY_theLOOP_1200x1200.png" alt="">
+                <h6>Shorty</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/T-TIME_theLOOP_1200x1200.png" alt="">
+                <h6>T-TIME</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/USAL_theLOOP_1200x1200.png" alt="">
+                <h6>Usal</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/VONIK_BELL_theLOOP_1200x1200.png" alt="">
+                <h6>Vonik and MC Bell</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/VONIK_theLOOP_1200x1200.png" alt="">
+                <h6>Vonik</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/BELL_theLOOP_1200x1200.png" alt="">
+                <h6>MC Bell</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/WADE_theLOOP_1200x1200.png" alt="">
+                <h6>Wade</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/ZEINT_theLOOP_1200x1200.png" alt="">
                 <h6>Zenit</h6></a>
             </div>
           </div>
           <div class="tab-pane fade" id="pills-star" role="tabpanel" aria-labelledby="pliis-startab">
             <h5 class="font_title_light">歌星點歌</h5>
-            <div class="row"><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/KTV-default.png" alt="">
-                <h6>女歌星</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/KTV-default.png" alt="">
-                <h6>男歌星</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/KTV-default.png" alt="">
+            <div class="row"><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/KTV-default.png" alt="">
+                <h6>女歌星</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/KTV-default.png" alt="">
+                <h6>男歌星</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/KTV-default.png" alt="">
                 <h6>團體</h6></a>
             </div>
           </div>
           <div class="tab-pane fade" id="pills-search" role="tabpanel" aria-labelledby="pliis-searchtab">
             <h5 class="font_title_light">歌曲查詢</h5>
-            <div class="row"><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/KTV-default.png" alt="">
-                <h6>注音</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/KTV-default.png" alt="">
-                <h6>字部</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/KTV-default.png" alt="">
-                <h6>英文</h6></a><a class="ktv_song_card mt_12 col-4"><img class="song_card" src="assets/KTV-default.png" alt="">
+            <div class="row"><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/KTV-default.png" alt="">
+                <h6>注音</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/KTV-default.png" alt="">
+                <h6>字部</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/KTV-default.png" alt="">
+                <h6>英文</h6></a><a class="ktv_song_card mt_12 col-4" href="star_female_list.html"><img class="song_card" src="assets/KTV-default.png" alt="">
                 <h6>語種</h6></a>
             </div>
           </div>

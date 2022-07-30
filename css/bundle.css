@@ -86,6 +86,9 @@ ul {
   padding: 0;
   margin: 0; }
 
+.pointer {
+  cursor: pointer; }
+
 img.avator {
   -webkit-clip-path: circle(50%);
           clip-path: circle(50%); }
@@ -185,7 +188,7 @@ button {
   line-height: 24px;
   letter-spacing: 1px; }
 
-.font_sub_gray {
+.font_xs_gray {
   font-size: 0.6875rem;
   color: #a8a7a7;
   font-weight: 400;
@@ -659,7 +662,8 @@ span {
 .ktv_song_card.singer_card {
   display: block;
   height: 24px;
-  line-height: 24px; }
+  line-height: 24px;
+  color: #ffffff; }
   .ktv_song_card.singer_card::before {
     top: 50%;
     -webkit-transform: translateY(-50%);

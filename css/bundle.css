@@ -277,69 +277,74 @@ button.simple {
   border: 1px solid #db00ff;
   color: #db00ff; }
 
-nav.nav_category .expand_btn {
-  width: 70px;
+nav.nav_category {
+  width: 100%;
   height: 70px;
   background: #151515;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-      -ms-flex-positive: 0;
-          flex-grow: 0;
-  -webkit-flex-shrink: 0;
-      -ms-flex-negative: 0;
-          flex-shrink: 0; }
-  nav.nav_category .expand_btn svg.icon {
-    color: #ffffff;
-    width: 14px;
-    height: 14px; }
-  nav.nav_category .expand_btn span {
-    font-size: 0.6875rem;
-    color: #a8a7a7;
-    font-weight: 400;
-    line-height: 1.5rem;
-    letter-spacing: 0px; }
-
-nav.nav_category .category_wrapper::-webkit-scrollbar {
-  display: none;
-  /* Chrome Safari */ }
-
-nav.nav_category .category_wrapper {
   position: fixed;
-  overflow-x: auto;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -webkit-flex-shrink: 1;
-      -ms-flex-negative: 1;
-          flex-shrink: 1;
-  scrollbar-width: none;
-  /* firefox */
-  -ms-overflow-style: none;
-  /* IE 10+ */
-  left: 70px;
-  right: 0; }
-  nav.nav_category .category_wrapper ul {
-    margin: 0 !important; }
-  nav.nav_category .category_wrapper .nav-link {
-    height: 7.6vw;
-    font-size: 0.8125rem;
-    border: 1px solid #a8a7a7;
-    color: #a8a7a7;
-    border-radius: 3.8vh;
-    line-height: 13px;
-    margin-left: 5px;
-    margin-right: 5px;
-    white-space: nowrap; }
-    nav.nav_category .category_wrapper .nav-link:active {
-      border: 1px solid #db00ff;
-      color: #db00ff; }
-  nav.nav_category .category_wrapper .nav-link.active {
-    color: #000000 !important;
-    background: #db00ff !important;
-    border: none; }
-  nav.nav_category .category_wrapper .nav-item {
-    display: inline-block; }
+  top: 7vh; }
+  nav.nav_category .expand_btn {
+    width: 70px;
+    height: 70px;
+    background: #151515;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0; }
+    nav.nav_category .expand_btn svg.icon {
+      color: #ffffff;
+      width: 14px;
+      height: 14px; }
+    nav.nav_category .expand_btn span {
+      font-size: 0.6875rem;
+      color: #a8a7a7;
+      font-weight: 400;
+      line-height: 1.5rem;
+      letter-spacing: 0px; }
+  nav.nav_category .category_wrapper::-webkit-scrollbar {
+    display: none;
+    /* Chrome Safari */ }
+  nav.nav_category .category_wrapper {
+    position: fixed;
+    overflow-x: auto;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -webkit-flex-shrink: 1;
+        -ms-flex-negative: 1;
+            flex-shrink: 1;
+    scrollbar-width: none;
+    /* firefox */
+    -ms-overflow-style: none;
+    /* IE 10+ */
+    height: 70px;
+    left: 70px;
+    right: 0; }
+    nav.nav_category .category_wrapper ul {
+      margin: 0 !important; }
+    nav.nav_category .category_wrapper .nav-link {
+      height: 7.6vw;
+      font-size: 0.8125rem;
+      border: 1px solid #a8a7a7;
+      color: #a8a7a7;
+      border-radius: 3.8vh;
+      line-height: 13px;
+      margin-left: 5px;
+      margin-right: 5px;
+      white-space: nowrap; }
+      nav.nav_category .category_wrapper .nav-link:active {
+        border: 1px solid #db00ff;
+        color: #db00ff; }
+    nav.nav_category .category_wrapper .nav-link.active {
+      color: #000000 !important;
+      background: #db00ff !important;
+      border: none; }
+    nav.nav_category .category_wrapper .nav-item {
+      display: inline-block; }
 
 .ktv_song_card img.song_card {
   width: 100%;
@@ -2243,5 +2248,6 @@ nav.back_navbar {
   background-image: linear-gradient(136.97deg, #111011 15.14%, #222222 95.09%);
   background-attachment: fixed; }
   .song_list .main.container-fluid {
-    margin-top: 7vh; }
+    margin-top: calc(7vh + 70px);
+    margin-bottom: 30px; }
 

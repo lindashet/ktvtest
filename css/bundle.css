@@ -595,6 +595,9 @@ nav.nav_category {
     height: 100%; }
 
 .collapse_actions {
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
   position: relative;
   border: 1px solid #db00ff;
   background-image: -o-linear-gradient(316.64deg, #111011 15.19%, #292929 84.91%);

@@ -7,9 +7,10 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300&amp;family=Noto+Sans+TC:wght@400;500;700&amp;family=Roboto&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&amp;family=Roboto&amp;display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&amp;family=Barlow:wght@300&amp;display=swap" rel="stylesheet">
   <title>ONCOR</title>
   <body class="song" ontouchstart="">
     <nav class="navbar song fixed-top navbar-expand-md">
@@ -72,7 +73,7 @@
       <svg class="icon logo" aria-hidden="true">
         <use xlink:href="#logo"></use>
       </svg>
-      <div class="room_info_wrapper pointer"><span>包廂</span>
+      <div class="room_info_wrapper pointer" type="button" data-bs-toggle="modal" data-bs-target="#roomInfoModal"><span>包廂</span>
         <h2>402</h2>
       </div>
     </div>
@@ -129,6 +130,32 @@
               </svg>
         </div>
       </button>
+    </div>
+    <div class="modal fade" id="roomInfoModal" tabindex="-1" aria-labelledby="roomInfoModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content toast_modal time_info bg-dark">
+          <div class="modal-header">
+            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body flex_center flex-column">
+            <h5 class="font_title_light_r">包廂開始時間</h5>
+            <div class="time_wrapper flex_center mt_16">
+              <h1 class="time_block rounded">13</h1>
+              <h1>:</h1>
+              <h1 class="time_block rounded">30</h1>
+            </div>
+            <p class="font_title_light_r mt_16">2022年12月20日</p>
+            <div class="divider"></div>
+            <div class="font_title_light_r mt_30">包廂人數</div>
+            <h1 class="count time_block rounded flex-grow-1 mt_16">09</h1>
+            <button class="stroke_btn mt_10 flex_center w-100 mt_40"><span>解除門鎖</span>
+                  <svg class="icon lock-open" aria-hidden="true">
+                    <use xlink:href="#lock-open"></use>
+                  </svg>
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 <script defer="defer" src="bundle.js"></script><link href="./css/bundle.css" rel="stylesheet"></head>

@@ -126,6 +126,7 @@ svg.icon {
   background-color: rgba(0, 0, 0, 0.5); }
 
 button {
+  outline: none;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -230,18 +231,35 @@ button {
   height: 1px;
   background-color: rgba(255, 255, 255, 0.1); }
 
+.static {
+  color: initial; }
+  .static:hover, .static:active {
+    color: initial !important; }
+
+.static_light {
+  color: #ffffff !important; }
+  .static_light:hover, .static_light:active {
+    color: #ffffff !important; }
+
 /*!***********************************************************************************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!../node_modules/sass-loader/dist/cjs.js!./scss/common/components.scss ***!
   \***********************************************************************************************************************************************************************************************/
+#cover.cover {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0px;
+  left: 0px;
+  z-index: 999;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px); }
+
 .divider {
   width: 100%;
   height: 1px;
   background-color: rgba(255, 255, 255, 0.3); }
-
-.divider.ver {
-  width: 1px;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.1); }
 
 .button_stroke {
   color: #484848;
@@ -610,18 +628,18 @@ nav.nav_category {
     width: 5px;
     height: 100%; }
 
-.ktv_song_card.normal,
-.ktv_song_card.waiting,
-.ktv_song_card.interrupt {
+.normal,
+.waiting,
+.interrupt {
   cursor: pointer; }
 
-.ktv_song_card.onready h6 {
+.onready h6 {
   color: #7b61ff; }
 
-.ktv_song_card.interrupt h6 {
+.interrupt h6 {
   color: #50abff; }
 
-.ktv_song_card.leadinterrupt h6 {
+.leadinterrupt h6 {
   color: #f5bfff; }
 
 .ktv_song_card,
@@ -696,42 +714,6 @@ span {
     top: 0;
     height: calc(100% - 10px); }
 
-.time_info .modal-body {
-  padding-left: 1.875rem;
-  padding-right: 1.875rem; }
-
-.time_info .time_wrapper,
-.time_info .count {
-  width: 200px; }
-
-.time_info .time_wrapper .time_block {
-  width: 86px;
-  height: 86px; }
-
-.time_info svg.icon.lock-open {
-  width: 20px;
-  height: 20px;
-  margin-left: 0.625rem; }
-
-.time_info h1 {
-  font-family: "Barlow", "Roboto", sans-serif;
-  font-size: 4.25rem;
-  color: #ffffff;
-  font-weight: 400;
-  line-height: 86px;
-  letter-spacing: 2px; }
-
-.time_info .time_block {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(49, 49, 49, 0.4)), to(rgba(255, 255, 255, 0.2)));
-  background-image: -o-linear-gradient(top, rgba(49, 49, 49, 0.4) 0%, rgba(255, 255, 255, 0.2) 100%);
-  background-image: linear-gradient(180deg, rgba(49, 49, 49, 0.4) 0%, rgba(255, 255, 255, 0.2) 100%);
-  text-align: center;
-  vertical-align: middle;
-  color: #ffffff; }
-
-.time_info p {
-  color: #db00ff; }
-
 .modal {
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
@@ -748,7 +730,7 @@ span {
   border-radius: 0; }
 
 .modal-content.toast_modal .modal-header {
-  border: none; }
+  border-color: rgba(255, 255, 255, 0.1); }
 
 .modal-content.toast_modal .modal-body {
   padding-top: 0;
@@ -760,6 +742,65 @@ span {
   padding: 1rem; }
   .modal-content.toast_modal .modal-footer .stroke_btn {
     width: 100%; }
+
+.modal_list .modal-header {
+  border: none; }
+
+.model_alert svg.icon.triangle-warning,
+.model_alert svg.icon.check {
+  display: none; }
+
+.model_alert .modal-header svg.icon {
+  width: 16px;
+  height: 16px; }
+
+.model_alert.success svg.icon.check {
+  display: block; }
+
+.model_alert.success svg.icon.triangle-warning {
+  display: none; }
+
+.model_alert.warning svg.icon.check {
+  display: none; }
+
+.model_alert.warning svg.icon.triangle-warning {
+  display: block; }
+
+.modal_room_info .modal-body {
+  padding-left: 1.875rem;
+  padding-right: 1.875rem; }
+
+.modal_room_info .time_wrapper,
+.modal_room_info .count {
+  width: 200px; }
+
+.modal_room_info .time_wrapper .time_block {
+  width: 86px;
+  height: 86px; }
+
+.modal_room_info svg.icon.lock-open {
+  width: 20px;
+  height: 20px;
+  margin-left: 0.625rem; }
+
+.modal_room_info h1 {
+  font-family: "Barlow", "Roboto", sans-serif;
+  font-size: 4.25rem;
+  color: #ffffff;
+  font-weight: 400;
+  line-height: 86px;
+  letter-spacing: 2px; }
+
+.modal_room_info .time_block {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(49, 49, 49, 0.4)), to(rgba(255, 255, 255, 0.2)));
+  background-image: -o-linear-gradient(top, rgba(49, 49, 49, 0.4) 0%, rgba(255, 255, 255, 0.2) 100%);
+  background-image: linear-gradient(180deg, rgba(49, 49, 49, 0.4) 0%, rgba(255, 255, 255, 0.2) 100%);
+  text-align: center;
+  vertical-align: middle;
+  color: #ffffff; }
+
+.modal_room_info p {
+  color: #db00ff; }
 
 .toast_lang_wrapper.active .toast_lang {
   display: block; }
@@ -1769,7 +1810,7 @@ span {
 .song_list *,
 .singer_list *,
 .singer_songs *,
-.player_list * {
+.players_list * {
   text-transform: uppercase; }
 
 /*!***********************************************************************************************************************************************************************************!*\
@@ -1785,16 +1826,6 @@ span {
   background-size: 100% auto, 100%;
   background-repeat: no-repeat;
   background-attachment: fixed; }
-  .home .cover {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    top: 0px;
-    left: 0px;
-    z-index: 999;
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px); }
   .home .main.container {
     margin-top: calc(80px + 5vh); }
   .home .banner {
@@ -1895,12 +1926,26 @@ nav.navbar {
   height: 80px;
   padding: 0; }
   nav.navbar .container-fluid {
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
     padding-left: 0;
     padding-right: 0; }
+  nav.navbar .navbar-toggler svg.icon.close {
+    width: 20px;
+    height: 20px; }
+  nav.navbar .navbar-toggler:focus {
+    -webkit-box-shadow: none;
+            box-shadow: none; }
+  nav.navbar .navbar-toggler[aria-expanded="false"] svg.icon.menu {
+    display: block; }
+  nav.navbar .navbar-toggler[aria-expanded="false"] svg.icon.close {
+    display: none; }
+  nav.navbar .navbar-toggler[aria-expanded="true"] svg.icon.menu {
+    display: none; }
+  nav.navbar .navbar-toggler[aria-expanded="true"] svg.icon.close {
+    display: block; }
   nav.navbar svg.icon.check {
     width: 14px;
     height: 14px;
@@ -2061,10 +2106,20 @@ nav.navbar {
     nav.navbar.song .navbar-toggler {
       position: relative;
       width: 56px; }
-    nav.navbar.song .divider.ver {
-      height: 43px; }
     nav.navbar.song .nav_member_wrapper {
-      margin-left: 0.25rem; } }
+      position: relative;
+      padding-left: 0.25rem; }
+      nav.navbar.song .nav_member_wrapper:before {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+        width: 1px;
+        height: 43px;
+        background-color: rgba(255, 255, 255, 0.1); } }
 
 /*!**********************************************************************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!../node_modules/sass-loader/dist/cjs.js!./scss/song.scss ***!
@@ -2149,8 +2204,8 @@ nav.navbar {
     margin: 0 auto;
     max-width: 46vh;
     width: 100%;
-    padding-left: 8.2vw;
-    padding-right: 8.2vw; }
+    padding-left: 1rem;
+    padding-right: 1rem; }
     .song .active_button_wrapper .button_wrapper {
       display: -webkit-box;
       display: -webkit-flex;

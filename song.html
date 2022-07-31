@@ -16,34 +16,36 @@
     <nav class="navbar song fixed-top navbar-expand-md">
       <div class="container-fluid justify-content-between justify-content-md-start position-relative">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-          <svg class="icon navbar-toggler-icon" aria-hidden="true">
+          <svg class="icon navbar-toggler-icon menu" aria-hidden="true">
             <use xlink:href="#menu"></use>
           </svg>
+          <svg class="icon navbar-toggler-icon close" aria-hidden="true">
+            <use xlink:href="#close"></use>
+          </svg>
         </button>
-        <div class="divider ver"></div>
         <div class="collapse navbar-collapse ml_50 ml_m_0" id="navbarToggler">
           <ul class="navbar-nav me-auto">
-                        <li class="nav-item py_24 mx_16 mx_m_0"><a class="nav-link p_0" href="index.html">首頁</a></li>
-                        <li class="nav-item py_24 mx_16 mx_m_0"><a class="nav-link p_0" href="#">立即訂位</a></li>
-                        <li class="nav-item py_24 mx_16 mx_m_0"><a class="nav-link p_0" href="#">點餐</a></li>
-                        <li class="nav-item py_24 mx_16 mx_m_0"><a class="nav-link p_0" href="#">包廂點歌</a></li>
+                <li class="nav-item py_24 mx_16 mx_m_0"><a class="nav-link p_0" href="index.html">首頁</a></li>
+                <li class="nav-item py_24 mx_16 mx_m_0"><a class="nav-link p_0" href="#.html">立即訂位</a></li>
+                <li class="nav-item py_24 mx_16 mx_m_0"><a class="nav-link p_0" href="#.html">點餐</a></li>
+                <li class="nav-item py_24 mx_16 mx_m_0"><a class="nav-link p_0" href="song.html">包廂點歌</a></li>
           </ul>
         </div>
         <div class="nav_member_wrapper d-flex align-items-center flex-grow-1">
-          <div class="toast_lang_wrapper active">
-            <button class="lang">
+          <div class="toast_lang_wrapper">
+            <button class="lang" id="lang_btn">
               <svg class="icon lang mr_16 mr_m_0" aria-hidden="true">
                 <use xlink:href="#lang"></use>
               </svg>
             </button>
             <div class="toast_modal toast_lang">
               <ul><a href="#">
-                                  <li class="tw d-flex justify-content-between align-items-center selected"><span>繁體中文</span>
+                                  <li class="lang_item d-flex justify-content-between align-items-center tw selected"><span>繁體中文</span>
                                     <svg class="icon check" aria-hidden="true">
                                       <use xlink:href="#check"></use>
                                     </svg>
                                   </li></a><a href="#">
-                                  <li class="tw d-flex justify-content-between align-items-center"><span>ENGLISH</span>
+                                  <li class="lang_item d-flex justify-content-between align-items-center en"><span>ENGLISH</span>
                                     <svg class="icon check" aria-hidden="true">
                                       <use xlink:href="#check"></use>
                                     </svg>
@@ -70,37 +72,37 @@
       </div>
     </nav>
     <div class="logo_info_wrapper">
-      <svg class="icon logo" aria-hidden="true">
-        <use xlink:href="#logo"></use>
-      </svg>
+          <svg class="icon logo undefined" aria-hidden="true">
+            <use xlink:href="#logo"></use>
+          </svg>
       <div class="room_info_wrapper pointer" type="button" data-bs-toggle="modal" data-bs-target="#roomInfoModal"><span>包廂</span>
         <h2>402</h2>
       </div>
     </div>
     <div class="active_button_wrapper">
       <div class="button_wrapper main"><a class="ratio_btn ratio ratio-21x9" href="song_list.html" role="button">
-          <div class="square_icon_tab">
-            <svg class="icon" aria-hidden="true">
-              <use xlink:href="#broadcast"></use>
-            </svg><span>我要點歌</span>
-          </div></a>
+              <div class="square_icon_tab">
+                <svg class="icon" aria-hidden="true">
+                  <use xlink:href="#broadcast"></use>
+                </svg><span>我要點歌</span>
+              </div></a>
       </div>
       <div class="button_wrapper sub"><a class="ratio_btn ratio ratio-1x1" href="microphone.html" role="button">
-          <div class="square_icon_tab">
-            <svg class="icon" aria-hidden="true">
-              <use xlink:href="#microphone"></use>
-            </svg><span>麥克風</span>
-          </div></a><a class="ratio_btn ratio ratio-1x1" href="settings.html" role="button">
-          <div class="square_icon_tab">
-            <svg class="icon" aria-hidden="true">
-              <use xlink:href="#setting"></use>
-            </svg><span>環控</span>
-          </div></a><a class="ratio_btn ratio ratio-1x1" href="volume.html" role="button">
-          <div class="square_icon_tab">
-            <svg class="icon" aria-hidden="true">
-              <use xlink:href="#volume"></use>
-            </svg><span>音量</span>
-          </div></a>
+              <div class="square_icon_tab">
+                <svg class="icon" aria-hidden="true">
+                  <use xlink:href="#microphone"></use>
+                </svg><span>麥克風</span>
+              </div></a><a class="ratio_btn ratio ratio-1x1" href="settings.html" role="button">
+              <div class="square_icon_tab">
+                <svg class="icon" aria-hidden="true">
+                  <use xlink:href="#setting"></use>
+                </svg><span>環控</span>
+              </div></a><a class="ratio_btn ratio ratio-1x1" href="volume.html" role="button">
+              <div class="square_icon_tab">
+                <svg class="icon" aria-hidden="true">
+                  <use xlink:href="#volume"></use>
+                </svg><span>音量</span>
+              </div></a>
       </div>
     </div>
     <div class="bottom_tab bottom_tab_main">
@@ -125,7 +127,7 @@
       </div>
       <button class="main_button">
         <div class="circle">
-              <svg class="icon music-cut" aria-hidden="true">
+              <svg class="icon music-cut undefined" aria-hidden="true">
                 <use xlink:href="#music-cut"></use>
               </svg>
         </div>
@@ -133,7 +135,7 @@
     </div>
     <div class="modal fade" id="roomInfoModal" tabindex="-1" aria-labelledby="roomInfoModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal-content toast_modal time_info bg-dark">
+        <div class="modal-content toast_modal modal_room_info bg-dark">
           <div class="modal-header">
             <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
@@ -149,7 +151,7 @@
             <div class="font_title_light_r mt_30">包廂人數</div>
             <h1 class="count time_block rounded flex-grow-1 mt_16">09</h1>
             <button class="stroke_btn mt_10 flex_center w-100 mt_40"><span>解除門鎖</span>
-                  <svg class="icon lock-open" aria-hidden="true">
+                  <svg class="icon lock-open undefined" aria-hidden="true">
                     <use xlink:href="#lock-open"></use>
                   </svg>
             </button>
@@ -157,5 +159,6 @@
         </div>
       </div>
     </div>
+    <div class="cover" id="cover"></div>
   </body>
 <script defer="defer" src="bundle.js"></script><link href="./css/bundle.css" rel="stylesheet"></head>

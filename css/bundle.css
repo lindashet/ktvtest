@@ -344,11 +344,12 @@ button {
   color: #db00ff; }
 
 .setting_icon_btn span {
-  font-size: 1.54vh; }
+  font-size: 1.54vh;
+  margin-top: 2px; }
 
 .setting_icon_btn .circle {
-  width: 7.76vh;
-  height: 7.76vh;
+  width: 7.5vh;
+  height: 7.5vh;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(2.93%, #363638), color-stop(30.82%, #2a2a2c), color-stop(58.29%, #232325), color-stop(99.08%, #232325));
   background-image: -o-linear-gradient(top, #363638 2.93%, #2a2a2c 30.82%, #232325 58.29%, #232325 99.08%);
   background-image: linear-gradient(180deg, #363638 2.93%, #2a2a2c 30.82%, #232325 58.29%, #232325 99.08%);
@@ -356,8 +357,8 @@ button {
   border-radius: 50%; }
 
 .setting_icon_btn svg.icon {
-  width: 7.76vh;
-  height: 7.76vh; }
+  width: 7.5vh;
+  height: 7.5vh; }
 
 .setting_btn {
   width: 7.76vh;
@@ -689,8 +690,8 @@ nav.nav_category {
 
 .ktv_song_card.singer_card {
   display: block;
-  height: 24px;
-  line-height: 24px;
+  height: 32px;
+  line-height: 32px;
   color: #ffffff; }
   .ktv_song_card.singer_card::before {
     top: 50%;
@@ -730,7 +731,9 @@ nav.nav_category {
   background-repeat: no-repeat;
   background-position: center bottom;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  z-index: 1030;
+  top: 7vh; }
   .playing_card img.cover {
     width: 64px;
     height: 64px; }
@@ -1836,15 +1839,15 @@ nav.nav_category {
 
 .song_nav_sub_margin {
   margin-top: calc(7vh + 70px);
-  margin-bottom: 3.125rem; }
+  margin-bottom: 5rem; }
 
 .song_nav_margin {
   margin-top: calc(7vh + 20px);
-  margin-bottom: 3.125rem; }
+  margin-bottom: 5rem; }
 
 .players_list_nav_margin {
-  margin-top: 7vh;
-  margin-bottom: 3.125rem; }
+  margin-top: calc(7vh + 150px);
+  margin-bottom: 5rem; }
 
 .song_list *,
 .singer_list *,

@@ -207,9 +207,9 @@ button {
   font-weight: normal;
   border-radius: 2px;
   line-height: 13px;
-  padding: 4px;
-  margin-left: 3px;
-  margin-right: 3px; }
+  padding: 0.25rem;
+  margin-left: 0.1875;
+  margin-right: 0.1875; }
 
 .divider_pseu:after {
   position: absolute;
@@ -363,10 +363,10 @@ button {
           box-shadow: none; }
 
 button.simple {
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 0.9375rem;
+  padding-bottom: 0.9375rem;
+  padding-top: 0.9375rem;
+  padding-bottom: 0.9375rem;
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -455,8 +455,8 @@ button.simple {
           -ms-flex-align: center;
               align-items: center;
       width: 100%;
-      padding-left: 14px;
-      padding-right: 14px; }
+      padding-left: 0.875rem;
+      padding-right: 0.875rem; }
     .volume_controller .progress_wrapper .dot {
       width: 6px;
       height: 6px;
@@ -486,9 +486,12 @@ button.simple {
       color: #db00ff; }
 
 .stroke_btn {
-  border: 1px solid #a8a7a7;
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   color: #a8a7a7;
-  border-radius: 4px; }
+  border-radius: 4px;
+  text-align: center; }
   .stroke_btn:active {
     border: 1px solid #db00ff;
     color: #db00ff; }
@@ -556,8 +559,8 @@ nav.nav_category {
       color: #a8a7a7;
       border-radius: 3.8vh;
       white-space: nowrap;
-      margin-left: 5px;
-      margin-right: 5px;
+      margin-left: 0.3125rem;
+      margin-right: 0.3125rem;
       padding-top: 0;
       padding-bottom: 0; }
       nav.nav_category .category_wrapper .nav-link:active {
@@ -584,7 +587,7 @@ nav.nav_category {
 .ktv_song_card {
   position: relative;
   width: 100%;
-  padding-left: 16px; }
+  padding-left: 1rem; }
   .ktv_song_card:before {
     position: absolute;
     content: "";
@@ -633,7 +636,7 @@ span {
   border: 1px solid #db00ff;
   background-image: -o-linear-gradient(316.64deg, #111011 15.19%, #292929 84.91%);
   background-image: linear-gradient(133.36deg, #111011 15.19%, #292929 84.91%);
-  padding: 11px 20px; }
+  padding: 0.75rem 1.25rem; }
   .collapse_actions svg.icon.arrow_top {
     display: block;
     position: absolute;
@@ -650,10 +653,10 @@ span {
     -webkit-flex-grow: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
-    margin-left: 8px;
-    margin-right: 8px;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
     font-size: 0.8125rem;
-    padding: 3px;
+    padding: 0.1875;
     -webkit-flex-basis: 30%;
         -ms-flex-preferred-size: 30%;
             flex-basis: 30%;
@@ -674,17 +677,45 @@ span {
   display: none; }
 
 .ktv_song_card.song_card {
-  padding-bottom: 10px; }
+  padding-bottom: 0.625rem; }
   .ktv_song_card.song_card::before {
     top: 0;
     height: calc(100% - 10px); }
 
-.ktv_playing_card .toasty {
+.modal {
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.5); }
+  .modal .btn-close {
+    background-image: url(../698785364502d71266c1.svg); }
+
+.toast_modal {
+  -webkit-box-shadow: 6px 8px 20px 12.6885px rgba(0, 0, 0, 0.8);
+          box-shadow: 6px 8px 20px 12.6885px rgba(0, 0, 0, 0.8);
   background-image: -o-linear-gradient(316.64deg, #111011 15.19%, #292929 84.91%);
   background-image: linear-gradient(133.36deg, #111011 15.19%, #292929 84.91%);
-  border: 1.1535px solid #db00ff; }
+  border: 1px solid #db00ff;
+  border-radius: 0; }
+
+.modal-content.toast_modal .modal-header {
+  border: none; }
+
+.modal-content.toast_modal .modal-body {
+  padding-top: 0;
+  letter-spacing: 2px; }
+
+.modal-content.toast_modal .modal-footer {
+  width: 100%;
+  border-color: rgba(255, 255, 255, 0.1);
+  padding: 1rem; }
+  .modal-content.toast_modal .modal-footer .stroke_btn {
+    width: 100%; }
 
 .toast_lang_wrapper.active .toast_lang {
+  display: block; }
+
+.toast_lang_wrapper .toast_lang {
+  display: none;
   width: 150px;
   height: auto;
   z-index: 999;
@@ -692,23 +723,18 @@ span {
   top: 76px;
   -webkit-transform: translateX(-59px);
       -ms-transform: translateX(-59px);
-          transform: translateX(-59px);
-  -webkit-box-shadow: 6px 8px 20px 12.6885px rgba(0, 0, 0, 0.8);
-          box-shadow: 6px 8px 20px 12.6885px rgba(0, 0, 0, 0.8);
-  background-image: -o-linear-gradient(316.64deg, #111011 15.19%, #292929 84.91%);
-  background-image: linear-gradient(133.36deg, #111011 15.19%, #292929 84.91%);
-  border: 1.1535px solid #db00ff; }
-  .toast_lang_wrapper.active .toast_lang ul {
-    margin-left: 16px;
-    margin-right: 16px; }
-  .toast_lang_wrapper.active .toast_lang li {
+          transform: translateX(-59px); }
+  .toast_lang_wrapper .toast_lang ul {
+    margin-left: 1rem;
+    margin-right: 1rem; }
+  .toast_lang_wrapper .toast_lang li {
     position: relative;
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
     cursor: pointer; }
-    .toast_lang_wrapper.active .toast_lang li svg.icon.check {
+    .toast_lang_wrapper .toast_lang li svg.icon.check {
       display: none; }
-  .toast_lang_wrapper.active .toast_lang li.tw:after {
+  .toast_lang_wrapper .toast_lang li.tw:after {
     position: absolute;
     content: "";
     bottom: 0;
@@ -716,17 +742,17 @@ span {
     width: 100%;
     height: 1px;
     background-color: #484848; }
-  .toast_lang_wrapper.active .toast_lang li.selected span {
+  .toast_lang_wrapper .toast_lang li.selected span {
     color: #db00ff; }
-  .toast_lang_wrapper.active .toast_lang li.selected svg.icon.check {
+  .toast_lang_wrapper .toast_lang li.selected svg.icon.check {
     width: 14px;
     height: 14px;
     display: block; }
-  .toast_lang_wrapper.active .toast_lang span {
+  .toast_lang_wrapper .toast_lang span {
     color: #ffffff;
     font-size: 0.8125rem;
     font-weight: normal; }
-  .toast_lang_wrapper.active .toast_lang:before {
+  .toast_lang_wrapper .toast_lang:before {
     position: absolute;
     content: "";
     height: 12px;
@@ -739,8 +765,8 @@ span {
     top: -12px; }
 
 .active_tab {
-  margin-left: 4px;
-  margin-right: 4px; }
+  margin-left: 0.25rem;
+  margin-right: 0.25rem; }
   .active_tab svg {
     width: 24px;
     height: 24px; }
@@ -749,7 +775,7 @@ span {
     color: #a8a7a7;
     font-size: 0.75rem;
     font-weight: 500;
-    margin-top: 4px; }
+    margin-top: 0.25rem; }
   .active_tab:active * {
     color: #db00ff; }
 
@@ -762,7 +788,7 @@ span {
   font-size: 10px;
   color: #ffffff !important;
   line-height: 8px;
-  margin-left: 4px; }
+  margin-left: 0.25rem; }
 
 .m_0 {
   margin: 0; }
@@ -1653,8 +1679,8 @@ span {
   .square_icon_tab:hover span {
     color: #db00ff; }
   .active_tab {
-    margin-left: 4px;
-    margin-right: 4px; }
+    margin-left: 0.25rem;
+    margin-right: 0.25rem; }
     .active_tab svg {
       width: 24px;
       height: 24px; }
@@ -1669,12 +1695,9 @@ span {
     color: #db00ff; }
   .volume_btn:hover svg {
     color: #db00ff; }
-  .stroke_btn {
-    border: 1px solid #a8a7a7;
-    color: #a8a7a7; }
-    .stroke_btn:hover {
-      border: 1px solid #db00ff;
-      color: #db00ff; } }
+  .stroke_btn:hover {
+    border: 1px solid #db00ff;
+    color: #db00ff; } }
 
 /*!*****************************************************************************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!../node_modules/sass-loader/dist/cjs.js!./scss/common/page.scss ***!
@@ -1689,7 +1712,7 @@ span {
 
 .song_nav_margin {
   margin-top: calc(7vh + 20px);
-  margin-bottom: 30px; }
+  margin-bottom: 1.875rem; }
 
 .song_list *,
 .singer_list *,
@@ -1735,14 +1758,14 @@ span {
   .home svg.icon.logo {
     width: 53%; }
   .home .divider {
-    margin-top: 40px;
-    margin-bottom: 40px; }
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem; }
   .home .sign_in_wrapper {
     width: 100%;
     margin-top: 15%; }
   .home .ratio_btn {
-    margin-left: 8px;
-    margin-right: 8px; }
+    margin-left: 0.5rem;
+    margin-right: 0.5rem; }
   .home .square_icon_tab span {
     letter-spacing: 2px; }
   .home button.login {
@@ -1778,18 +1801,18 @@ span {
       max-width: 390px;
       height: 40vh; }
     .home .main_end_wrapper {
-      padding-left: 32px;
-      padding-right: 32px; }
+      padding-left: 2rem;
+      padding-right: 2rem; }
     .home .sign_in_wrapper {
       width: 100%;
       max-width: 390px;
       margin-top: 0; }
     .home .ratio_btn {
-      margin-left: 6px;
-      margin-right: 6px; }
+      margin-left: 0.375rem;
+      margin-right: 0.375rem; }
     .home .divider {
-      margin-top: 30px;
-      margin-bottom: 30px; } }
+      margin-top: 1.875rem;
+      margin-bottom: 1.875rem; } }
 
 @media screen and (max-width: 390px) {
   .home .main_end_wrapper {
@@ -1873,7 +1896,7 @@ nav.navbar {
     -webkit-clip-path: circle(50%);
             clip-path: circle(50%);
     color: #ffffff;
-    padding: 5px; }
+    padding: 0.3125rem; }
   nav.navbar .button_stroke {
     color: #ffffff; }
     nav.navbar .button_stroke:active {
@@ -1968,7 +1991,7 @@ nav.navbar {
       -webkit-clip-path: circle(50%);
               clip-path: circle(50%);
       color: #ffffff;
-      padding: 5px; } }
+      padding: 0.3125rem; } }
 
 @media (hover: hover) {
   nav.navbar a.nav-link:hover {
@@ -1989,7 +2012,7 @@ nav.navbar {
     nav.navbar.song .divider.ver {
       height: 43px; }
     nav.navbar.song .nav_member_wrapper {
-      margin-left: 4px; } }
+      margin-left: 0.25rem; } }
 
 /*!**********************************************************************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!../node_modules/sass-loader/dist/cjs.js!./scss/song.scss ***!
@@ -2031,8 +2054,8 @@ nav.navbar {
     height: 48px;
     max-width: 46vh;
     margin-top: 15vh;
-    padding-left: 20px;
-    padding-right: 20px; }
+    padding-left: 1.25rem;
+    padding-right: 1.25rem; }
   .song .logo_info_wrapper .room_info_wrapper {
     display: -webkit-box;
     display: -webkit-flex;
@@ -2044,6 +2067,7 @@ nav.navbar {
             align-items: center;
     margin-top: 4.7vh; }
     .song .logo_info_wrapper .room_info_wrapper span {
+      overflow: visible;
       position: relative;
       font-size: 1.125rem;
       color: #a8a7a7;
@@ -2067,7 +2091,7 @@ nav.navbar {
       font-weight: 400;
       line-height: 42px;
       letter-spacing: 1px;
-      margin-left: 50px;
+      margin-left: 3.125rem;
       margin-bottom: 0; }
   .song .active_button_wrapper {
     margin: 0 auto;
@@ -2233,7 +2257,7 @@ nav.navbar {
       color: #a8a7a7;
       font-size: 0.75rem;
       font-weight: 500;
-      margin-top: 32px; }
+      margin-top: 2rem; }
   .bottom_tab.bottom_tab_main .active_tab {
     -webkit-flex-basis: 58px;
         -ms-flex-preferred-size: 58px;
@@ -2288,7 +2312,7 @@ nav.navbar {
     top: 0;
     right: 0;
     text-align: center;
-    padding-left: 40px;
+    padding-left: 2.5rem;
     vertical-align: middle;
     line-height: 25px;
     font-size: 1.6vh; }
@@ -2325,7 +2349,7 @@ nav.back_navbar {
     line-height: 24px;
     letter-spacing: 2px; }
   nav.back_navbar .main_title h5 {
-    margin-right: 6px; }
+    margin-right: 0.375rem; }
 
 /*!********************************************************************************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!../node_modules/sass-loader/dist/cjs.js!./scss/volume_control.scss ***!
@@ -2340,8 +2364,8 @@ nav.back_navbar {
     color: #db00ff; }
   .volume_control .microphone_mode {
     margin-top: 4.8vh;
-    padding-left: 40px;
-    padding-right: 40px; }
+    padding-left: 2.5rem;
+    padding-right: 2.5rem; }
     .volume_control .microphone_mode .microphone_mode_btn_wrapper {
       margin-top: 2.8vh; }
     .volume_control .microphone_mode .microphone_mode_btn_wrapper:nth-child(3) {

@@ -20,7 +20,7 @@
           </svg>
         </button>
         <div class="title_wrapper ml_16"><span class="font_xs_gray">歌星點歌 </span>
-          <div class="main_title pointer d-flex align-items-center">
+          <div class="main_title pointer d-flex align-items-center" type="button" data-bs-toggle="modal" data-bs-target="#backNavModal">
             <h5>女歌手</h5>
             <svg class="icon arrow-g" aria-hidden="true">
               <use xlink:href="#arrow-g"></use>
@@ -30,7 +30,7 @@
       </div>
     </nav>
     <nav class="nav_category d-flex align-items-center">
-      <button class="expand_btn flex_center flex-column p_0">
+      <button class="expand_btn flex_center flex-column p_0" type="button" data-bs-toggle="modal" data-bs-target="#categoryModal">
         <svg class="icon expand" aria-hidden="true">
           <use xlink:href="#expand"></use>
         </svg><span>全部分類</span>
@@ -556,6 +556,45 @@
           <div class="title flex_center"><span class="m-0">已點歌</span>
             <div class="badge">10</div>
           </div></a>
+      </div>
+    </div>
+    <div class="modal fade" id="categoryModal" tabindex="-1" aria-labelledby="categoryModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content toast_modal">
+          <div class="modal-header">
+            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body d-flex flex-column">
+            <button class="stroke_btn mt_10">注音搜尋</button>
+            <button class="stroke_btn mt_10">英文搜尋</button>
+            <button class="stroke_btn mt_10">一字部</button>
+            <button class="stroke_btn mt_10">二字部</button>
+            <button class="stroke_btn mt_10">三字部</button>
+            <button class="stroke_btn mt_10">四字部</button>
+            <button class="stroke_btn mt_10">五字部</button>
+            <button class="stroke_btn mt_10">其他字部</button>
+          </div>
+          <div class="modal-footer d-flex">
+            <button class="stroke_btn mt_10" data-bs-dismiss="modal">關閉</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="backNavModal" tabindex="-1" aria-labelledby="backNavModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content toast_modal">
+          <div class="modal-header">
+            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body d-flex flex-column">
+            <button class="stroke_btn mt_10">女歌星</button>
+            <button class="stroke_btn mt_10">男歌星</button>
+            <button class="stroke_btn mt_10">團體</button>
+          </div>
+          <div class="modal-footer d-flex">
+            <button class="stroke_btn mt_10" data-bs-dismiss="modal">關閉</button>
+          </div>
+        </div>
       </div>
     </div>
   </body>

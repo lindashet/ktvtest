@@ -146,13 +146,17 @@ button {
 /*!******************************************************************************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!../node_modules/sass-loader/dist/cjs.js!./scss/common/style.scss ***!
   \******************************************************************************************************************************************************************************************/
+.light {
+  color: #ffffff; }
+
+.dark {
+  color: #000000; }
+
 .party {
-  color: #db00ff;
-  border: solid 1px rgba(219, 0, 255, 0.5); }
+  color: #db00ff; }
 
 .purple {
-  color: #7b61ff;
-  border: solid 1px rgba(123, 97, 255, 0.5); }
+  color: #7b61ff; }
 
 .bg-dark {
   background: #000000 !important; }
@@ -160,6 +164,13 @@ button {
 .font_sub_gray {
   font-size: 0.875rem;
   color: #a8a7a7;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 1px; }
+
+.font_sub_party {
+  font-size: 0.875rem;
+  color: #db00ff;
   font-weight: 700;
   line-height: 24px;
   letter-spacing: 1px; }
@@ -212,15 +223,6 @@ button {
   font-weight: 700;
   line-height: 24px;
   letter-spacing: 1px; }
-
-.card_tag {
-  font-size: 12px;
-  font-weight: normal;
-  border-radius: 2px;
-  line-height: 13px;
-  padding: 0.25rem;
-  margin-left: 0.1875;
-  margin-right: 0.1875; }
 
 .divider_pseu:after {
   position: absolute;
@@ -642,22 +644,13 @@ nav.nav_category {
 .leadinterrupt h6 {
   color: #f5bfff; }
 
-.ktv_song_card,
-h6,
-span {
-  display: block;
-  -o-text-overflow: ellipsis;
-     text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap; }
-
 .ktv_song_card {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
 
-.song_info {
+.song_content {
   overflow: hidden; }
 
 .collapse_actions {
@@ -713,6 +706,48 @@ span {
   .ktv_song_card.song_card::before {
     top: 0;
     height: calc(100% - 10px); }
+
+.card_tag {
+  font-size: 12px;
+  font-weight: normal;
+  border-radius: 2px;
+  line-height: 13px;
+  padding: 0.25rem;
+  margin-left: 0.1875;
+  margin-right: 0.1875; }
+
+.card_tag.party {
+  border: solid 1px rgba(219, 0, 255, 0.5); }
+
+.card_tag.purple {
+  border: solid 1px rgba(123, 97, 255, 0.5); }
+
+.playing_card {
+  background-color: #000000;
+  background-image: url(../08ed85ef17891f48ca1d.svg);
+  height: 130px;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
+  .playing_card img.cover {
+    width: 64px;
+    height: 64px; }
+
+.song_content h6,
+.song_content span,
+.ktv_song_card,
+.ktv_song_card h6,
+.ktv_song_card span {
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap; }
+
+.ktv_song_card span,
+.song_content span {
+  display: block; }
 
 .modal {
   -webkit-backdrop-filter: blur(5px);
@@ -1400,7 +1435,7 @@ span {
     font-size: 14px; }
   .toast_lang_wrapper.active .toast_lang {
     width: 110px;
-    top: 64px;
+    top: 50px;
     -webkit-transform: translateX(-39px);
         -ms-transform: translateX(-39px);
             transform: translateX(-39px); }
@@ -1801,11 +1836,15 @@ span {
 
 .song_nav_sub_margin {
   margin-top: calc(7vh + 70px);
-  margin-bottom: 30px; }
+  margin-bottom: 3.125rem; }
 
 .song_nav_margin {
   margin-top: calc(7vh + 20px);
-  margin-bottom: 1.875rem; }
+  margin-bottom: 3.125rem; }
+
+.players_list_nav_margin {
+  margin-top: 7vh;
+  margin-bottom: 3.125rem; }
 
 .song_list *,
 .singer_list *,
@@ -1872,7 +1911,7 @@ span {
     background-size: 100%;
     display: block; }
     .home .main.container {
-      margin-top: 64px;
+      margin-top: 50px;
       padding: 0; }
     .home .start_block {
       width: 100%;
@@ -1952,7 +1991,7 @@ nav.navbar {
     color: #db00ff; }
   nav.navbar svg.icon.logo {
     width: 196px;
-    height: 40px; }
+    height: 80px; }
     nav.navbar svg.icon.logo:active, nav.navbar svg.icon.logo:hover {
       color: white; }
   nav.navbar a.nav-link {
@@ -2467,8 +2506,6 @@ nav.back_navbar {
   background-attachment: fixed; }
   .volume_control .main.container {
     margin-top: 7vh; }
-  .volume_control h6.light {
-    color: #db00ff; }
   .volume_control .microphone_mode {
     margin-top: 4.8vh;
     padding-left: 2.5rem;

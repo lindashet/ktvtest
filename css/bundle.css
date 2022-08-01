@@ -283,6 +283,10 @@ button {
       -ms-flex-negative: 1;
           flex-shrink: 1; }
 
+.ratio_btn {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem; }
+
 .ratio_btn:first-child {
   margin-left: 0; }
 
@@ -1437,10 +1441,6 @@ nav.nav_category {
   padding-left: 2rem; }
 
 @media screen and (max-width: 767px) {
-  .ratio_btn:first-child {
-    margin-left: 0; }
-  .ratio_btn:last-child {
-    margin-right: 0; }
   .square_icon_tab span {
     font-size: 14px; }
   .toast_lang_wrapper.active .toast_lang {
@@ -1909,9 +1909,6 @@ nav.nav_category {
   .home .sign_in_wrapper {
     width: 100%;
     margin-top: 15%; }
-  .home .ratio_btn {
-    margin-left: 0.5rem;
-    margin-right: 0.5rem; }
   .home .square_icon_tab span {
     letter-spacing: 2px; }
   .home .simple_btn.login {

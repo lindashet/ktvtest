@@ -1885,7 +1885,7 @@ nav.nav_category {
     width: 100%; }
   .home .carousel-indicators {
     position: fixed;
-    top: calc(69vh - 20px); }
+    top: calc(69.5vh - 90px); }
   .home .carousel-item img {
     height: 100%;
     width: 100%; }

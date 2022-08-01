@@ -267,6 +267,14 @@ button {
   height: 1px;
   background-color: rgba(255, 255, 255, 0.3); }
 
+footer.footer {
+  color: #a8a7a7;
+  font-weight: 400;
+  font-size: 0.75rem;
+  height: 100px;
+  margin-top: 70px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1); }
+
 .button_stroke {
   color: #484848;
   border: solid 1px #484848;
@@ -1902,7 +1910,7 @@ nav.nav_category {
   .home svg.icon.logo {
     width: initial;
     height: initial;
-    width: 53%; }
+    width: 80%; }
   .home .divider {
     margin-top: 2.5rem;
     margin-bottom: 2.5rem; }
@@ -1921,6 +1929,18 @@ nav.nav_category {
     color: #ffffff; }
     .home .simple_btn.register:active {
       color: #db00ff; }
+
+@media screen and (max-width: 991px) {
+  .home svg.icon.logo {
+    width: initial;
+    height: initial;
+    width: 53%; } }
+
+@media screen and (min-width: 768px) {
+  .home .carousel-indicators {
+    -webkit-transform: translateY(40px);
+        -ms-transform: translateY(40px);
+            transform: translateY(40px); } }
 
 @media screen and (max-width: 767px) {
   .home {
@@ -2055,7 +2075,7 @@ nav.navbar {
 
 @media screen and (max-width: 991px) {
   nav.navbar svg.icon.logo {
-    height: 150px; }
+    width: 150px; }
   nav.navbar a.nav-link {
     font-size: 0.875rem;
     color: #a8a7a7;

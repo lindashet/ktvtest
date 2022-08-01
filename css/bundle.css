@@ -1883,9 +1883,6 @@ nav.nav_category {
     margin-top: calc(80px + 5vh); }
   .home .banner {
     width: 100%; }
-  .home .carousel-indicators {
-    position: fixed;
-    top: calc(69.5vh - 90px); }
   .home .carousel-item img {
     height: 100%;
     width: 100%; }
@@ -1955,6 +1952,9 @@ nav.nav_category {
       position: absolute;
       top: 0;
       left: 0; }
+    .home .carousel-indicators {
+      position: fixed;
+      top: calc(69vh - 100px); }
     .home .end_block {
       position: fixed;
       bottom: 0;

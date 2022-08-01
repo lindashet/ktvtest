@@ -502,7 +502,9 @@ button {
       border-radius: 50%;
       background-color: #484848; }
     .volume_controller .progress_wrapper .dot:nth-child(6) {
-      background: #ffffff; }
+      background: #ffffff !important; }
+    .volume_controller .progress_wrapper .dot.active {
+      background: #db00ff; }
 
 .volume_btn {
   width: 54px;

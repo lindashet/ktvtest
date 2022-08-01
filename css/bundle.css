@@ -1939,6 +1939,8 @@ nav.nav_category {
       margin: 0; }
     .home .start_block {
       padding: 0; }
+    .home .carousel-indicators {
+      bottom: 30px; }
     .home .end_block {
       position: fixed;
       bottom: 0;

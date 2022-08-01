@@ -1952,9 +1952,6 @@ nav.nav_category {
       position: absolute;
       top: 0;
       left: 0; }
-    .home .carousel-indicators {
-      position: fixed;
-      top: calc(69vh - 100px); }
     .home .end_block {
       position: fixed;
       bottom: 0;

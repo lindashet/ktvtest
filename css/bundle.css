@@ -861,9 +861,9 @@ nav.nav_category {
   z-index: 999;
   position: absolute;
   top: 76px;
-  -webkit-transform: translateX(-59px);
-      -ms-transform: translateX(-59px);
-          transform: translateX(-59px); }
+  -webkit-transform: translateX(-57px);
+      -ms-transform: translateX(-57px);
+          transform: translateX(-57px); }
   .toast_lang_wrapper .toast_lang ul {
     margin-left: 1rem;
     margin-right: 1rem; }
@@ -1463,9 +1463,9 @@ footer.footer {
   .toast_lang_wrapper.active .toast_lang {
     width: 110px;
     top: 50px;
-    -webkit-transform: translateX(-39px);
-        -ms-transform: translateX(-39px);
-            transform: translateX(-39px); }
+    -webkit-transform: translateX(-35px);
+        -ms-transform: translateX(-35px);
+            transform: translateX(-35px); }
     .toast_lang_wrapper.active .toast_lang ul {
       margin-left: 16px;
       margin-right: 16px; }
@@ -2051,6 +2051,10 @@ nav.navbar {
       background-color: #484848;
       right: 0;
       top: 0; }
+  nav.navbar .nav_member_wrapper a,
+  nav.navbar .nav_member_wrapper button {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem; }
   nav.navbar .nav_member_wrapper svg.icon {
     cursor: pointer;
     width: 20px;

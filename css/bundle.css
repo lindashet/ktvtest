@@ -114,6 +114,9 @@ a {
   a:active {
     color: #db00ff; }
 
+a[role="button"] {
+  padding: 0.375rem; }
+
 svg.icon {
   width: 1rem;
   height: 1rem;
@@ -1978,6 +1981,9 @@ nav.navbar {
             align-items: stretch;
     padding-left: 2.5rem;
     padding-right: 2.5rem; }
+  nav.navbar .navbar-toggler svg.icon.menu {
+    width: 24px;
+    height: 24px; }
   nav.navbar .navbar-toggler svg.icon.close {
     width: 20px;
     height: 20px; }

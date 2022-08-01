@@ -1929,7 +1929,7 @@ nav.nav_category {
 
 @media screen and (max-width: 430px) {
   .home {
-    height: 100vh; }
+    overflow-y: hidden; }
     .home .banner {
       width: 100%;
       height: auto;

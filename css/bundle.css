@@ -1454,8 +1454,6 @@ footer.footer {
 @media screen and (max-width: 767px) {
   footer.footer {
     font-size: 0.75rem;
-    position: absolute;
-    bottom: 0;
     min-width: 280px;
     width: 70%; }
   .square_icon_tab span {
@@ -1844,7 +1842,9 @@ footer.footer {
       font-weight: 500; }
     .active_tab:hover * {
       color: #db00ff; }
-  .setting_icon_btn:active svg.icon {
+  .setting_icon_btn svg:hover {
+    color: #ffffff; }
+  .setting_icon_btn:hover span {
     color: #db00ff; }
   .volume_btn:hover svg {
     color: #db00ff; }
@@ -2122,7 +2122,7 @@ nav.navbar {
       background-color: rgba(0, 0, 0, 0.5);
       top: 0px;
       left: 0px;
-      z-index: 4;
+      z-index: 1030;
       -webkit-backdrop-filter: blur(5px);
       backdrop-filter: blur(5px);
       -webkit-transition: none !important;
@@ -2138,7 +2138,7 @@ nav.navbar {
       -o-transition: none;
       transition: none; }
     nav.navbar .navbar-toggler {
-      z-index: 5; }
+      z-index: 1031; }
     nav.navbar ul.navbar-nav {
       padding-top: 70px; }
     nav.navbar li.nav-item {

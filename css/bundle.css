@@ -1928,14 +1928,16 @@ nav.nav_category {
       font-size: 2.2vh; } }
 
 @media screen and (max-width: 430px) {
-  .home .banner {
-    width: 100%;
-    height: auto;
-    padding: 56.7%; }
-  .home .end_block {
-    position: fixed;
-    bottom: 0;
-    height: 30.5vh; } }
+  .home {
+    height: 100vh; }
+    .home .banner {
+      width: 100%;
+      height: auto;
+      padding: 56.7%; }
+    .home .end_block {
+      position: fixed;
+      bottom: 0;
+      height: 30.5vh; } }
 
 /*!**********************************************************************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!../node_modules/sass-loader/dist/cjs.js!./scss/home.scss ***!

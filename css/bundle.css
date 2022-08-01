@@ -115,7 +115,8 @@ a {
     color: #db00ff; }
 
 svg.icon {
-  vertical-align: -0.15em;
+  width: 1rem;
+  height: 1rem;
   color: #ffffff; }
   svg.icon:active {
     color: #db00ff; }
@@ -393,7 +394,7 @@ button {
   -webkit-box-shadow: none;
           box-shadow: none; }
 
-button.simple {
+.simple_btn {
   padding-top: 0.9375rem;
   padding-bottom: 0.9375rem;
   padding-top: 0.9375rem;
@@ -1896,6 +1897,8 @@ nav.nav_category {
     width: 100%;
     max-width: 442px; }
   .home svg.icon.logo {
+    width: initial;
+    height: initial;
     width: 53%; }
   .home .divider {
     margin-top: 2.5rem;
@@ -1908,15 +1911,15 @@ nav.nav_category {
     margin-right: 0.5rem; }
   .home .square_icon_tab span {
     letter-spacing: 2px; }
-  .home button.login {
+  .home .simple_btn.login {
     background-color: #ffffff;
     border-radius: 0;
     color: #000000; }
-    .home button.login:active {
+    .home .simple_btn.login:active {
       background-color: #db00ff; }
-  .home button.register {
+  .home .simple_btn.register {
     color: #ffffff; }
-    .home button.register:active {
+    .home .simple_btn.register:active {
       color: #db00ff; }
 
 @media screen and (max-width: 767px) {
@@ -1935,8 +1938,8 @@ nav.nav_category {
       margin-bottom: 1.8vh; }
     .home .square_icon_tab span {
       font-size: 2.2vh; }
-    .home button.login,
-    .home button.register {
+    .home .simple_btn.login,
+    .home .simple_btn.register {
       height: 5.5vh;
       font-size: 2.2vh; } }
 
@@ -2020,12 +2023,12 @@ nav.navbar {
     cursor: pointer;
     width: 20px;
     height: 20px; }
-  nav.navbar .nav_member_wrapper button.avator img {
+  nav.navbar .nav_member_wrapper .avator img {
     width: 34px;
     height: 34px;
     -webkit-clip-path: circle(50%);
             clip-path: circle(50%); }
-  nav.navbar .nav_member_wrapper button.avator span {
+  nav.navbar .nav_member_wrapper .avator span {
     text-transform: uppercase;
     font-size: 0.875rem;
     color: #ffffff; }
@@ -2119,10 +2122,10 @@ nav.navbar {
       cursor: pointer;
       width: 24px;
       height: 24px; }
-    nav.navbar .nav_member_wrapper button.avator img {
+    nav.navbar .nav_member_wrapper .avator img {
       width: 24px;
       height: 24px; }
-    nav.navbar .nav_member_wrapper button.avator span {
+    nav.navbar .nav_member_wrapper .avator span {
       text-transform: uppercase;
       font-size: 0.875rem;
       color: #ffffff; }

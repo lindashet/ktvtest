@@ -38,28 +38,28 @@
       <div class="category_wrapper d-flex">
         <ul class="nav nav-pills mb-3 d-flex align-items-center flex-nowrap" id="pills-tab" role="tablist">
           <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="pills-zhuyintab" data-bs-toggle="pill" data-bs-target="#pills-zhuyin" type="button" role="tab" aria-controls="pills-zhuyin" aria-selected="false">注音搜尋</button>
+            <button class="nav-link active" id="pills-zhuyin-tab" data-bs-toggle="pill" data-bs-target="#pills-zhuyin" type="button" role="tab" aria-controls="pills-zhuyin" aria-selected="false">注音搜尋</button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link" id="pills-englishtab" data-bs-toggle="pill" data-bs-target="#pills-english" type="button" role="tab" aria-controls="pills-english" aria-selected="false">英文搜尋</button>
+            <button class="nav-link" id="pills-english-tab" data-bs-toggle="pill" data-bs-target="#pills-english" type="button" role="tab" aria-controls="pills-english" aria-selected="false">英文搜尋</button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link" id="pills-onetab" data-bs-toggle="pill" data-bs-target="#pills-one" type="button" role="tab" aria-controls="pills-one" aria-selected="false">一字部</button>
+            <button class="nav-link" id="pills-one-tab" data-bs-toggle="pill" data-bs-target="#pills-one" type="button" role="tab" aria-controls="pills-one" aria-selected="false">一字部</button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link" id="pills-twotab" data-bs-toggle="pill" data-bs-target="#pills-two" type="button" role="tab" aria-controls="pills-two" aria-selected="false">二字部</button>
+            <button class="nav-link" id="pills-two-tab" data-bs-toggle="pill" data-bs-target="#pills-two" type="button" role="tab" aria-controls="pills-two" aria-selected="false">二字部</button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link" id="pills-threetab" data-bs-toggle="pill" data-bs-target="#pills-three" type="button" role="tab" aria-controls="pills-three" aria-selected="false">三字部</button>
+            <button class="nav-link" id="pills-three-tab" data-bs-toggle="pill" data-bs-target="#pills-three" type="button" role="tab" aria-controls="pills-three" aria-selected="false">三字部</button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link" id="pills-fourtab" data-bs-toggle="pill" data-bs-target="#pills-four" type="button" role="tab" aria-controls="pills-four" aria-selected="false">四字部</button>
+            <button class="nav-link" id="pills-four-tab" data-bs-toggle="pill" data-bs-target="#pills-four" type="button" role="tab" aria-controls="pills-four" aria-selected="false">四字部</button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link" id="pills-fivetab" data-bs-toggle="pill" data-bs-target="#pills-five" type="button" role="tab" aria-controls="pills-five" aria-selected="false">五字部</button>
+            <button class="nav-link" id="pills-five-tab" data-bs-toggle="pill" data-bs-target="#pills-five" type="button" role="tab" aria-controls="pills-five" aria-selected="false">五字部</button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link" id="pills-othertab" data-bs-toggle="pill" data-bs-target="#pills-other" type="button" role="tab" aria-controls="pills-other" aria-selected="false">其他字部</button>
+            <button class="nav-link" id="pills-other-tab" data-bs-toggle="pill" data-bs-target="#pills-other" type="button" role="tab" aria-controls="pills-other" aria-selected="false">其他字部</button>
           </li>
         </ul>
       </div>
@@ -546,7 +546,7 @@
       <div class="tab_wrapper"><a class="active_tab d-flex flex-column align-items-center" role="button" href="song.html" id="home">
           <svg class="icon mr_m_0" aria-hidden="true">
             <use xlink:href="#home"></use>
-          </svg><span>回主頁</span></a><a class="active_tab d-flex flex-column align-items-center selected" role="button" href="song_list.html" id="music">
+          </svg><span>回主頁</span></a><a class="active_tab d-flex flex-column align-items-center selected" role="button" href="song_category_list.html" id="music">
           <svg class="icon mr_m_0" aria-hidden="true">
             <use xlink:href="#music"></use>
           </svg><span>歌曲</span></a><a class="active_tab request_song d-flex flex-column align-items-center" role="button" href="players_list.html" id="home">
@@ -565,14 +565,14 @@
             <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body d-flex flex-column">
-            <button class="stroke_btn mt_10">注音搜尋</button>
-            <button class="stroke_btn mt_10">英文搜尋</button>
-            <button class="stroke_btn mt_10">一字部</button>
-            <button class="stroke_btn mt_10">二字部</button>
-            <button class="stroke_btn mt_10">三字部</button>
-            <button class="stroke_btn mt_10">四字部</button>
-            <button class="stroke_btn mt_10">五字部</button>
-            <button class="stroke_btn mt_10">其他字部</button>
+            <button class="modal_list_btn stroke_btn mt_10" id="modal-list-zhuyin">注音搜尋</button>
+            <button class="modal_list_btn stroke_btn mt_10" id="modal-list-english">英文搜尋</button>
+            <button class="modal_list_btn stroke_btn mt_10" id="modal-list-one">一字部</button>
+            <button class="modal_list_btn stroke_btn mt_10" id="modal-list-two">二字部</button>
+            <button class="modal_list_btn stroke_btn mt_10" id="modal-list-three">三字部</button>
+            <button class="modal_list_btn stroke_btn mt_10" id="modal-list-four">四字部</button>
+            <button class="modal_list_btn stroke_btn mt_10" id="modal-list-five">五字部</button>
+            <button class="modal_list_btn stroke_btn mt_10" id="modal-list-other">其他字部</button>
           </div>
           <div class="modal-footer d-flex">
             <button class="stroke_btn mt_10" data-bs-dismiss="modal">關閉</button>
@@ -587,9 +587,9 @@
             <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body d-flex flex-column">
-            <button class="stroke_btn mt_10">女歌星</button>
-            <button class="stroke_btn mt_10">男歌星</button>
-            <button class="stroke_btn mt_10">團體</button>
+            <button class="modal_list_btn stroke_btn mt_10" id="modal-list-female">女歌星</button>
+            <button class="modal_list_btn stroke_btn mt_10" id="modal-list-male">男歌星</button>
+            <button class="modal_list_btn stroke_btn mt_10" id="modal-list-group">團體</button>
           </div>
           <div class="modal-footer d-flex">
             <button class="stroke_btn mt_10" data-bs-dismiss="modal">關閉</button>

@@ -804,6 +804,9 @@ nav.nav_category {
 .model_alert.warning svg.icon.triangle-warning {
   display: block; }
 
+.modal_room_info .modal-header {
+  border: none; }
+
 .modal_room_info .modal-body {
   padding-left: 1.875rem;
   padding-right: 1.875rem; }
@@ -1885,7 +1888,10 @@ nav.nav_category {
     width: 100%; }
   .home .carousel-item img {
     height: 100%;
-    width: 100%; }
+    width: 100%;
+    text-align: center;
+    -o-object-fit: contain;
+       object-fit: contain; }
   .home .main_end_wrapper {
     width: 100%;
     max-width: 442px; }
@@ -1919,6 +1925,8 @@ nav.nav_category {
     .home .main.container {
       margin-top: 50px;
       padding: 0; }
+    .home .carousel-item img {
+      height: 65vh; }
     .home .sign_in_wrapper {
       margin: initial;
       width: 41.6vh; }
@@ -1937,6 +1945,8 @@ nav.nav_category {
     overflow-y: hidden; }
     .home .row {
       margin: 0; }
+    .home .carousel-item img {
+      height: 100%; }
     .home .start_block {
       padding: 0; }
     .home .carousel-indicators {

@@ -2172,15 +2172,14 @@ nav.navbar {
   height: 100%;
   background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, #0f0f0f 31.71%, #111111 48.22%, #161616 76.17%, #0f0f0f 100%), url(../2434679a7584a482cc58.svg), url(../0e44bcb8e4d8463d1bfd.svg), -o-linear-gradient(316.64deg, #111011 15.19%, #292929 84.91%);
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #0f0f0f 31.71%, #111111 48.22%, #161616 76.17%, #0f0f0f 100%), url(../2434679a7584a482cc58.svg), url(../0e44bcb8e4d8463d1bfd.svg), linear-gradient(133.36deg, #111011 15.19%, #292929 84.91%);
-  background-size: 100% 80%, 440%, 200% 160%, contain;
+  background-size: 100% 80%, 1710px, 200% 160%, contain;
   background-position: center bottom, 26% 29%, center, center;
   background-repeat: no-repeat;
   background-attachment: fixed; }
-  .song .logo_info_wrapper,
-  .song .active_button_wrapper {
-    margin: 0 auto;
+  .song .logo_info_wrapper {
     width: 100%;
     height: calc((100vh - 106px) / 2);
+    margin: 0 auto;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -2198,6 +2197,13 @@ nav.navbar {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center; }
+  .song .active_button_wrapper {
+    position: fixed;
+    left: 50%;
+    bottom: calc(10vh + 106px);
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%); }
   .song .logo_info_wrapper svg.logo {
     width: 100%;
     height: 48px;
@@ -2218,7 +2224,7 @@ nav.navbar {
     .song .logo_info_wrapper .room_info_wrapper span {
       overflow: visible;
       position: relative;
-      font-size: 1.125rem;
+      font-size: 2.5vh;
       color: #a8a7a7;
       font-weight: 400;
       line-height: 21px;
@@ -2235,7 +2241,7 @@ nav.navbar {
         height: 32px;
         background-color: #db00ff; }
     .song .logo_info_wrapper .room_info_wrapper h2 {
-      font-size: 34px;
+      font-size: 4.7vh;
       color: #db00ff;
       font-weight: 400;
       line-height: 42px;

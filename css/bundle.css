@@ -2212,7 +2212,7 @@ nav.navbar {
   .song .active_button_wrapper {
     position: fixed;
     left: 50%;
-    bottom: calc(10vh + 106px);
+    bottom: calc(6vh + 106px);
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
             transform: translateX(-50%); }

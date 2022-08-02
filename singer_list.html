@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1user-scalable=no">
+  <meta name="theme-color" content="#000">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&amp;family=Roboto&amp;display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+  <script src="f8a0af2b726c10a3ccf2.js"></script>
+  <script src="a1dde0bc42b699186f95.js"></script>
+  <title>ONCOR</title>
+  <body class="singer_list song_bg" ontouchstart="">
+    <nav class="back_navbar fixed-top d-flex align-items-center">
+      <div class="container-fluid p-0 d-flex justify-content-start align-items-center position-relative">
+        <button class="navbar-toggler" id="backToPre" type="button">
+          <svg class="icon back undefined" aria-hidden="true">
+            <use xlink:href="#back"></use>
+          </svg>
+        </button>
+        <div class="title_wrapper ml_16"><span class="font_xs_gray">歌星點歌</span>
+          <div class="main_title pointer d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#backNavModal">
+            <h5>女歌手</h5>
+            <svg class="icon arrow-g undefined" aria-hidden="true">
+              <use xlink:href="#arrow-g"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <nav class="nav_category d-flex align-items-center">
+      <button class="expand_btn flex_center flex-column p_0" type="button" data-bs-toggle="modal" data-bs-target="#categoryModal">
+        <svg class="icon expand undefined" aria-hidden="true">
+          <use xlink:href="#expand"></use>
+        </svg><span>全部分類</span>
+      </button>
+      <div class="category_wrapper d-flex">
+        <ul class="nav nav-pills mb-3 d-flex align-items-center flex-nowrap" id="pills-tab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="pills-zhuyin-tab" data-bs-toggle="pill" data-bs-target="#pills-zhuyin" type="button" role="tab" aria-controls="pills-zhuyin" aria-selected="false">注音搜尋</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-english-tab" data-bs-toggle="pill" data-bs-target="#pills-english" type="button" role="tab" aria-controls="pills-english" aria-selected="false">英文搜尋</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-one-tab" data-bs-toggle="pill" data-bs-target="#pills-one" type="button" role="tab" aria-controls="pills-one" aria-selected="false">一字部</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-two-tab" data-bs-toggle="pill" data-bs-target="#pills-two" type="button" role="tab" aria-controls="pills-two" aria-selected="false">二字部</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-three-tab" data-bs-toggle="pill" data-bs-target="#pills-three" type="button" role="tab" aria-controls="pills-three" aria-selected="false">三字部</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-four-tab" data-bs-toggle="pill" data-bs-target="#pills-four" type="button" role="tab" aria-controls="pills-four" aria-selected="false">四字部</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-five-tab" data-bs-toggle="pill" data-bs-target="#pills-five" type="button" role="tab" aria-controls="pills-five" aria-selected="false">五字部</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-other-tab" data-bs-toggle="pill" data-bs-target="#pills-other" type="button" role="tab" aria-controls="pills-other" aria-selected="false">其他字部</button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="main container-fluid p_0 song_nav_sub_margin">
+      <div class="container p-0">
+        <div class="tab-content" id="pills-tabContent">
+          <div class="tab-pane position-relative fade show active" id="pills-zhuyin" role="tabpanel" aria-labelledby="pliis-zhuyin-tab">
+            <div class="container keyboard zhuyin_keyboard">
+              <div class="keyboard_input_wrapper flex_between_center ml_8 mr_4">
+                <input class="keyboard_text_input font_songlist_light rounded flex-grow-1 flex-shrink-1" type="text" value="ㄐㄏ" disabled="disabled">
+                <button class="flex-grow-0 flex-shrink-0">
+                  <svg class="icon return undefined" aria-hidden="true">
+                    <use xlink:href="#return"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="keyboard_board keboard_board_zhuyin mt_12 pb_10">
+                <div class="keys flex_center">
+                  <div class="key ratio ratio-1x1 flex_center light">1</div>
+                  <div class="key ratio ratio-1x1 flex_center light">2</div>
+                  <div class="key ratio ratio-1x1 flex_center light">3</div>
+                  <div class="key ratio ratio-1x1 flex_center light">4</div>
+                  <div class="key ratio ratio-1x1 flex_center light">5</div>
+                  <div class="key ratio ratio-1x1 flex_center light">6</div>
+                  <div class="key ratio ratio-1x1 flex_center light">7</div>
+                  <div class="key ratio ratio-1x1 flex_center light">8</div>
+                  <div class="key ratio ratio-1x1 flex_center light">9</div>
+                  <div class="key ratio ratio-1x1 flex_center light">0</div>
+                </div>
+                <div class="keys flex_center">
+                  <div class="key ratio ratio-1x1 flex_center light">ㄅ</div>
+                  <div class="key ratio ratio-1x1 flex_center light">ㄉ</div>
+                  <div class="key ratio ratio-1x1 flex_center light hidden"></div>
+                  <div class="key ratio ratio-1x1 flex_center light hidden"></div>
+                  <div class="key ratio ratio-1x1 flex_center light">ㄓ</div>
+                  <div class="key ratio ratio-1x1 flex_center light hidden"></div>
+                  <div class="key ratio ratio-1x1 flex_center light">ㄦ</div>
+                  <div class="key ratio ratio-1x1 flex_center light">ㄚ</div>
+                  <div class="key ratio ratio-1x1 flex_center light">ㄞ</div>
+                  <div class="key ratio ratio-1x1 flex_center light">ㄢ</div>
+                </div>
+                <div class="keys flex_center">
+                  <div class="key ratio ratio-1x1 flex_center light">ㄆ</div>
+                  <div class="key ratio ratio-1x1 flex_center light">ㄊ</div>
+                  <div class="key ratio ratio-1x1 flex_center light">ㄍ</div>
+                  <div class="key ratio ratio-1x1 flex_center light">ㄐ</div>
+                  <div class="key ratio ratio-1x1 flex_center light">ㄔ</div>
+                  <div class="key ratio ratio-1x1 flex_center light">ㄗ</div>
+                  <div class="key ratio ratio-1x1 flex_center light">ㄧ</div>
+                  <div class="key ratio ratio-1x1 flex_center light">ㄛ</div>
+                  <div class="key ratio ratio-1x1 flex_center light">ㄟ</div>
+                  <div class="key ratio ratio-1x1 flex_center light">ㄣ</div>
+                </div>
+                <div class="keys flex_center">
+                  <div class="key ratio ratio-1x1 flex_center light">ㄇ</div>
+                  <div class="key ratio ratio-1x1 flex_center light">ㄋ</div>
+                  <div class="key ratio ratio-1x1 flex_center light">ㄎ</div>
+                  <div class="key ratio ratio-1x1 flex_center light">ㄑ</div>
+                  <div class="key ratio ratio-1x1 flex_center light">ㄕ</div>
+                  <div class="key ratio ratio-1x1 flex_center light">ㄘ</div>
+                  <div class="key ratio ratio-1x1 flex_center light">ㄨ</div>
+                  <div class="key ratio ratio-1x1 flex_center light">ㄜ</div>
+                  <div class="key ratio ratio-1x1 flex_center light">ㄠ</div>
+                  <div class="key ratio ratio-1x1 flex_center light">ㄤ</div>
+                </div>
+                <div class="keys flex_center">
+                  <div class="key ratio ratio-1x1 flex_center light">ㄈ</div>
+                  <div class="key ratio ratio-1x1 flex_center light">ㄌ</div>
+                  <div class="key ratio ratio-1x1 flex_center light">ㄏ</div>
+                  <div class="key ratio ratio-1x1 flex_center light">ㄒ</div>
+                  <div class="key ratio ratio-1x1 flex_center light">ㄖ</div>
+                  <div class="key ratio ratio-1x1 flex_center light">ㄙ</div>
+                  <div class="key ratio ratio-1x1 flex_center light">ㄩ</div>
+                  <div class="key ratio ratio-1x1 flex_center light">ㄝ</div>
+                  <div class="key ratio ratio-1x1 flex_center light">ㄡ</div>
+                  <div class="key ratio ratio-1x1 flex_center light">ㄥ</div>
+                </div>
+              </div>
+            </div>
+            <div class="scroll_wrapper_zhuyin container">
+              <div class="row mt_5">
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="pills-english" role="tabpanel" aria-labelledby="pliis-english-tab">
+            <div class="container keyboard english_keyboard">
+              <div class="keyboard_input_wrapper flex_between_center ml_16 mr_8">
+                <input class="keyboard_text_input font_songlist_light rounded flex-grow-1 flex-shrink-1" type="text" value="ZIANG" disabled="disabled">
+                <button class="flex-grow-0 flex-shrink-0">
+                  <svg class="icon return undefined" aria-hidden="true">
+                    <use xlink:href="#return"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="keyboard_board keboard_board_english mt_12 pb_10">
+                <div class="keys flex_center">
+                  <div class="key ratio ratio-1x1 flex_center light">1</div>
+                  <div class="key ratio ratio-1x1 flex_center light">2</div>
+                  <div class="key ratio ratio-1x1 flex_center light">3</div>
+                  <div class="key ratio ratio-1x1 flex_center light">4</div>
+                  <div class="key ratio ratio-1x1 flex_center light">5</div>
+                  <div class="key ratio ratio-1x1 flex_center light">6</div>
+                  <div class="key ratio ratio-1x1 flex_center light">7</div>
+                  <div class="key ratio ratio-1x1 flex_center light">8</div>
+                  <div class="key ratio ratio-1x1 flex_center light">9</div>
+                  <div class="key ratio ratio-1x1 flex_center light">0</div>
+                </div>
+                <div class="keys flex_center">
+                  <div class="key ratio ratio-1x1 flex_center light">Q</div>
+                  <div class="key ratio ratio-1x1 flex_center light">W</div>
+                  <div class="key ratio ratio-1x1 flex_center light">E</div>
+                  <div class="key ratio ratio-1x1 flex_center light">R</div>
+                  <div class="key ratio ratio-1x1 flex_center light">T</div>
+                  <div class="key ratio ratio-1x1 flex_center light">Y</div>
+                  <div class="key ratio ratio-1x1 flex_center light">U</div>
+                  <div class="key ratio ratio-1x1 flex_center light">U</div>
+                  <div class="key ratio ratio-1x1 flex_center light">I</div>
+                  <div class="key ratio ratio-1x1 flex_center light">O</div>
+                </div>
+                <div class="keys flex_center translate">
+                  <div class="key ratio ratio-1x1 flex_center light">A</div>
+                  <div class="key ratio ratio-1x1 flex_center light">S</div>
+                  <div class="key ratio ratio-1x1 flex_center light">D</div>
+                  <div class="key ratio ratio-1x1 flex_center light">F</div>
+                  <div class="key ratio ratio-1x1 flex_center light">G</div>
+                  <div class="key ratio ratio-1x1 flex_center light">H</div>
+                  <div class="key ratio ratio-1x1 flex_center light">J</div>
+                  <div class="key ratio ratio-1x1 flex_center light">K</div>
+                  <div class="key ratio ratio-1x1 flex_center light">L</div>
+                  <div class="key ratio ratio-1x1 flex_center light hidden"></div>
+                </div>
+                <div class="keys flex_center">
+                  <div class="key ratio ratio-1x1 flex_center light hidden"></div>
+                  <div class="key ratio ratio-1x1 flex_center light hidden"></div>
+                  <div class="key ratio ratio-1x1 flex_center light">Z</div>
+                  <div class="key ratio ratio-1x1 flex_center light">X</div>
+                  <div class="key ratio ratio-1x1 flex_center light">C</div>
+                  <div class="key ratio ratio-1x1 flex_center light">V</div>
+                  <div class="key ratio ratio-1x1 flex_center light">B</div>
+                  <div class="key ratio ratio-1x1 flex_center light">N</div>
+                  <div class="key ratio ratio-1x1 flex_center light hidden"></div>
+                  <div class="key ratio ratio-1x1 flex_center light hidden"></div>
+                </div>
+              </div>
+            </div>
+            <div class="scroll_wrapper_english container">
+              <div class="row mt_5">
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="pills-one" role="tabpanel" aria-labelledby="pliis-one-tab">
+            <div class="container">
+              <div class="row">
+                <div class="col-6 font_xs_gray">歌手</div>
+                <div class="col-6 font_xs_gray">歌手</div>
+              </div>
+              <div class="row mt_5">
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="pills-two" role="tabpanel" aria-labelledby="pliis-two-tab">
+            <div class="container">
+              <div class="row">
+                <div class="col-6 font_xs_gray">歌手</div>
+                <div class="col-6 font_xs_gray">歌手</div>
+              </div>
+              <div class="row mt_5">
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="pills-three" role="tabpanel" aria-labelledby="pliis-three-tab">
+            <div class="container">
+              <div class="row">
+                <div class="col-6 font_xs_gray">歌手</div>
+                <div class="col-6 font_xs_gray">歌手</div>
+              </div>
+              <div class="row mt_5">
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="pills-four" role="tabpanel" aria-labelledby="pliis-four-tab">
+            <div class="container">
+              <div class="row">
+                <div class="col-6 font_xs_gray">歌手</div>
+                <div class="col-6 font_xs_gray">歌手</div>
+              </div>
+              <div class="row mt_5">
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="pills-five" role="tabpanel" aria-labelledby="pliis-five-tab">
+            <div class="container">
+              <div class="row">
+                <div class="col-6 font_xs_gray">歌手</div>
+                <div class="col-6 font_xs_gray">歌手</div>
+              </div>
+              <div class="row mt_5">
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="pills-other" role="tabpanel" aria-labelledby="pliis-other-tab">
+            <div class="container">
+              <div class="row">
+                <div class="col-6 font_xs_gray">歌手</div>
+                <div class="col-6 font_xs_gray">歌手</div>
+              </div>
+              <div class="row mt_5">
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom_tab bottom_tab_sub">
+      <div class="tab_wrapper"><a class="active_tab d-flex flex-column align-items-center" role="button" href="song.html" id="home">
+          <svg class="icon mr_m_0" aria-hidden="true">
+            <use xlink:href="#home"></use>
+          </svg><span>回主頁</span></a><a class="active_tab d-flex flex-column align-items-center selected" role="button" href="song_category_list.html" id="music">
+          <svg class="icon mr_m_0" aria-hidden="true">
+            <use xlink:href="#music"></use>
+          </svg><span>歌曲</span></a><a class="active_tab request_song d-flex flex-column align-items-center" role="button" href="players_list.html" id="home">
+          <svg class="icon mr_16 mr_m_0" aria-hidden="true">
+            <use xlink:href="#broadcast-w"></use>
+          </svg>
+          <div class="title flex_center"><span class="m-0">已點歌</span>
+            <div class="badge">10</div>
+          </div></a>
+      </div>
+    </div>
+    <div class="modal fade" id="categoryModal" tabindex="-1" aria-labelledby="categoryModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content toast_modal modal_list">
+          <div class="modal-header"><a class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></a></div>
+          <div class="modal-body d-flex flex-column">
+            <button class="modal_list_btn stroke_btn mt_10" id="modal-list-zhuyin">注音搜尋</button>
+            <button class="modal_list_btn stroke_btn mt_10" id="modal-list-english">英文搜尋</button>
+            <button class="modal_list_btn stroke_btn mt_10" id="modal-list-one">一字部</button>
+            <button class="modal_list_btn stroke_btn mt_10" id="modal-list-two">二字部</button>
+            <button class="modal_list_btn stroke_btn mt_10" id="modal-list-three">三字部</button>
+            <button class="modal_list_btn stroke_btn mt_10" id="modal-list-four">四字部</button>
+            <button class="modal_list_btn stroke_btn mt_10" id="modal-list-five">五字部</button>
+            <button class="modal_list_btn stroke_btn mt_10" id="modal-list-other">其他字部</button>
+          </div>
+          <div class="modal-footer d-flex">
+            <button class="stroke_btn mt_10" data-bs-dismiss="modal">關閉</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="backNavModal" tabindex="-1" aria-labelledby="backNavModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content toast_modal modal_list">
+          <div class="modal-header"><a class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></a></div>
+          <div class="modal-body d-flex flex-column">
+            <button class="modal_list_btn stroke_btn mt_10" id="modal-list-female">女歌星</button>
+            <button class="modal_list_btn stroke_btn mt_10" id="modal-list-male">男歌星</button>
+            <button class="modal_list_btn stroke_btn mt_10" id="modal-list-group">團體</button>
+          </div>
+          <div class="modal-footer d-flex">
+            <button class="stroke_btn mt_10" data-bs-dismiss="modal">關閉</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+<script defer="defer" src="bundle.js"></script><link href="./css/bundle.css" rel="stylesheet"></head>

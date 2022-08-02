@@ -10,8 +10,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&amp;family=Roboto&amp;display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
-  <script src="7f142e0b5457434caca3.js"></script>
-  <script src="10da0338be622ed32235.js"></script>
+  <script src="0479aff79c312b8d33db.js"></script>
+  <script src="3cd0c4ae24bc8c1356bf.js"></script>
   <title>ONCOR</title>
   <body class="singer_list song_bg" ontouchstart="">
     <nav class="back_navbar fixed-top d-flex align-items-center">
@@ -71,7 +71,7 @@
         <div class="tab-content" id="pills-tabContent">
           <div class="tab-pane position-relative fade show active" id="pills-zhuyin" role="tabpanel" aria-labelledby="pliis-zhuyin-tab">
             <div class="container keyboard zhuyin_keyboard">
-              <div class="keyboard_input_wrapper flex_between_center ml_16 mr_8">
+              <div class="keyboard_input_wrapper flex_between_center ml_8 mr_4">
                 <input class="keyboard_text_input font_songlist_light rounded flex-grow-1 flex-shrink-1" type="text" value="ㄐㄏ" disabled="disabled">
                 <button class="flex-grow-0 flex-shrink-0">
                   <svg class="icon return undefined" aria-hidden="true">
@@ -95,10 +95,10 @@
                 <div class="keys flex_center">
                   <div class="key ratio ratio-1x1 flex_center light">ㄅ</div>
                   <div class="key ratio ratio-1x1 flex_center light">ㄉ</div>
-                  <div class="key ratio ratio-1x1 flex_center light empty"></div>
-                  <div class="key ratio ratio-1x1 flex_center light empty"></div>
+                  <div class="key ratio ratio-1x1 flex_center light hidden"></div>
+                  <div class="key ratio ratio-1x1 flex_center light hidden"></div>
                   <div class="key ratio ratio-1x1 flex_center light">ㄓ</div>
-                  <div class="key ratio ratio-1x1 flex_center light empty"></div>
+                  <div class="key ratio ratio-1x1 flex_center light hidden"></div>
                   <div class="key ratio ratio-1x1 flex_center light">ㄦ</div>
                   <div class="key ratio ratio-1x1 flex_center light">ㄚ</div>
                   <div class="key ratio ratio-1x1 flex_center light">ㄞ</div>
@@ -168,13 +168,89 @@
             </div>
           </div>
           <div class="tab-pane fade" id="pills-english" role="tabpanel" aria-labelledby="pliis-english-tab">
-            <div class="row">
-              <div class="col-6 font_xs_gray">歌手</div>
-              <div class="col-6 font_xs_gray">歌手</div>
+            <div class="container keyboard english_keyboard">
+              <div class="keyboard_input_wrapper flex_between_center ml_16 mr_8">
+                <input class="keyboard_text_input font_songlist_light rounded flex-grow-1 flex-shrink-1" type="text" value="ZIANG" disabled="disabled">
+                <button class="flex-grow-0 flex-shrink-0">
+                  <svg class="icon return undefined" aria-hidden="true">
+                    <use xlink:href="#return"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="keyboard_board keboard_board english mt_12 pb_10">
+                <div class="keys flex_center">
+                  <div class="key ratio ratio-1x1 flex_center light">1</div>
+                  <div class="key ratio ratio-1x1 flex_center light">2</div>
+                  <div class="key ratio ratio-1x1 flex_center light">3</div>
+                  <div class="key ratio ratio-1x1 flex_center light">4</div>
+                  <div class="key ratio ratio-1x1 flex_center light">5</div>
+                  <div class="key ratio ratio-1x1 flex_center light">6</div>
+                  <div class="key ratio ratio-1x1 flex_center light">7</div>
+                  <div class="key ratio ratio-1x1 flex_center light">8</div>
+                  <div class="key ratio ratio-1x1 flex_center light">9</div>
+                  <div class="key ratio ratio-1x1 flex_center light">0</div>
+                </div>
+                <div class="keys flex_center">
+                  <div class="key ratio ratio-1x1 flex_center light">Q</div>
+                  <div class="key ratio ratio-1x1 flex_center light">W</div>
+                  <div class="key ratio ratio-1x1 flex_center light">E</div>
+                  <div class="key ratio ratio-1x1 flex_center light">R</div>
+                  <div class="key ratio ratio-1x1 flex_center light">T</div>
+                  <div class="key ratio ratio-1x1 flex_center light">Y</div>
+                  <div class="key ratio ratio-1x1 flex_center light">U</div>
+                  <div class="key ratio ratio-1x1 flex_center light">U</div>
+                  <div class="key ratio ratio-1x1 flex_center light">I</div>
+                  <div class="key ratio ratio-1x1 flex_center light">O</div>
+                </div>
+                <div class="keys flex_center translate">
+                  <div class="key ratio ratio-1x1 flex_center light">A</div>
+                  <div class="key ratio ratio-1x1 flex_center light">S</div>
+                  <div class="key ratio ratio-1x1 flex_center light">D</div>
+                  <div class="key ratio ratio-1x1 flex_center light">F</div>
+                  <div class="key ratio ratio-1x1 flex_center light">G</div>
+                  <div class="key ratio ratio-1x1 flex_center light">H</div>
+                  <div class="key ratio ratio-1x1 flex_center light">J</div>
+                  <div class="key ratio ratio-1x1 flex_center light">K</div>
+                  <div class="key ratio ratio-1x1 flex_center light">L</div>
+                  <div class="key ratio ratio-1x1 flex_center light hidden"></div>
+                </div>
+                <div class="keys flex_center">
+                  <div class="key ratio ratio-1x1 flex_center light hidden"></div>
+                  <div class="key ratio ratio-1x1 flex_center light hidden"></div>
+                  <div class="key ratio ratio-1x1 flex_center light">Z</div>
+                  <div class="key ratio ratio-1x1 flex_center light">X</div>
+                  <div class="key ratio ratio-1x1 flex_center light">C</div>
+                  <div class="key ratio ratio-1x1 flex_center light">V</div>
+                  <div class="key ratio ratio-1x1 flex_center light">B</div>
+                  <div class="key ratio ratio-1x1 flex_center light">N</div>
+                  <div class="key ratio ratio-1x1 flex_center light hidden"></div>
+                  <div class="key ratio ratio-1x1 flex_center light hidden"></div>
+                </div>
+              </div>
             </div>
-            <div class="row mt_5">
-              <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
-              <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+            <div class="scroll_wrapper_english container">
+              <div class="row mt_5">
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+                <div class="col-6 my_8"><a class="ktv_song_card singer_card font_songlist_light" href="singer_songs.html">江蕙</a></div>
+              </div>
             </div>
           </div>
           <div class="tab-pane fade" id="pills-one" role="tabpanel" aria-labelledby="pliis-one-tab">

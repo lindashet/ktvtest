@@ -142,6 +142,18 @@ $(document).ready(function () {
     console.log(targetItemId);
     $("#categoryModal .modal_list_btn").removeClass("selected");
     $("#categoryModal #modal-list-".concat(targetItemId)).addClass("selected");
+
+    if (targetItemId == "english") {
+      window.setTimeout(function () {
+        setScrollWrapperHeight(".english_keyboard", ".scroll_wrapper_english");
+      }, 100);
+    }
+
+    if (targetItemId == "zhuyin") {
+      window.setTimeout(function () {
+        setScrollWrapperHeight(".zhuyin_keyboard", ".scroll_wrapper_zhuyin");
+      }, 100);
+    }
   });
   $("#categoryModal .modal_list_btn").click(function (e) {
     var targetItemId = e.target.id.split("-")[2];
@@ -154,5 +166,23 @@ $(document).ready(function () {
     console.log(targetItemText);
     $(".main_title h5").html(targetItemText);
     $("#backNavModal").modal("hide");
+  }); //動態改變 ScrollWrapper 高度
+  //進入畫面時設定 ScrollWrapper 高度
+
+  setScrollWrapperHeight(".zhuyin_keyboard", ".scroll_wrapper_zhuyin");
+  setScrollWrapperHeight(".english_keyboard", ".scroll_wrapper_english");
+  $(window).resize(function () {
+    //Screen size 改變時設定 ScrollWrapper 高度
+    setScrollWrapperHeight(".zhuyin_keyboard", ".scroll_wrapper_zhuyin");
+    setScrollWrapperHeight(".english_keyboard", ".scroll_wrapper_english");
   });
+
+  function setScrollWrapperHeight(keyboard, scrollWrapper) {
+    var scrollWrapperPaddingTop = $(keyboard).height() + 10;
+    console.log(scrollWrapperPaddingTop);
+    $(scrollWrapper).css("padding-top", "".concat(scrollWrapperPaddingTop, "px"));
+  } // $('button[data-bs-toggle="pill"]').on("show.bs.tab", function (e) {
+  //   console.log("open");
+  // });
+
 });

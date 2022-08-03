@@ -2506,6 +2506,8 @@ nav.navbar.navbar_song {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center; }
+    .bottom_tab .tab_wrapper .tab_sheet {
+      line-height: 25px; }
   .bottom_tab .active_tab {
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
@@ -2690,7 +2692,8 @@ nav.back_navbar {
     font-size: 1.125rem;
     color: #ffffff;
     font-weight: 700;
-    letter-spacing: 2px; }
+    letter-spacing: 2px;
+    line-height: initial !important; }
   nav.back_navbar span,
   nav.back_navbar h5 {
     -o-text-overflow: ellipsis;
@@ -2779,10 +2782,8 @@ nav.back_navbar {
 
 .controller.settings nav.back_navbar {
   height: 7vh; }
-  .controller.settings nav.back_navbar h5 {
-    font-size: 2.52vh; }
 
-.controller.settings .controller.settings *:not(.tab_sheet) {
+.controller.settings * {
   line-height: 1.5vh; }
 
 .controller.settings h6 {

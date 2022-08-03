@@ -1,3 +1,4 @@
+//search_list_data.js
 const list = [
   { title: "注音", id: "zhuyin", img: "KTV-default" },
   { title: "字部", id: "word", img: "KTV-default" },

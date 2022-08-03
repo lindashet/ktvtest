@@ -1,3 +1,4 @@
+//category_list_data.js
 $(document).ready(function () {
   //藥丸分類視窗 / 導覽分類視窗 預選 index 1
   $("#categoryModal .modal_list_btn:first-child").addClass("selected");

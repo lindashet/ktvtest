@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&amp;family=Roboto&amp;display=swap" rel="stylesheet">
 <link href="./css/bundle.css" rel="stylesheet">
   <title>ONCOR</title>
-  <body class="controller microphone" ontouchstart="">
+  <body class="controller microphone song_page" ontouchstart="">
     <header>
       <nav class="back_navbar fixed-top d-flex align-items-center">
         <div class="container-fluid p-0 d-flex justify-content-start align-items-center position-relative">
@@ -25,7 +25,7 @@
     </header>
     <div class="main container container-md">
       <div class="row justify-content-center">
-        <div class="controllerler micVolume" id="micVolume">
+        <div class="volume_controller micVolume" id="micVolume">
           <button class="volume_btn" id="micVolumeMinus">
             <svg class="icon minus undefined" aria-hidden="true">
               <use xlink:href="#minus"></use>
@@ -34,12 +34,12 @@
           <div class="progress_wrapper">
             <h6 class="font_sub_gray">音量</h6>
             <div class="dot_wrapper flex_center mt_12">
-              <div class="dot"></div>
-              <div class="dot"></div>
-              <div class="dot"></div>
-              <div class="dot"></div>
-              <div class="dot"></div>
-              <div class="dot"></div>
+              <div class="dot active"></div>
+              <div class="dot active"></div>
+              <div class="dot active"></div>
+              <div class="dot active"></div>
+              <div class="dot active"></div>
+              <div class="dot active"></div>
               <div class="dot"></div>
               <div class="dot"></div>
               <div class="dot"></div>
@@ -53,7 +53,7 @@
             </svg>
           </button>
         </div>
-        <div class="controllerler tone" id="tone">
+        <div class="volume_controller volume_middle tone" id="tone">
           <button class="volume_btn" id="toneMinus">
             <svg class="icon minus undefined" aria-hidden="true">
               <use xlink:href="#minus"></use>
@@ -81,7 +81,7 @@
             </svg>
           </button>
         </div>
-        <div class="controllerler echo" id="echo">
+        <div class="volume_controller volume_middle echo" id="echo">
           <button class="volume_btn" id="echoMinus">
             <svg class="icon minus undefined" aria-hidden="true">
               <use xlink:href="#minus"></use>

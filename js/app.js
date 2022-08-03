@@ -1,3 +1,4 @@
+//app.js
 $(document).ready(function () {
   //回上頁
   $("#backToPre").on("click", () => {
@@ -97,21 +98,48 @@ $(document).ready(function () {
     requestModal("成功刪除", requestSong, requestSinger, "success");
   });
 
+  //Volume Controller
   //音量控制項
-  const defaultVol = 0; //預設音量
-  const maxVol = 5; //最大音量
-  const minVol = -5; //最小音量
+  const defaultVol = 6; //預設音量
+  const maxVol = 11; //最大音量
+  const minVol = 1; //最小音量
+  
+  //Middle音樂控制項
+  const defaultMVol = 0; //預設音量
+  const maxMVol = 5; //最大音量
+  const minMVol = -5; //最小音量
   const correction = 6; //校正值
-
+  
   let micVolumeVol = defaultVol,
-    toneVol = defaultVol,
-    echoVol = defaultVol,
-    volumeVol = defaultVol;
-
+  toneVol = defaultMVol,
+  echoVol = defaultMVol,
+  volumeVol = defaultVol;
+  
+  volumeController("micVolume", micVolumeVol);
+  volumeController("volume", volumeVol);
+  volumeMiddleController("tone", toneVol);
+  volumeMiddleController("echo", echoVol);
+  
   function volumeController(id, val) {
     $(`#${id}Plus`).click(function () {
-      if (val >= defaultVol) {
-        if (val < maxVol) {
+      if (val < maxVol) {
+        val++;
+        $(`#${id} .dot:nth-child(${val})`).addClass("active");
+      }
+    });
+
+    $(`#${id}Minus`).click(function () {
+      if (val > minVol) {
+        $(`#${id} .dot:nth-child(${val})`).removeClass("active");
+        val--;
+      }
+    });
+  }
+
+  function volumeMiddleController(id, val) {
+    $(`#${id}Plus`).click(function () {
+      if (val >= defaultMVol) {
+        if (val < maxMVol) {
           val++;
           $(`#${id} .dot:nth-child(${val + correction})`).addClass("active");
         } else {
@@ -124,11 +152,11 @@ $(document).ready(function () {
     });
 
     $(`#${id}Minus`).click(function () {
-      if (val > defaultVol) {
+      if (val > defaultMVol) {
         $(`#${id} .dot:nth-child(${val + correction})`).removeClass("active");
         val--;
       } else {
-        if (val > minVol) {
+        if (val > minMVol) {
           val--;
           $(`#${id} .dot:nth-child(${val + correction})`).addClass("active");
         } else {
@@ -138,10 +166,6 @@ $(document).ready(function () {
     });
   }
 
-  volumeController("micVolume", micVolumeVol);
-  volumeController("tone", toneVol);
-  volumeController("echo", echoVol);
-  volumeController("volume", volumeVol);
 
   //藥丸分類視窗按鈕點擊動作
   $("#categoryModal .modal_list_btn").click(function (e) {

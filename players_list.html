@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&amp;family=Roboto&amp;display=swap" rel="stylesheet">
   <link href="./css/bundle.css" rel="stylesheet">
   <title>ONCOR</title>
-  <body class="players_list song_bg" ontouchstart="">
+  <body class="players_list song_page song_bg" ontouchstart="">
     <div class="playing_card position-fixed w-100 px_24">
       <div class="playing_song_wrapper d-flex"><img class="cover" src="assets/imgs//bb_now_playing_card.png">
         <div class="song_content overflow-hidden ml_20 mt_8">
@@ -52,12 +52,6 @@
               <div class="card_tag party">導</div>
               <div class="card_tag purple ml_4">原</div>
             </div>
-          </div>
-          <div class="collapse_actions accordion-collapse flex_center collapse" id="collapse-interrupt" aria-labelledby="headinginterrupt" data-bs-parent="#accordion_cards">
-            <button class="stroke_btn requestModalDelete">刪除</button>
-            <svg class="icon arrow_top undefined" aria-hidden="true">
-              <use xlink:href="#arrow_top"></use>
-            </svg>
           </div>
         </div>
         <div class="col-12 my_8 song_card_wapper onready">
@@ -298,7 +292,7 @@
           </div></a>
       </div>
     </div>
-    <div class="modal fade" id="requestModal" ctabindex="-1" aria-labelledby="requestModalLabel" aria-hidden="true">
+    <div class="modal" id="requestModal" ctabindex="-1" aria-labelledby="requestModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content toast_modal model_alert">
           <div class="modal-header flex_center">

@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&amp;family=Roboto&amp;display=swap" rel="stylesheet">
   <link href="./css/bundle.css" rel="stylesheet">
   <title>ONCOR</title>
-  <body class="controller settings" ontouchstart="">
+  <body class="controller settings song_page" ontouchstart="">
     <header>
       <nav class="back_navbar fixed-top d-flex align-items-center">
         <div class="container-fluid p-0 d-flex justify-content-start align-items-center position-relative">
@@ -103,28 +103,23 @@
     </div>
     <div class="bottom_tab bottom_tab_settings">
       <div class="tab_sheet font_sm_party">歡呼特效</div>
-      <div class="tab_wrapper">
-        <button class="setting_icon_btn d-flex flex-column align-items-center">
-          <div class="circle">
-            <svg class="icon mr_16 mr_m_0" aria-hidden="true">
-              <use xlink:href="#hands"></use>
-            </svg>
-          </div><span class="font_sm_gray">歡呼鼓掌</span>
-        </button>
-        <button class="setting_icon_btn d-flex flex-column align-items-center">
-          <div class="circle">
-            <svg class="icon mr_16 mr_m_0" aria-hidden="true">
-              <use xlink:href="#shine"></use>
-            </svg>
-          </div><span class="font_sm_gray">閃光四溢</span>
-        </button>
-        <button class="setting_icon_btn d-flex flex-column align-items-center">
-          <div class="circle">
-            <svg class="icon mr_16 mr_m_0" aria-hidden="true">
-              <use xlink:href="#noise"></use>
-            </svg>
-          </div><span class="font_sm_gray">號角響起</span>
-        </button>
+      <div class="tab_wrapper flex_between_center">
+        <div class="setting_btn_wrapper flex_center flex-grow-1">
+          <button class="setting_btn setting_bottom_circle_btn">火焰
+          </button>
+        </div>
+        <div class="setting_btn_wrapper flex_center flex-grow-1">
+          <button class="setting_btn setting_bottom_circle_btn">警報
+          </button>
+        </div>
+        <div class="setting_btn_wrapper flex_center flex-grow-1">
+          <button class="setting_btn setting_bottom_circle_btn">電流
+          </button>
+        </div>
+        <div class="setting_btn_wrapper flex_center flex-grow-1">
+          <button class="setting_btn setting_bottom_circle_btn">閃電
+          </button>
+        </div>
       </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>

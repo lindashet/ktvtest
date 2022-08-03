@@ -1,3 +1,4 @@
+// song_list_data.js
 $(document).ready(function () {
   const newKtvImgCards = [
     { title: "國語", img: "KTV-1-NewRelease-01" },

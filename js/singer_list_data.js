@@ -1,3 +1,4 @@
+//singer_list_data.js
 const list = [
   { title: "女歌星", id: "female", img: "KTV-default" },
   { title: "男歌星", id: "male", img: "KTV-default" },

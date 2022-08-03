@@ -2280,6 +2280,7 @@ nav.navbar.navbar_song {
     top: 0px;
     left: 0px;
     z-index: 1030;
+    margin-left: 0;
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     -webkit-transition: none !important;
@@ -2781,7 +2782,7 @@ nav.back_navbar {
   .controller.settings nav.back_navbar h5 {
     font-size: 2.52vh; }
 
-.controller.settings * {
+.controller.settings .controller.settings *:not(.tab_sheet) {
   line-height: 1.5vh; }
 
 .controller.settings h6 {

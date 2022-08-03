@@ -1424,7 +1424,7 @@ nav.nav_category {
   background: #151515;
   position: fixed;
   z-index: 1030;
-  top: 7vh; }
+  top: 50px; }
   nav.nav_category .expand_btn {
     width: 70px;
     height: 70px;
@@ -1926,19 +1926,19 @@ footer.footer {
   background-attachment: fixed; }
 
 .song_nav_sub_margin {
-  margin-top: calc(7vh + 70px);
+  margin-top: calc(50px + 70px);
   margin-bottom: 5rem; }
 
 .song_nav_margin {
-  margin-top: calc(7vh + 20px);
+  margin-top: calc(50px + 20px);
   margin-bottom: 5rem; }
 
 .song_nav_margin_seamless {
-  margin-top: 7vh;
+  margin-top: 50px;
   margin-bottom: 5rem; }
 
 .players_list_nav_margin {
-  margin-top: calc(7vh + 150px);
+  margin-top: calc(50px + 150px);
   margin-bottom: 5rem; }
 
 .players_list .back_navbar {
@@ -2054,10 +2054,6 @@ footer.footer {
       height: 30.5vh;
       z-index: 2; } }
 
-/*!**********************************************************************************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!../node_modules/sass-loader/dist/cjs.js!./scss/home.scss ***!
-  \**********************************************************************************************************************************************************************************/
-
 /*!***************************************************************************************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!../node_modules/sass-loader/dist/cjs.js!./scss/components/navigation.scss ***!
   \***************************************************************************************************************************************************************************************************/
@@ -2069,9 +2065,7 @@ nav.navbar {
     -webkit-box-align: stretch;
     -webkit-align-items: stretch;
         -ms-flex-align: stretch;
-            align-items: stretch;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem; }
+            align-items: stretch; }
   nav.navbar .navbar-toggler svg.icon.menu {
     width: 24px;
     height: 24px; }
@@ -2093,48 +2087,23 @@ nav.navbar {
     width: 14px;
     height: 14px;
     color: #db00ff; }
-  nav.navbar svg.icon.logo {
-    width: 196px;
-    height: 80px; }
-    nav.navbar svg.icon.logo:active, nav.navbar svg.icon.logo:hover {
-      color: white; }
   nav.navbar a.nav-link {
-    font-size: 1rem;
     color: #a8a7a7;
-    font-weight: 500;
-    line-height: 24px;
-    letter-spacing: 1px; }
+    font-weight: 500; }
     nav.navbar a.nav-link:active {
       color: #ffffff; }
   nav.navbar .nav_member_wrapper button.lang {
     position: relative; }
-    nav.navbar .nav_member_wrapper button.lang:after {
-      content: "";
-      position: absolute;
-      width: 1px;
-      height: 100%;
-      background-color: #484848;
-      right: 0;
-      top: 0; }
   nav.navbar .nav_member_wrapper a,
   nav.navbar .nav_member_wrapper button {
     padding-left: 0.5rem;
     padding-right: 0.5rem; }
   nav.navbar .nav_member_wrapper svg.icon {
-    cursor: pointer;
-    width: 20px;
-    height: 20px; }
+    cursor: pointer; }
   nav.navbar .nav_member_wrapper .avator img {
-    width: 34px;
-    height: 34px;
     -webkit-clip-path: circle(50%);
             clip-path: circle(50%); }
-  nav.navbar .nav_member_wrapper .avator span {
-    font-size: 0.875rem;
-    color: #ffffff; }
   nav.navbar .nav_member_wrapper svg.icon.user-solid {
-    width: 34px;
-    height: 34px;
     background-color: #a8a7a7;
     -webkit-clip-path: circle(50%);
             clip-path: circle(50%);
@@ -2150,35 +2119,12 @@ nav.navbar {
     nav.navbar .button_stroke.register:active {
       border-color: #db00ff; }
 
-@media screen and (max-width: 991px) {
-  nav.navbar svg.icon.logo {
-    width: 150px; }
-  nav.navbar a.nav-link {
-    font-size: 0.875rem;
-    color: #a8a7a7;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 1px; }
-  nav.navbar .nav_member_wrapper button.lang:after {
-    width: 0;
-    height: 0; } }
-
 @media screen and (max-width: 767px) {
   nav.navbar {
     height: 50px; }
     nav.navbar .container-fluid {
       padding-left: 0;
       padding-right: 0; }
-    nav.navbar .navbar-brand {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      -webkit-transform: translate(-50%, -50%);
-          -ms-transform: translate(-50%, -50%);
-              transform: translate(-50%, -50%); }
-    nav.navbar svg.icon.logo {
-      width: 118px;
-      height: 24px; }
     nav.navbar .navbar-collapse {
       position: absolute;
       width: 100%;
@@ -2245,28 +2191,163 @@ nav.navbar {
     color: #db00ff; } }
 
 /*!********************************************************************************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!../node_modules/sass-loader/dist/cjs.js!./scss/components/navigation_home.scss ***!
+  \********************************************************************************************************************************************************************************************************/
+@media screen and (min-width: 768px) {
+  nav.navbar.navbar_home .container-fluid {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem; }
+  nav.navbar.navbar_home svg.icon.logo {
+    width: 196px;
+    height: 80px; }
+    nav.navbar.navbar_home svg.icon.logo:active, nav.navbar.navbar_home svg.icon.logo:hover {
+      color: white; }
+  nav.navbar.navbar_home .navbar-collapse {
+    margin-left: 3.125rem; }
+  nav.navbar.navbar_home a.nav-link {
+    font-size: 1rem; }
+  nav.navbar.navbar_home .nav_member_wrapper svg.icon {
+    width: 20px;
+    height: 20px; }
+  nav.navbar.navbar_home .nav_member_wrapper .avator img {
+    width: 34px;
+    height: 34px;
+    -webkit-clip-path: circle(50%);
+            clip-path: circle(50%); }
+  nav.navbar.navbar_home .nav_member_wrapper .avator span {
+    font-size: 0.875rem;
+    color: #ffffff; }
+  nav.navbar.navbar_home .nav_member_wrapper svg.icon.user-solid {
+    width: 34px;
+    height: 34px; } }
+
+@media screen and (min-width: 768px) {
+  nav.navbar.navbar_home .nav_member_wrapper button.lang:after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background-color: #484848;
+    right: 0;
+    top: 0; } }
+
+@media screen and (max-width: 991px) {
+  nav.navbar.navbar_home svg.icon.logo {
+    width: 150px; }
+  nav.navbar.navbar_home .navbar-collapse {
+    margin-left: 1.25rem; }
+  nav.navbar.navbar_home a.nav-link {
+    font-size: 0.875rem;
+    color: #a8a7a7;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 1px; } }
+
+@media screen and (max-width: 767px) {
+  nav.navbar.navbar_home {
+    height: 50px; }
+    nav.navbar.navbar_home .container-fluid {
+      padding-left: 0;
+      padding-right: 0; }
+    nav.navbar.navbar_home .navbar-brand {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%); }
+    nav.navbar.navbar_home svg.icon.logo {
+      width: 118px;
+      height: 24px; }
+    nav.navbar.navbar_home a.nav-link {
+      font-size: 1.25rem; }
+    nav.navbar.navbar_home .navbar-collapse {
+      margin-left: 0; } }
+
+/*!********************************************************************************************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!../node_modules/sass-loader/dist/cjs.js!./scss/components/navigation_song.scss ***!
   \********************************************************************************************************************************************************************************************************/
-@media screen and (max-width: 767px) {
-  nav.navbar.song {
-    background: transparent; }
-    nav.navbar.song .navbar-toggler {
-      position: relative;
-      width: 56px; }
-    nav.navbar.song .nav_member_wrapper {
-      position: relative;
-      padding-left: 0.25rem; }
-      nav.navbar.song .nav_member_wrapper:before {
-        position: absolute;
-        content: "";
-        left: 0;
-        top: 50%;
-        -webkit-transform: translateY(-50%);
-            -ms-transform: translateY(-50%);
-                transform: translateY(-50%);
-        width: 1px;
-        height: 43px;
-        background-color: rgba(255, 255, 255, 0.1); } }
+nav.navbar.navbar_song {
+  height: 50px; }
+  nav.navbar.navbar_song .container-fluid {
+    padding-left: 0;
+    padding-right: 0; }
+  nav.navbar.navbar_song .navbar-collapse {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0px;
+    left: 0px;
+    z-index: 1030;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    -webkit-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important; }
+  nav.navbar.navbar_song .navbar-nav {
+    background: #000000;
+    width: 70%;
+    height: 100%;
+    background-color: #000000;
+    min-width: 280px;
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none; }
+  nav.navbar.navbar_song .navbar-toggler {
+    z-index: 1031; }
+  nav.navbar.navbar_song ul.navbar-nav {
+    padding-top: 70px; }
+  nav.navbar.navbar_song li.nav-item {
+    text-align: center;
+    position: relative; }
+    nav.navbar.navbar_song li.nav-item:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #484848; }
+  nav.navbar.navbar_song a.nav-link {
+    font-size: 1.25rem; }
+  nav.navbar.navbar_song .nav_member_wrapper svg.icon {
+    width: 24px;
+    height: 24px; }
+  nav.navbar.navbar_song .nav_member_wrapper .avator img {
+    width: 24px;
+    height: 24px; }
+  nav.navbar.navbar_song .nav_member_wrapper .avator span {
+    font-size: 0.875rem;
+    color: #ffffff; }
+  nav.navbar.navbar_song .nav_member_wrapper svg.icon.user-solid {
+    width: 24px;
+    height: 24px;
+    background-color: #a8a7a7;
+    -webkit-clip-path: circle(50%);
+            clip-path: circle(50%);
+    color: #ffffff;
+    padding: 0.3125rem; }
+
+nav.navbar.navbar_song {
+  background: transparent; }
+  nav.navbar.navbar_song .navbar-toggler {
+    position: relative;
+    width: 56px; }
+  nav.navbar.navbar_song .nav_member_wrapper {
+    position: relative;
+    padding-left: 0.25rem; }
+    nav.navbar.navbar_song .nav_member_wrapper:before {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+              transform: translateY(-50%);
+      width: 1px;
+      height: 43px;
+      background-color: rgba(255, 255, 255, 0.1); }
 
 /*!**********************************************************************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!../node_modules/sass-loader/dist/cjs.js!./scss/song.scss ***!
@@ -2601,13 +2682,20 @@ nav.back_navbar {
     width: 10px;
     height: 5px;
     color: #a8a7a7; }
+  nav.back_navbar .title_wrapper {
+    overflow: hidden;
+    margin-right: 1.25rem; }
   nav.back_navbar h5 {
     font-size: 1.125rem;
     color: #ffffff;
     font-weight: 700;
-    line-height: 24px;
-    letter-spacing: 2px;
-    padding-bottom: 4px; }
+    letter-spacing: 2px; }
+  nav.back_navbar span,
+  nav.back_navbar h5 {
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap; }
   nav.back_navbar .main_title h5 {
     margin-right: 0.375rem; }
 
@@ -2618,11 +2706,12 @@ nav.back_navbar {
   background-image: -o-linear-gradient(313.03deg, #111011 15.14%, #222222 95.09%);
   background-image: linear-gradient(136.97deg, #111011 15.14%, #222222 95.09%);
   background-attachment: fixed; }
-  .controller nav.back_navbar {
-    background-color: #000000;
-    height: 7vh; }
   .controller .main.container {
     margin-top: 7vh; }
+  .controller nav.back_navbar {
+    height: 7vh; }
+    .controller nav.back_navbar h5 {
+      font-size: 2.52vh; }
   .controller .microphone_mode {
     margin-top: 4.8vh;
     padding-left: 2.5rem;
@@ -2686,6 +2775,11 @@ nav.back_navbar {
   .controller .setting_circle_btn {
     margin-left: 0.4vh;
     margin-right: 0.4vh; }
+
+.controller.settings nav.back_navbar {
+  height: 7vh; }
+  .controller.settings nav.back_navbar h5 {
+    font-size: 2.52vh; }
 
 .controller.settings * {
   line-height: 1.5vh; }

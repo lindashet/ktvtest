@@ -2403,6 +2403,15 @@ nav.nav_category .category_wrapper .nav-item {
   color: #db00ff;
 }
 
+.fast_btn svg {
+  width: 5.2vh;
+  height: 5.2vh;
+}
+
+.fast_btn:active {
+  color: #db00ff;
+}
+
 .badge {
   background: #db00ff;
   border-radius: 8px;
@@ -2557,6 +2566,9 @@ footer.footer {
     font-weight: 500;
   }
   .active_tab:hover * {
+    color: #db00ff;
+  }
+  .fast_btn:hover {
     color: #db00ff;
   }
   .setting_icon_btn svg:hover {
@@ -3211,7 +3223,7 @@ nav.navbar.navbar_song .nav_member_wrapper:before {
 .song .active_button_wrapper {
   position: fixed;
   left: 50%;
-  bottom: calc(6vh + 106px);
+  bottom: 96px;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
@@ -3278,6 +3290,18 @@ nav.navbar.navbar_song .nav_member_wrapper:before {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+}
+.song .active_button_wrapper .button_wrapper.fast {
+  margin-top: 1.6vh;
+}
+.song .active_button_wrapper .button_wrapper.fast * {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
 }
 .song .active_button_wrapper .button_wrapper.sub {
   margin-top: 2.8vh;

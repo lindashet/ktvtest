@@ -2026,6 +2026,7 @@ nav.nav_category .category_wrapper .nav-item {
   text-align: center;
   line-height: 1rem;
   padding-top: 0.3rem;
+  letter-spacing: 0.5px;
 }
 
 .ktv_song_card {
@@ -2339,6 +2340,7 @@ nav.nav_category .category_wrapper .nav-item {
   margin-right: 1rem;
 }
 .toast_lang_wrapper .toast_lang li {
+  list-style: none;
   position: relative;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -2398,6 +2400,7 @@ nav.nav_category .category_wrapper .nav-item {
   font-size: 0.75rem;
   font-weight: 500;
   margin-top: 0.25rem;
+  letter-spacing: 0.5px;
 }
 .active_tab:active * {
   color: #db00ff;
@@ -2537,6 +2540,7 @@ footer.footer {
     margin-right: 16px;
   }
   .toast_lang_wrapper.active .toast_lang li {
+    list-style: none;
     position: relative;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -2546,7 +2550,7 @@ footer.footer {
 @media screen and (max-width: 390px) {
   .square_icon_tab span {
     line-height: 8vw;
-    font-size: 4vw;
+    font-size: 3.6vw;
   }
 }
 
@@ -2707,9 +2711,6 @@ footer.footer {
   width: 100%;
   margin-top: 15%;
 }
-.home .square_icon_tab span {
-  letter-spacing: 2px;
-}
 .home .simple_btn.login {
   background-color: #ffffff;
   border-radius: 0;
@@ -2730,6 +2731,9 @@ footer.footer {
     width: initial;
     height: initial;
     width: 53%;
+  }
+  .home .square_icon_tab span {
+    font-size: 0.875rem;
   }
 }
 
@@ -2761,7 +2765,7 @@ footer.footer {
     margin-bottom: 1.8vh;
   }
   .home .square_icon_tab span {
-    font-size: 2.2vh;
+    font-size: 1.5vh;
   }
   .home .simple_btn.login,
   .home .simple_btn.register {
@@ -2868,6 +2872,7 @@ nav.navbar .nav_member_wrapper svg.icon.user-solid {
 }
 nav.navbar .button_stroke {
   color: #ffffff;
+  font-size: 0.875rem;
 }
 nav.navbar .button_stroke:active {
   border-color: #db00ff;
@@ -3641,8 +3646,8 @@ nav.back_navbar h5 {
   color: #ffffff;
   font-weight: 700;
   line-height: initial !important;
-  font-size: 1.125rem;
-  letter-spacing: 2px;
+  font-size: 1rem;
+  letter-spacing: 1px;
 }
 nav.back_navbar span,
 nav.back_navbar h5 {
@@ -3706,7 +3711,7 @@ nav.back_navbar .main_title h5 {
   flex-basis: 50%;
   flex-grow: 1;
   flex-shrink: 1;
-  letter-spacing: 4px;
+  letter-spacing: 1px;
 }
 .controller .microphone_mode .stroke_btn:first-child {
   border-radius: 16px 4px 4px 16px;

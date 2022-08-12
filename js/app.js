@@ -79,25 +79,25 @@ $(document).ready(function () {
   let requestSong = "落月";
   let requestSinger = "江蕙";
 
-  //langSetting == "tw"
+  //langSetting == "en"
   //點播
   $(".requestModalRequest").click(function () {
-    requestModal("成功點播", requestSong, requestSinger, "success");
+    requestModal("Queue", requestSong, requestSinger, "success");
   });
 
   //插播
   $(".requestModalInterrupt").click(function () {
-    requestModal("成功插播", requestSong, requestSinger, "success");
+    requestModal("Priority", requestSong, requestSinger, "success");
   });
 
   //角色插播
   $(".requestModalLeadInterrupt").click(function () {
-    requestModal("已有角色插播", requestSong, requestSinger, "warning");
+    requestModal("Next On exits", requestSong, requestSinger, "warning");
   });
 
   //刪除
   $(".requestModalDelete").click(function () {
-    requestModal("成功刪除", requestSong, requestSinger, "success");
+    requestModal("Delete", requestSong, requestSinger, "success");
   });
 
   //Volume Controller

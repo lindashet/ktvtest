@@ -1,20 +1,19 @@
 // song_list_data.js
 $(document).ready(function () {
-  //langSetting == "tw"
+  //langSetting == "en"
   const newKtvImgCards = [
-    { title: "國語", img: "KTV-1-NewRelease-01" },
-    { title: "台語", img: "KTV-1-NewRelease-02" },
-    { title: "英語", img: "KTV-1-NewRelease-03" },
-    { title: "粵語", img: "cantonese" },
-    { title: "其他", img: "KTV-1-NewRelease-08" },
+    { title: "MANDARIN", img: "KTV-1-NewRelease-01" },
+    { title: "TAIWANESE", img: "KTV-1-NewRelease-02" },
+    { title: "ENGLISH", img: "KTV-1-NewRelease-03" },
+    { title: "OTHERS", img: "KTV-1-NewRelease-08" },
   ];
   const rankingKtvImgCards = [
-    { title: "新歌", img: "new-ranking" },
-    { title: "國語", img: "chinese-ranking" },
-    { title: "台語", img: "taiwanese-ranking" },
-    { title: "英語", img: "english-ranking" },
-    { title: "粵語", img: "cantonese" },
-    { title: "日語", img: "japanese-ranking" },
+    { title: "NEW RELEASE", img: "new-ranking" },
+    { title: "MANDARIN", img: "chinese-ranking" },
+    { title: "TAIWANESE", img: "taiwanese-ranking" },
+    { title: "ENGLISH", img: "english-ranking" },
+    { title: "CANTONESE", img: "cantonese" },
+    { title: "J-POP", img: "japanese-ranking" },
   ];
 
   const partyKtvImgCards = [
@@ -49,23 +48,22 @@ $(document).ready(function () {
 
   function getList() {
     $("#backNavModal .modal-body").html("");
-
-    //langSetting == "tw"
+    //langSetting == "en"
     switch (cateIndex) {
       case 0:
-        cate = "新歌快報";
+        cate = "NEW RELEASES";
         list = newKtvImgCards;
         break;
       case 1:
-        cate = "排行榜";
+        cate = "CHARTS";
         list = rankingKtvImgCards;
         break;
       case 3:
-        cate = "一鍵派對";
+        cate = "PARTY UP";
         list = partyKtvImgCards;
         break;
       case 4:
-        cate = "theLOOP Live 精選";
+        cate = "theLOOP LIVE COLLECTION";
         list = djKtvImgCards;
         break;
       default:

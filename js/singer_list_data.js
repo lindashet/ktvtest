@@ -1,11 +1,11 @@
 //singer_list_data.js
 
 $(document).ready(function () {
-  //langSetting == "tw"
+  //langSetting == "en"
   const list = [
-    { title: "女歌星", id: "female", img: "KTV-default" },
-    { title: "男歌星", id: "male", img: "KTV-default" },
-    { title: "團體", id: "group", img: "KTV-default" },
+    { title: "FEMALE ARTISTS", id: "female", img: "KTV-default" },
+    { title: "MALE ARTISTS", id: "male", img: "KTV-default" },
+    { title: "GROUP ARTISTS", id: "group", img: "KTV-default" },
   ];
 
   //取得分類標題

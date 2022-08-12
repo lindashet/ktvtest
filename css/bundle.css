@@ -1595,6 +1595,7 @@ button {
 }
 .square_icon_tab span {
   margin-top: 1vh;
+  white-space: nowrap;
 }
 .square_icon_tab:active svg,
 .square_icon_tab:active span {
@@ -2023,7 +2024,8 @@ nav.nav_category .category_wrapper .nav-item {
   font-weight: normal;
   font-size: 0.75rem;
   text-align: center;
-  line-height: 1.5rem;
+  line-height: 1rem;
+  padding-top: 0.3rem;
 }
 
 .ktv_song_card {
@@ -2340,7 +2342,9 @@ nav.nav_category .category_wrapper .nav-item {
   position: relative;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  cursor: pointer;
+}
+.toast_lang_wrapper .toast_lang li a {
+  padding: 0 !important;
 }
 .toast_lang_wrapper .toast_lang li svg.icon.check {
   display: none;
@@ -2519,7 +2523,7 @@ footer.footer {
     width: 70%;
   }
   .square_icon_tab span {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   .toast_lang_wrapper.active .toast_lang {
     width: 110px;
@@ -2541,8 +2545,8 @@ footer.footer {
 
 @media screen and (max-width: 390px) {
   .square_icon_tab span {
-    font-size: 4vw;
     line-height: 8vw;
+    font-size: 4vw;
   }
 }
 
@@ -3634,11 +3638,11 @@ nav.back_navbar .title_wrapper {
   margin-right: 1.25rem;
 }
 nav.back_navbar h5 {
-  font-size: 1.125rem;
   color: #ffffff;
   font-weight: 700;
-  letter-spacing: 2px;
   line-height: initial !important;
+  font-size: 1.125rem;
+  letter-spacing: 2px;
 }
 nav.back_navbar span,
 nav.back_navbar h5 {
@@ -3688,7 +3692,6 @@ nav.back_navbar .main_title h5 {
   margin-right: 0.5vh;
   width: auto;
   height: 9.4vh;
-  letter-spacing: 4px;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -3698,6 +3701,12 @@ nav.back_navbar .main_title h5 {
   flex-shrink: 1;
   vertical-align: middle;
   text-align: center;
+  -webkit-flex-basis: 50%;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  flex-grow: 1;
+  flex-shrink: 1;
+  letter-spacing: 4px;
 }
 .controller .microphone_mode .stroke_btn:first-child {
   border-radius: 16px 4px 4px 16px;

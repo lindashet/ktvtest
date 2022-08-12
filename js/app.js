@@ -78,6 +78,8 @@ $(document).ready(function () {
 
   let requestSong = "落月";
   let requestSinger = "江蕙";
+
+  //langSetting == "tw"
   //點播
   $(".requestModalRequest").click(function () {
     requestModal("成功點播", requestSong, requestSinger, "success");
@@ -103,23 +105,23 @@ $(document).ready(function () {
   const defaultVol = 6; //預設音量
   const maxVol = 11; //最大音量
   const minVol = 1; //最小音量
-  
+
   //Middle音樂控制項
   const defaultMVol = 0; //預設音量
   const maxMVol = 5; //最大音量
   const minMVol = -5; //最小音量
   const correction = 6; //校正值
-  
+
   let micVolumeVol = defaultVol,
-  toneVol = defaultMVol,
-  echoVol = defaultMVol,
-  volumeVol = defaultVol;
-  
+    toneVol = defaultMVol,
+    echoVol = defaultMVol,
+    volumeVol = defaultVol;
+
   volumeController("micVolume", micVolumeVol);
   volumeController("volume", volumeVol);
   volumeMiddleController("tone", toneVol);
   volumeMiddleController("echo", echoVol);
-  
+
   function volumeController(id, val) {
     $(`#${id}Plus`).click(function () {
       if (val < maxVol) {
@@ -165,7 +167,6 @@ $(document).ready(function () {
       }
     });
   }
-
 
   //藥丸分類視窗按鈕點擊動作
   $("#categoryModal .modal_list_btn").click(function (e) {

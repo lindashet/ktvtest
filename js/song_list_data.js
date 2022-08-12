@@ -1,5 +1,6 @@
 // song_list_data.js
 $(document).ready(function () {
+  //langSetting == "tw"
   const newKtvImgCards = [
     { title: "國語", img: "KTV-1-NewRelease-01" },
     { title: "台語", img: "KTV-1-NewRelease-02" },
@@ -14,7 +15,6 @@ $(document).ready(function () {
     { title: "英語", img: "english-ranking" },
     { title: "粵語", img: "cantonese" },
     { title: "日語", img: "japanese-ranking" },
-    { title: "韓語", img: "korean-ranking" },
   ];
 
   const partyKtvImgCards = [
@@ -50,6 +50,7 @@ $(document).ready(function () {
   function getList() {
     $("#backNavModal .modal-body").html("");
 
+    //langSetting == "tw"
     switch (cateIndex) {
       case 0:
         cate = "新歌快報";
@@ -60,11 +61,11 @@ $(document).ready(function () {
         list = rankingKtvImgCards;
         break;
       case 3:
-        cate = "電音 PARTY 排行";
+        cate = "一鍵派對";
         list = partyKtvImgCards;
         break;
       case 4:
-        cate = "THELOOP DJ 精選";
+        cate = "theLOOP Live 精選";
         list = djKtvImgCards;
         break;
       default:

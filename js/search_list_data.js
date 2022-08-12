@@ -1,12 +1,14 @@
 //search_list_data.js
-const list = [
-  { title: "注音", id: "zhuyin", img: "KTV-default" },
-  { title: "字部", id: "word", img: "KTV-default" },
-  { title: "英文", id: "english", img: "KTV-default" },
-  { title: "語種", id: "lang", img: "KTV-default" },
-];
 
 $(document).ready(function () {
+  //langSetting == "tw"
+  const list = [
+    { title: "注音", id: "zhuyin", img: "KTV-default" },
+    { title: "字部", id: "word", img: "KTV-default" },
+    { title: "英文", id: "english", img: "KTV-default" },
+    { title: "語種", id: "lang", img: "KTV-default" },
+  ];
+
   //藥丸分類視窗按鈕預選 index 1
   $("#categoryModal .modal_list_btn:first-child").addClass("selected");
 

@@ -2339,6 +2339,7 @@ nav.nav_category .category_wrapper .nav-item {
   margin-right: 1rem;
 }
 .toast_lang_wrapper .toast_lang li {
+  list-style: none;
   position: relative;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -2537,6 +2538,7 @@ footer.footer {
     margin-right: 16px;
   }
   .toast_lang_wrapper.active .toast_lang li {
+    list-style: none;
     position: relative;
     padding-top: 10px;
     padding-bottom: 10px;

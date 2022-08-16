@@ -32,10 +32,6 @@ $(document).ready(function () {
     ToastLangToggle(false);
   });
 
-  $(".lang_item").click(function () {
-    switchLang($(this));
-  });
-
   //語言視窗開關
   function ToastLangToggle(isOpen) {
     $(".toast_lang_wrapper").click(function () {
@@ -47,18 +43,6 @@ $(document).ready(function () {
         $("#cover").hide();
       }
     });
-  }
-
-  //切換語言
-  function switchLang(evt) {
-    if (evt.hasClass("tw")) {
-      $(".lang_item.tw").addClass("selected");
-      $(".lang_item.en").removeClass("selected");
-    } else if (evt.hasClass("en")) {
-      $(".lang_item.en").addClass("selected");
-      $(".lang_item.tw").removeClass("selected");
-    }
-    ToastLangToggle(false);
   }
 
   // 點播動作提示

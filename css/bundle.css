@@ -3518,6 +3518,10 @@ nav.navbar.navbar_song .nav_member_wrapper:before {
 }
 .bottom_tab.bottom_tab_main .main_button_space {
   width: 72px;
+  min-width: 72px;
+  -webkit-flex-basis: 20%;
+  -ms-flex-preferred-size: 20%;
+  flex-basis: 20%;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -3534,9 +3538,9 @@ nav.navbar.navbar_song .nav_member_wrapper:before {
   margin-top: 2rem;
 }
 .bottom_tab.bottom_tab_main .active_tab {
-  -webkit-flex-basis: 58px;
-  -ms-flex-preferred-size: 58px;
-  flex-basis: 58px;
+  -webkit-flex-basis: 20%;
+  -ms-flex-preferred-size: 20%;
+  flex-basis: 20%;
 }
 
 @media screen and (max-width: 350px) {

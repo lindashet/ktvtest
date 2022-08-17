@@ -37,6 +37,12 @@ h6 {
   padding: 0;
 }
 
+[type="button"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 .pos_center {
   position: absolute;
   top: 50%;
@@ -3630,8 +3636,8 @@ nav.back_navbar {
   background-color: #000000;
   height: 50px;
 }
-nav.back_navbar a.singer_search[type="button"],
-nav.back_navbar a.music_search[type="button"] {
+nav.back_navbar a.singer_search,
+nav.back_navbar a.music_search {
   padding: 6px 8px;
 }
 nav.back_navbar svg {

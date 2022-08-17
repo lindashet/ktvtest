@@ -13,13 +13,20 @@
   <body class="song_category_list song_page song_bg" ontouchstart="">
     <header>
       <nav class="back_navbar fixed-top d-flex align-items-center">
-        <div class="container-fluid p-0 d-flex justify-content-start align-items-center position-relative">
+        <div class="container-fluid p-0 d-flex justify-content-between align-items-center position-relative">
           <button class="navbar-toggler" id="backToPre" type="button">
             <svg class="icon back undefined" aria-hidden="true">
               <use xlink:href="#back"></use>
             </svg>
           </button>
           <h5 class="pos_center">歌曲列表</h5>
+          <div class="search_song_wrapper d-flex justify-content-end flex-grow-1"><a class="singer_search" href="search_singer.html" type="button">
+              <svg class="icon lang mr_16 mr_m_0" aria-hidden="true">
+                <use xlink:href="#singer-search"></use>
+              </svg></a><a class="music_search" href="search_music.html" type="button">
+              <svg class="icon lang mr_16 mr_m_0" aria-hidden="true">
+                <use xlink:href="#music-search"></use>
+              </svg></a></div>
         </div>
       </nav>
     </header>
@@ -45,12 +52,6 @@
           </li>
           <li class="nav-item" role="presentation">
             <button class="nav-link" id="pills-dj-tab" data-bs-toggle="pill" data-bs-target="#pills-dj" type="button" role="tab" aria-controls="pills-dj" aria-selected="false">theLOOP Live 精選</button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link" id="pills-singer-tab" data-bs-toggle="pill" data-bs-target="#pills-singer" type="button" role="tab" aria-controls="pills-singer" aria-selected="false">歌星點歌</button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link" id="pills-search-tab" data-bs-toggle="pill" data-bs-target="#pills-search" type="button" role="tab" aria-controls="pills-search" aria-selected="false">歌曲查詢</button>
           </li>
         </ul>
       </div>
@@ -136,23 +137,6 @@
                 <h6>Zenit</h6></a>
             </div>
           </div>
-          <div class="tab-pane fade" id="pills-singer" role="tabpanel" aria-labelledby="pliis-singertab">
-            <h5 class="font_title_light">歌星點歌</h5>
-            <div class="row"><a class="ktv_img_card mt_12 col-4" href="singer_list.html?cate=5&amp;title=0"><img class="img_card" src="assets/imgs/covers//KTV-default.png" alt="">
-                <h6>女歌星</h6></a><a class="ktv_img_card mt_12 col-4" href="singer_list.html?cate=5&amp;title=1"><img class="img_card" src="assets/imgs/covers//KTV-default.png" alt="">
-                <h6>男歌星</h6></a><a class="ktv_img_card mt_12 col-4" href="singer_list.html?cate=5&amp;title=2"><img class="img_card" src="assets/imgs/covers//KTV-default.png" alt="">
-                <h6>團體</h6></a>
-            </div>
-          </div>
-          <div class="tab-pane fade" id="pills-search" role="tabpanel" aria-labelledby="pliis-searchtab">
-            <h5 class="font_title_light">歌曲查詢</h5>
-            <div class="row"><a class="ktv_img_card mt_12 col-4" href="search_list_zhuyin.html"><img class="img_card" src="assets/imgs/covers//KTV-default.png" alt="">
-                <h6>注音</h6></a><a class="ktv_img_card mt_12 col-4" href="search_list_word.html"><img class="img_card" src="assets/imgs/covers//KTV-default.png" alt="">
-                <h6>字部</h6></a><a class="ktv_img_card mt_12 col-4" href="search_list_english.html"><img class="img_card" src="assets/imgs/covers//KTV-default.png" alt="">
-                <h6>英文</h6></a><a class="ktv_img_card mt_12 col-4" href="search_list_lang.html"><img class="img_card" src="assets/imgs/covers//KTV-default.png" alt="">
-                <h6>語種</h6></a>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -182,8 +166,6 @@
             <button class="modal_list_btn stroke_btn mt_10" id="modal-list-theme">主題點歌</button>
             <button class="modal_list_btn stroke_btn mt_10" id="modal-list-party">一鍵派對</button>
             <button class="modal_list_btn stroke_btn mt_10" id="modal-list-dj">theLOOP Live 精選</button>
-            <button class="modal_list_btn stroke_btn mt_10" id="modal-list-singer">歌星點歌</button>
-            <button class="modal_list_btn stroke_btn mt_10" id="modal-list-search">歌曲查詢</button>
           </div>
           <div class="modal-footer d-flex">
             <button class="stroke_btn mt_10" data-bs-dismiss="modal">關閉</button>

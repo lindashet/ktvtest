@@ -3630,7 +3630,11 @@ nav.back_navbar {
   background-color: #000000;
   height: 50px;
 }
-nav.back_navbar svg.back {
+nav.back_navbar a.singer_search[type="button"],
+nav.back_navbar a.music_search[type="button"] {
+  padding: 6px 8px;
+}
+nav.back_navbar svg {
   width: 28px;
   height: 28px;
 }

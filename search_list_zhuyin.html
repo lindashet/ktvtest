@@ -13,13 +13,13 @@
   <body class="search_list song_page song_bg" ontouchstart="">
     <header>
       <nav class="back_navbar fixed-top d-flex align-items-center">
-        <div class="container-fluid p-0 d-flex justify-content-start align-items-center position-relative">
+        <div class="container-fluid p-0 d-flex justify-content-between align-items-center position-relative">
           <button class="navbar-toggler" id="backToPre" type="button">
             <svg class="icon back undefined" aria-hidden="true">
               <use xlink:href="#back"></use>
             </svg>
           </button>
-          <div class="title_wrapper ml_16 d-flex flex-column justify-content-center"><span class="font_xs_gray">歌曲查詢</span>
+          <div class="title_wrapper ml_16 d-flex flex-column flex-grow-1 justify-content-center"><span class="font_xs_gray">歌曲查詢</span>
             <div class="main_title pointer d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#backNavModal">
               <h5>注音</h5>
               <svg class="icon arrow-g undefined" aria-hidden="true">
@@ -27,6 +27,13 @@
               </svg>
             </div>
           </div>
+          <div class="search_song_wrapper"><a class="singer_search" href="search_singer.html" type="button">
+              <svg class="icon lang mr_16 mr_m_0" aria-hidden="true">
+                <use xlink:href="#singer-search"></use>
+              </svg></a><a class="music_search" href="search_music.html" type="button">
+              <svg class="icon lang mr_16 mr_m_0" aria-hidden="true">
+                <use xlink:href="#music-search"></use>
+              </svg></a></div>
         </div>
       </nav>
     </header>

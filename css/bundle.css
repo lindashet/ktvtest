@@ -4,6 +4,7 @@
 html,
 body {
   width: 100%;
+  height: 100%;
   margin: auto 0;
   overflow-x: hidden;
   overflow-y: auto;
@@ -4340,6 +4341,7 @@ nav.back_navbar .main_title h5 {
   \***********************************************************************************************************************************************************************************/
 .sign {
   position: relative;
+  background: #f1f1f1;
 }
 .sign::before {
   content: "";

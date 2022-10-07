@@ -18,26 +18,25 @@ $(document).ready(function () {
   ];
 
   const partyKtvImgCards = [
-    { title: "ULTRA", img: "KTV-4-Party-01" },
-    { title: "EDC", img: "KTV-4-Party-02" },
-    { title: "Tomorrowland", img: "KTV-4-Party-03" },
+    { title: "TOMARROWLAND 2022", img: "KTV-4-Party-03" },
+    { title: "ULTRA 2022", img: "KTV-4-Party-01" },
+    { title: "EDC 2022", img: "KTV-4-Party-02" },
   ];
   const djKtvImgCards = [
-    { title: "Bubble", img: "BUBBLE_theLOOP_1200x1200" },
-    { title: "Cyndi", img: "CINDI_theLOOP_1200x1200" },
+    { title: "BUBBLE", img: "BUBBLE_theLOOP_1200x1200-2" },
+    { title: "CYNDI", img: "CYNDI_theLOOP_1200x1200-2" },
     { title: "EYCK", img: "EYCK_theLOOP_1200x1200" },
-    { title: "Gin", img: "GIN_theLOOP_1200x1200" },
-    { title: "RaRa", img: "RARA_theLOOP_1200x1200" },
-    { title: "RayRay", img: "RAYRAY_theLOOP_1200x1200-2" },
-    { title: "Reason", img: "REASON_theLOOP_1200x1200-2" },
-    { title: "Shorty", img: "SHORTY_theLOOP_1200x1200" },
+    { title: "GIN", img: "GIN_theLOOP_1200x1200" },
+    { title: "RARA", img: "RARA_theLOOP_1200x1200" },
+    { title: "RAYRAY", img: "RAYRAY_theLOOP_1200x1200-2" },
+    { title: "REASON", img: "REASON_theLOOP_1200x1200-2" },
+    { title: "SHORTY", img: "SHORTY_theLOOP_1200x1200" },
     { title: "T-TIME", img: "T-TIME_theLOOP_1200x1200" },
-    { title: "Usal", img: "USAL_theLOOP_1200x1200" },
-    { title: "Vonik and MC Bell", img: "VONIK_BELL_theLOOP_1200x1200" },
-    { title: "Vonik", img: "VONIK_theLOOP_1200x1200" },
-    { title: "MC Bell", img: "BELL_theLOOP_1200x1200" },
-    { title: "Wade", img: "WADE_theLOOP_1200x1200" },
-    { title: "Zenit", img: "ZEINT_theLOOP_1200x1200" },
+    { title: "USAL", img: "USAL_theLOOP_1200x1200" },
+    { title: "VONIK & BELL", img: "VONIK_BELL_theLOOP_1200x1200" },
+    { title: "VONIK", img: "VONIK_theLOOP_1200x1200" },
+    { title: "WADE", img: "WADE_theLOOP_1200x1200" },
+    { title: "ZEINT", img: "ZEINT_theLOOP_1200x1200" },
   ];
 
   var list = [];

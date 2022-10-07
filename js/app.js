@@ -159,4 +159,29 @@ $(document).ready(function () {
     $(`#pills-tab #pills-${targetItemId}-tab`).tab("show");
     $("#categoryModal").modal("hide");
   });
+
+  //bootstrap date picker
+  $("#datepicker").datetimepicker({
+    useCurrent: false,
+    format: "YYYY-MM-DD",
+    showTodayButton: false,
+    ignoreReadonly: true,
+    minDate: moment().format("YYYY-MM-DD"),
+    icons: {
+      next: "fa fa-chevron-right",
+      previous: "fa fa-chevron-left",
+      today: "todayText",
+    },
+  });
+
+  $("#timepicker").datetimepicker({
+    format: 'HH:mm',
+    stepping: 30,
+    ignoreReadonly: true,
+
+    icons: {
+      up: "fa fa-chevron-up",
+      down: "fa fa-chevron-down",
+    },
+  });
 });

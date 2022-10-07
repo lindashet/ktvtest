@@ -230,6 +230,11 @@ button {
   padding-bottom: 0rem;
 }
 
+.py_0 {
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+}
+
 .ml_10 {
   margin-left: 0.625rem;
 }
@@ -259,6 +264,11 @@ button {
 }
 
 .pb_10 {
+  padding-bottom: 0.625rem;
+}
+
+.py_10 {
+  padding-top: 0.625rem;
   padding-bottom: 0.625rem;
 }
 
@@ -294,6 +304,11 @@ button {
   padding-bottom: 1.25rem;
 }
 
+.py_20 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
 .ml_30 {
   margin-left: 1.875rem;
 }
@@ -323,6 +338,11 @@ button {
 }
 
 .pb_30 {
+  padding-bottom: 1.875rem;
+}
+
+.py_30 {
+  padding-top: 1.875rem;
   padding-bottom: 1.875rem;
 }
 
@@ -358,6 +378,11 @@ button {
   padding-bottom: 2.5rem;
 }
 
+.py_40 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
 .ml_50 {
   margin-left: 3.125rem;
 }
@@ -387,6 +412,11 @@ button {
 }
 
 .pb_50 {
+  padding-bottom: 3.125rem;
+}
+
+.py_50 {
+  padding-top: 3.125rem;
   padding-bottom: 3.125rem;
 }
 
@@ -1553,27 +1583,61 @@ button {
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!../node_modules/sass-loader/dist/cjs.js!./scss/common/style.scss ***!
   \******************************************************************************************************************************************************************************************/
 .light {
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 .dark {
-  color: #000000;
+  color: #000000 !important;
 }
 
 .party {
-  color: #db00ff;
+  color: #db00ff !important;
 }
 
 .purple {
-  color: #7b61ff;
+  color: #7b61ff !important;
 }
 
 .bg-dark {
   background: #000000 !important;
 }
 
+.bg_formbg {
+  background: #232323 !important;
+}
+
 .bg_bglight_50 {
   background: rgba(241, 241, 241, 0.5) !important;
+}
+
+.bg_dark_30 {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.bg_linear_dark_active {
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(2.93%, #1b1b1b),
+    color-stop(30.82%, #1e1e1f),
+    color-stop(58.29%, #202021),
+    color-stop(99.08%, #232325)
+  );
+  background-image: -o-linear-gradient(
+    top,
+    #1b1b1b 2.93%,
+    #1e1e1f 30.82%,
+    #202021 58.29%,
+    #232325 99.08%
+  );
+  background-image: linear-gradient(
+    180deg,
+    #1b1b1b 2.93%,
+    #1e1e1f 30.82%,
+    #202021 58.29%,
+    #232325 99.08%
+  );
 }
 
 .font_sub_gray {
@@ -1694,6 +1758,10 @@ button {
   border: 1px solid rgba(168, 167, 167, 0.5);
 }
 
+.border_white_10 {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 .underline {
   text-decoration: underline;
 }
@@ -1727,6 +1795,9 @@ button {
 
 input.form-control {
   background: transparent;
+}
+
+input.form-control {
   border-width: 0 0 1px 0;
   border-color: #484848;
   border-radius: 0;
@@ -1740,28 +1811,43 @@ input.form-control:focus {
   box-shadow: none;
 }
 
+input.form-control[disabled] {
+  border-color: transparent;
+}
+
 input.form-control.icon_form {
   padding-left: 2.25rem;
 }
 
-input.form-control::-webkit-input-placeholder {
+input.form-control::-webkit-input-placeholder,
+select.form-select::-webkit-input-placeholder {
   color: #a8a7a7;
 }
 
-input.form-control::-moz-placeholder {
+input.form-control::-moz-placeholder,
+select.form-select::-moz-placeholder {
   color: #a8a7a7;
 }
 
-input.form-control:-ms-input-placeholder {
+input.form-control:-ms-input-placeholder,
+select.form-select:-ms-input-placeholder {
   color: #a8a7a7;
 }
 
-input.form-control::-ms-input-placeholder {
+input.form-control::-ms-input-placeholder,
+select.form-select::-ms-input-placeholder {
   color: #a8a7a7;
 }
 
-input.form-control::placeholder {
+input.form-control::placeholder,
+select.form-select::placeholder {
   color: #a8a7a7;
+}
+
+.form-label {
+  color: #a8a7a7;
+  font-size: 0.875rem;
+  margin-bottom: 1.25rem;
 }
 
 .icon_input::before {
@@ -1818,6 +1904,11 @@ input.form-control::placeholder {
   background: #d9d9d9;
 }
 
+.form_button.solid.bg_light {
+  background: #ffffff;
+  color: #000000;
+}
+
 .form_button.solid[disabled] {
   color: #ffffff;
   background: #d9d9d9;
@@ -1842,7 +1933,7 @@ input.form-control::placeholder {
 
 .form-text {
   font-size: 0.75rem;
-  color: #ec4747;
+  color: #252525;
   font-weight: 500;
 }
 
@@ -2612,7 +2703,7 @@ nav.nav_category .category_wrapper .nav-item {
 
 .playing_card {
   background-color: #000000;
-  background-image: url(../assets/imgs/soundwave.svg);
+  background-image: url(../08ed85ef17891f48ca1d.svg);
   height: calc(7vh + 130px);
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -2650,7 +2741,7 @@ nav.nav_category .category_wrapper .nav-item {
   background-color: rgba(0, 0, 0, 0.5);
 }
 .modal .btn-close {
-  background-image: url(../assets/imgs/close.svg);
+  background-image: url(../698785364502d71266c1.svg);
 }
 
 .toast_modal {
@@ -2834,7 +2925,7 @@ nav.nav_category .category_wrapper .nav-item {
   height: 12px;
   width: 100%;
   left: 0;
-  background-image: url(../assets/imgs/arrow_top.svg);
+  background-image: url(../fcb30078be153d28a1fd.svg);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -2896,7 +2987,7 @@ nav.nav_category .category_wrapper .nav-item {
   align-content: center;
   background-color: #484848;
   height: 100%;
-  background-image: url(../assets/imgs/search.svg);
+  background-image: url(../cfc288dc098bbc6dfeca.svg);
   background-position: 7px center;
   background-repeat: no-repeat;
   background-size: 16px;
@@ -3052,6 +3143,30 @@ nav.nav_category .category_wrapper .nav-item {
   color: #a8a7a7;
 }
 
+.topic_head {
+  position: relative;
+  height: 140px;
+}
+
+.reservation_detail_item * {
+  font-size: 0.875rem;
+}
+
+.reservation_detail_item i {
+  width: 14px;
+  height: 14px;
+  color: #525252;
+}
+
+.reservation_detail_item .h6 {
+  color: #a8a7a7;
+}
+
+.reservation_detail_item p {
+  color: #ffffff;
+  font-weight: 400;
+}
+
 footer.footer {
   color: #a8a7a7;
   font-weight: 400;
@@ -3155,6 +3270,10 @@ footer.footer {
   background-attachment: fixed;
 }
 
+.home_nav_margin {
+  margin-top: 80px;
+}
+
 .song_nav {
   margin-top: 50px;
   margin-bottom: 5rem;
@@ -3182,6 +3301,12 @@ footer.footer {
 
 .players_list .back_navbar {
   background: transparent;
+}
+
+@media screen and (max-width: 767px) {
+  .home_nav_margin {
+    margin-top: 50px;
+  }
 }
 
 @media (min-width: 768px), (orientation: landscape) {
@@ -3222,11 +3347,11 @@ footer.footer {
 .home {
   width: 100%;
   height: 100%;
-  background-image: url(../assets/imgs/backgroundwave.svg),
+  background-image: url(../f63eb6483e842a35abc3.svg),
     -webkit-gradient(linear, left top, left bottom, from(#222222), color-stop(48.96%, #000000), to(#222222));
-  background-image: url(../assets/imgs/backgroundwave.svg),
+  background-image: url(../f63eb6483e842a35abc3.svg),
     -o-linear-gradient(top, #222222 0%, #000000 48.96%, #222222 100%);
-  background-image: url(../assets/imgs/backgroundwave.svg),
+  background-image: url(../f63eb6483e842a35abc3.svg),
     linear-gradient(180deg, #222222 0%, #000000 48.96%, #222222 100%);
   background-position: center 5%, center;
   background-size: 100% auto, 100%;
@@ -3739,8 +3864,7 @@ nav.navbar.navbar_song .nav_member_wrapper:before {
       #161616 76.17%,
       #0f0f0f 100%
     ),
-    url(../assets/imgs/backgroundwavecrew.svg),
-    url(../assets/imgs/gradientbg.svg),
+    url(../2434679a7584a482cc58.svg), url(../0e44bcb8e4d8463d1bfd.svg),
     -o-linear-gradient(316.64deg, #111011 15.19%, #292929 84.91%);
   background-image: linear-gradient(
       180deg,
@@ -3750,8 +3874,7 @@ nav.navbar.navbar_song .nav_member_wrapper:before {
       #161616 76.17%,
       #0f0f0f 100%
     ),
-    url(../assets/imgs/backgroundwavecrew.svg),
-    url(../assets/imgs/gradientbg.svg),
+    url(../2434679a7584a482cc58.svg), url(../0e44bcb8e4d8463d1bfd.svg),
     linear-gradient(133.36deg, #111011 15.19%, #292929 84.91%);
   background-size: 100% 80%, 1710px, 200% 160%, contain;
   background-position: center bottom, 26% 29%, center, center;
@@ -4347,10 +4470,10 @@ nav.back_navbar .main_title h5 {
   content: "";
   width: 100%;
   height: 100%;
-  background-image: url('../assets/imgs/backgroundwave.svg');
   position: absolute;
   top: 0;
   left: 0;
+  background-image: url(../f63eb6483e842a35abc3.svg);
   background-color: #f1f1f1;
   background-position: center 5%, center;
   background-size: 100% auto, 100%;
@@ -4431,5 +4554,229 @@ nav.back_navbar .main_title h5 {
   }
   .desc.font_form_link {
     text-align: center;
+  }
+}
+
+/*!*****************************************************************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!../node_modules/sass-loader/dist/cjs.js!./scss/reservation.scss ***!
+  \*****************************************************************************************************************************************************************************************/
+.reservation {
+  width: 100%;
+  height: 100%;
+  background: #151515;
+}
+.reservation .main {
+  position: relative;
+  margin-bottom: 5rem;
+}
+.reservation .reservation_form,
+.reservation .member_detail {
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(2.93%, #1b1b1b),
+    color-stop(30.82%, #1e1e1f),
+    color-stop(58.29%, #202021),
+    color-stop(99.08%, #232325)
+  );
+  background-image: -o-linear-gradient(
+    top,
+    #1b1b1b 2.93%,
+    #1e1e1f 30.82%,
+    #202021 58.29%,
+    #232325 99.08%
+  );
+  background-image: linear-gradient(
+    180deg,
+    #1b1b1b 2.93%,
+    #1e1e1f 30.82%,
+    #202021 58.29%,
+    #232325 99.08%
+  );
+}
+.reservation .form_button {
+  height: 40px;
+}
+.reservation .reservation_member h6 {
+  font-size: 0.875rem;
+  color: #ffffff;
+}
+.reservation .reservation_remark * {
+  font-size: 0.875rem;
+  color: #a8a7a7;
+  line-height: 2.25rem;
+}
+.reservation .reservation_remark li {
+  font-weight: 400;
+}
+.reservation .member_detail h6,
+.reservation .reservation_detail h6 {
+  color: #db00ff;
+}
+.reservation input.form-control,
+.reservation input.form-control[readonly],
+.reservation select.form-select,
+.reservation textarea.form-control {
+  color: #ffffff;
+  background-color: transparent;
+}
+.reservation input.form-control:focus,
+.reservation input.form-control[readonly]:focus,
+.reservation select.form-select:focus,
+.reservation textarea.form-control:focus {
+  border-color: #ffffff;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.reservation textarea.form-control {
+  border-color: #525252;
+}
+.reservation select.form-select {
+  background-image: url("../assets/imgs/select-arrow.png");
+  background-size: auto 20%;
+  background-repeat: no-repeat;
+  border-width: 0 0 1px 0;
+  border-color: #484848;
+  border-radius: 0;
+  padding-bottom: 0.5rem;
+}
+.reservation input.form-control::-webkit-input-placeholder {
+  color: #525252;
+}
+.reservation input.form-control::-moz-placeholder {
+  color: #525252;
+}
+.reservation input.form-control:-ms-input-placeholder {
+  color: #525252;
+}
+.reservation input.form-control::-ms-input-placeholder {
+  color: #525252;
+}
+.reservation input.form-control::placeholder {
+  color: #525252;
+}
+.reservation .input-group-text {
+  background: transparent;
+  border-color: #525252;
+  cursor: pointer;
+}
+.reservation .input-group-text i {
+  color: #ffffff;
+}
+.reservation .reservation_btn {
+  height: 110px;
+  background-image: -o-linear-gradient(
+    316.64deg,
+    #111011 15.19%,
+    #292929 84.91%
+  );
+  background-image: linear-gradient(133.36deg, #111011 15.19%, #292929 84.91%);
+  border: 1px solid #db00ff;
+}
+.reservation .reservation_btn svg.search-b {
+  color: #db00ff;
+}
+.reservation img.qrcode {
+  width: 112px;
+  height: 112px;
+}
+.reservation .bootstrap-datetimepicker-widget {
+  -webkit-box-shadow: 6px 8px 20px 12.6885px rgba(0, 0, 0, 0.4);
+  box-shadow: 6px 8px 20px 12.6885px rgba(0, 0, 0, 0.4);
+  border: 1px solid #db00ff;
+  border-radius: 0;
+  background: rgba(21, 21, 21, 0.6);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+.reservation .bootstrap-datetimepicker-widget * {
+  color: #ffffff;
+}
+.reservation
+  .bootstrap-datetimepicker-widget
+  table
+  thead
+  tr:first-child
+  th:hover {
+  background: #000000;
+}
+.reservation .bootstrap-datetimepicker-widget table th,
+.reservation .bootstrap-datetimepicker-widget table td {
+  height: 30px;
+  line-height: 30px;
+  width: 30px;
+}
+.reservation .bootstrap-datetimepicker-widget table td span:hover,
+.reservation .bootstrap-datetimepicker-widget table td.minute:hover,
+.reservation .bootstrap-datetimepicker-widget table td.hour:hover {
+  background: #000000;
+}
+.reservation .bootstrap-datetimepicker-widget table td.day::before {
+  border-bottom-color: #ffffff;
+}
+.reservation .bootstrap-datetimepicker-widget table td.day:hover {
+  background: #000000;
+}
+.reservation .bootstrap-datetimepicker-widget table td.active,
+.reservation .bootstrap-datetimepicker-widget table td span.active {
+  background: #db00ff;
+}
+.reservation .bootstrap-datetimepicker-widget table a {
+  color: #db00ff;
+}
+.reservation .bootstrap-datetimepicker-widget.usetwentyfour td.minute,
+.reservation .bootstrap-datetimepicker-widget.usetwentyfour td.hour {
+  height: 36px;
+  line-height: 36px;
+}
+.reservation .dropdown-menu.bottom:before {
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-bottom: 14px solid #db00ff;
+  border-bottom-color: #db00ff;
+  z-index: 1;
+  top: -14px;
+}
+.reservation .dropdown-menu.top:before {
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-top: 14px solid #db00ff;
+  border-bottom-color: #db00ff;
+  z-index: 1;
+  bottom: -14px;
+}
+
+@media screen and (min-width: 992px) {
+  .member_detail,
+  .reservation_detail {
+    border-radius: 4px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .reservation .reservation_member {
+    background: #1f1f1f;
+  }
+  .reservation .reservation_member h6 {
+    font-size: 1rem;
+    color: #a8a7a7;
+  }
+  .reservation .reservation_info {
+    background: transparent;
+  }
+  .reservation .reservation_detail {
+    background: #232323;
+  }
+  .reservation .reservation_detail_content {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .reservation .member_detail h6,
+  .reservation .reservation_detail h6 {
+    font-size: 0.875rem;
+  }
+  .reservation .reservation_btn {
+    height: 40px;
   }
 }

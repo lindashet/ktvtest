@@ -5,6 +5,36 @@ $(document).ready(function () {
     history.back();
   });
 
+  $(window).scroll(function () {
+    if (
+      ($(document).width() > 767 && $(this).scrollTop() > 140) ||
+      ($(document).width() < 768 && $(this).scrollTop() > 200)
+    ) {
+      /* 要滑動到選單的距離 */
+      $("#ReservationSearchTab").addClass("navFixed"); /* 幫選單加上固定效果 */
+      $("#ReservationSearchTab").addClass("navFixed"); /* 幫選單加上固定效果 */
+    } else {
+      $("#ReservationSearchTab").removeClass("navFixed"); /* 移除選單固定效果 */
+    }
+
+    if (
+      ($(document).width() > 767 && $(this).scrollTop() > 72) ||
+      ($(document).width() < 768 && $(this).scrollTop() > 62)
+    ) {
+      /* 要滑動到選單的距離 */
+      $(".reservation_detail_nav").addClass(
+        "navFixed"
+      ); /* 幫選單加上固定效果 */
+      $(".reservation_detail_nav").addClass(
+        "navFixed"
+      ); /* 幫選單加上固定效果 */
+    } else {
+      $(".reservation_detail_nav").removeClass(
+        "navFixed"
+      ); /* 移除選單固定效果 */
+    }
+  });
+
   //語言切換動作
   //點擊外圍關閉語言視窗
   $(document).click(function () {
@@ -44,6 +74,23 @@ $(document).ready(function () {
       }
     });
   }
+  // 取消訂位
+  $("#reservationCancelBtn").click(function () {
+    messageModal("您的訂位已取消");
+  });
+
+  // 開啟 messageModal
+  function messageModal(text) {
+    $(".messageModalText").text(text);
+    $("#messageModal").modal("show");
+  }
+
+  //messageModal 點擊 confirm 按鈕
+  $("#messageModal #comfirmBtn").click(function () {
+    $("#messageModal").modal("hide");
+    console.log("click");
+    window.location.href = "reservation_search.html";
+  });
 
   // 點播動作提示
   // 開啟 requestModal
@@ -175,7 +222,7 @@ $(document).ready(function () {
   });
 
   $("#timepicker").datetimepicker({
-    format: 'HH:mm',
+    format: "HH:mm",
     stepping: 30,
     ignoreReadonly: true,
 

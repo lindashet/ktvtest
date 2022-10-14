@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <link href="./css/bundle.css" rel="stylesheet">
   <title>ONCOR</title>
-  <body class="reservation reservation_complete">
+  <body class="reservation reservation_detail">
     <header>
       <nav class="navbar navbar_home fixed-top navbar-expand-md">
         <div class="container-fluid justify-content-between justify-content-md-start pos_r">
@@ -66,21 +66,24 @@
         </div>
       </nav>
     </header>
-    <div class="main home_nav_margin">
-          <section class="topic_head_with_icon container-fluid">
-            <h4 class="light pos_center">
-                  <svg class="icon reservation_success mr_16 mr_m_8" aria-hidden="true">
-                    <use xlink:href="#reservation_success"></use>
-                  </svg>訂位成功
-            </h4>
-          </section>
-      <div class="container mt_30 mt_m_0">
+    <div class="main reservation_detail_nav_margin">
+      <div class="container mt_30">
+        <nav class="reservation_detail_nav flex_start_center">
+          <button class="mb_16 px_16" id="backToPre" type="button"><i class="fas fa-angle-left fa-lg light"></i>
+          </button>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a class="fs_m_xs" href="index.html">首頁</a></li>
+                  <li class="breadcrumb-item fs_m_xs active" aria-current="page">訂位明細</li>
+                </ol>
+              </nav>
+        </nav>
         <div class="row flex-column-reverse flex-lg-row">
           <div class="col-lg-6">
             <div class="container">
               <div class="row member_detail border_white_10 px_36 px_m_0 pt_30 pb_40">
-                <div class="col-12 text-center text-md-start"> 
-                  <h6 class="divider_pseu pos_r pb_20">訂位會員</h6>
+                <div class="col-12 text-center text-lg-start">
+                  <h6 class="party divider_pseu pos_r pb_20">訂位會員</h6>
                 </div>
                 <div class="col-12 mt_30">
                       <div class="title_text_item">
@@ -111,8 +114,8 @@
           <div class="col-lg-6">
             <div class="container">
               <div class="row reservation_detail border_white_10 px_36 px_m_0 pt_30 pt_m_20 pb_30 mb_20">
-                <div class="col-12 text-center text-md-start">
-                  <h6>訂位明細</h6>
+                <div class="col-12 text-center text-lg-start">
+                  <h6 class="party">訂位明細</h6>
                   <div class="reservation_detail_content bg_formbg px_24 px_m_0 py_30 py_m_20 my_20">
                         <div class="title_text_item">
                               <div class="h6"><i class="fas fa-hashtag mr_8"></i>訂位代號

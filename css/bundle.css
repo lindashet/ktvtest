@@ -2246,12 +2246,9 @@ svg.send {
   height: calc(var(--vh, 1vh) * 8.73);
   width: calc(var(--vh, 1vh) * 8.73);
   padding: 0;
-  letter-spacing: 0.5vh;
-  font-size: 13.5px;
   color: #a8a7a7;
   text-align: center;
   vertical-align: middle;
-  text-indent: 0.2vh;
   background-image: -webkit-gradient(
     linear,
     left top,
@@ -2280,6 +2277,10 @@ svg.send {
     inset 0px -3px 0px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.35),
     inset 0px -3px 0px rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.5vh;
+  font-size: 1.6vh;
+  font-size: calc(var(--vh, 1vh) * 1.6);
+  text-indent: 0.5vh;
 }
 .setting_btn svg {
   width: 3.6vh;
@@ -4877,7 +4878,7 @@ nav.back_navbar .main_title h5 {
   border-color: #525252;
 }
 .reservation select.form-select {
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAUCAYAAAADU1RxAAAACXBIWXMAACE4AAAhOAFFljFgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEKSURBVHgBzdXbDYJAEAXQizZACZjotzXYiXRgB2IlWIIdYAf6rSZgHcasMzpEQB67AxpvsuG1XE52PwD+MSmMTyPAF8LddfdH1Uk3YH8HkqEh3Ee9hwtM3DbJP8EczzCGB01Oh4JwD/cVuksQLwfwCtDFvPIwGwOLCbwMysgKJAYIKt3bKbyQz5/bUQfg8It9tqYJIN3LfEVGoto1FWkhbYBC91W+/wrtVUSHddMLLltjA6BsZvAi6X5nCIgrQHrL6QPRAKTzMxqIFiB99XGB9AFIV3NsIPThkI6xFiA97emCWKQVYIXoCekEWCOUECuAE8IRYg1wRlhCnADqMCT/LVdGhF+mBrKCMg9eW8pSr4UgDAAAAABJRU5ErkJggg==);
+  background-image: url("../assets/imgs/select-arrow.png");
   background-size: auto 20%;
   background-repeat: no-repeat;
   border-width: 0 0 1px 0;

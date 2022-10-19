@@ -5,13 +5,32 @@ $(document).ready(function () {
     history.back();
   });
 
+  //環控頁面 元素高度等比例設定
+  screenHeightRatio();
+
+  function screenHeightRatio() {
+    let windowsVH = window.innerHeight / 100;
+    document
+      .querySelectorAll(".screen_h_ratio")
+      .style.setProperty("--vh", windowsVH + "px");
+    window.addEventListener("resize", function () {
+      document
+        .querySelectorAll(".screen_h_ratio")
+        .style.setProperty("--vh", windowsVH + "px");
+    });
+  }
+  //環控頁面 智慧燈光切換
+  $("#evenoddBtn").click(function () {
+    $(this).toggleClass("active");
+  });
+
+  safariHacks();
   $(window).scroll(function () {
     if (
       ($(document).width() > 767 && $(this).scrollTop() > 140) ||
       ($(document).width() < 768 && $(this).scrollTop() > 200)
     ) {
       /* 要滑動到選單的距離 */
-      $("#ReservationSearchTab").addClass("navFixed"); /* 幫選單加上固定效果 */
       $("#ReservationSearchTab").addClass("navFixed"); /* 幫選單加上固定效果 */
     } else {
       $("#ReservationSearchTab").removeClass("navFixed"); /* 移除選單固定效果 */

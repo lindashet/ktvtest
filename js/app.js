@@ -10,21 +10,18 @@ $(document).ready(function () {
 
   function screenHeightRatio() {
     let windowsVH = window.innerHeight / 100;
-    document
-      .querySelectorAll(".screen_h_ratio")
-      .style.setProperty("--vh", windowsVH + "px");
+    document.documentElement.style.setProperty("--vh", windowsVH + "px");
+
     window.addEventListener("resize", function () {
-      document
-        .querySelectorAll(".screen_h_ratio")
-        .style.setProperty("--vh", windowsVH + "px");
+      document.documentElement.style.setProperty("--vh", windowsVH + "px");
     });
   }
+
   //環控頁面 智慧燈光切換
   $("#evenoddBtn").click(function () {
     $(this).toggleClass("active");
   });
 
-  safariHacks();
   $(window).scroll(function () {
     if (
       ($(document).width() > 767 && $(this).scrollTop() > 140) ||

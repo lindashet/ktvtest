@@ -13,13 +13,20 @@
   <body class="controller volume song_page" ontouchstart="">
     <header>
       <nav class="back_navbar fixed-top d-flex align-items-center">
-        <div class="container-fluid p-0 d-flex justify-content-start align-items-center position-relative">
+        <div class="container-fluid p-0 d-flex justify-content-between align-items-center pos_r">
           <button class="navbar-toggler" id="backToPre" type="button">
-            <svg class="icon back undefined" aria-hidden="true">
+            <svg class="icon back" aria-hidden="true">
               <use xlink:href="#back"></use>
             </svg>
           </button>
           <h5 class="pos_center">VOLUME</h5>
+          <div class="search_song_wrapper d-flex justify-content-end flex-grow-1"><a class="singer_search" href="search_singer.html" type="button">
+              <svg class="icon lang mr_16 mr_m_0" aria-hidden="true">
+                <use xlink:href="#singer-search"></use>
+              </svg></a><a class="music_search" href="search_music.html" type="button">
+              <svg class="icon lang mr_16 mr_m_0" aria-hidden="true">
+                <use xlink:href="#music-search"></use>
+              </svg></a></div>
         </div>
       </nav>
     </header>
@@ -27,7 +34,7 @@
       <div class="row justify-content-center">
         <div class="volume_controller volume" id="volume">
           <button class="volume_btn" id="volumeMinus">
-            <svg class="icon minus undefined" aria-hidden="true">
+            <svg class="icon minus" aria-hidden="true">
               <use xlink:href="#minus"></use>
             </svg>
           </button>
@@ -48,7 +55,7 @@
             </div>
           </div>
           <button class="volume_btn" id="volumePlus">
-            <svg class="icon plus undefined" aria-hidden="true">
+            <svg class="icon plus" aria-hidden="true">
               <use xlink:href="#plus"></use>
             </svg>
           </button>

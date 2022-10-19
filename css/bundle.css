@@ -4,7 +4,6 @@
 html,
 body {
   width: 100%;
-  height: 100%;
   margin: auto 0;
   overflow-x: hidden;
   overflow-y: auto;
@@ -44,6 +43,30 @@ h6 {
   appearance: none !important;
 }
 
+.top_m_0 {
+  top: 0;
+}
+
+.bottom_m_0 {
+  bottom: 0;
+}
+
+.left_m_0 {
+  left: 0;
+}
+
+.right_m_0 {
+  right: 0;
+}
+
+.pos_r {
+  position: relative;
+}
+
+.pos_a {
+  position: absolute;
+}
+
 .pos_center {
   position: absolute;
   top: 50%;
@@ -58,6 +81,26 @@ h6 {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.flex_v_center {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -91,6 +134,21 @@ h6 {
   -webkit-justify-content: space-around;
   -ms-flex-pack: distribute;
   justify-content: space-around;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.flex_start_center {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
@@ -230,6 +288,11 @@ button {
   padding-bottom: 0rem;
 }
 
+.py_0 {
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+}
+
 .ml_10 {
   margin-left: 0.625rem;
 }
@@ -259,6 +322,11 @@ button {
 }
 
 .pb_10 {
+  padding-bottom: 0.625rem;
+}
+
+.py_10 {
+  padding-top: 0.625rem;
   padding-bottom: 0.625rem;
 }
 
@@ -294,6 +362,11 @@ button {
   padding-bottom: 1.25rem;
 }
 
+.py_20 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
 .ml_30 {
   margin-left: 1.875rem;
 }
@@ -323,6 +396,11 @@ button {
 }
 
 .pb_30 {
+  padding-bottom: 1.875rem;
+}
+
+.py_30 {
+  padding-top: 1.875rem;
   padding-bottom: 1.875rem;
 }
 
@@ -358,6 +436,11 @@ button {
   padding-bottom: 2.5rem;
 }
 
+.py_40 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
 .ml_50 {
   margin-left: 3.125rem;
 }
@@ -387,6 +470,11 @@ button {
 }
 
 .pb_50 {
+  padding-bottom: 3.125rem;
+}
+
+.py_50 {
+  padding-top: 3.125rem;
   padding-bottom: 3.125rem;
 }
 
@@ -1553,27 +1641,65 @@ button {
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!../node_modules/sass-loader/dist/cjs.js!./scss/common/style.scss ***!
   \******************************************************************************************************************************************************************************************/
 .light {
-  color: #ffffff;
+  color: #ffffff !important;
+}
+
+.lightgray {
+  color: #a8a7a7 !important;
 }
 
 .dark {
-  color: #000000;
+  color: #000000 !important;
 }
 
 .party {
-  color: #db00ff;
+  color: #db00ff !important;
 }
 
 .purple {
-  color: #7b61ff;
+  color: #7b61ff !important;
 }
 
 .bg-dark {
   background: #000000 !important;
 }
 
+.bg_formbg {
+  background: #232323 !important;
+}
+
 .bg_bglight_50 {
   background: rgba(241, 241, 241, 0.5) !important;
+}
+
+.bg_dark_30 {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.bg_linear_dark_active {
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(2.93%, #1b1b1b),
+    color-stop(30.82%, #1e1e1f),
+    color-stop(58.29%, #202021),
+    color-stop(99.08%, #232325)
+  );
+  background-image: -o-linear-gradient(
+    top,
+    #1b1b1b 2.93%,
+    #1e1e1f 30.82%,
+    #202021 58.29%,
+    #232325 99.08%
+  );
+  background-image: linear-gradient(
+    180deg,
+    #1b1b1b 2.93%,
+    #1e1e1f 30.82%,
+    #202021 58.29%,
+    #232325 99.08%
+  );
 }
 
 .font_sub_gray {
@@ -1694,6 +1820,10 @@ button {
   border: 1px solid rgba(168, 167, 167, 0.5);
 }
 
+.border_white_10 {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 .underline {
   text-decoration: underline;
 }
@@ -1727,6 +1857,9 @@ button {
 
 input.form-control {
   background: transparent;
+}
+
+input.form-control {
   border-width: 0 0 1px 0;
   border-color: #484848;
   border-radius: 0;
@@ -1740,28 +1873,43 @@ input.form-control:focus {
   box-shadow: none;
 }
 
+input.form-control[disabled] {
+  border-color: transparent;
+}
+
 input.form-control.icon_form {
   padding-left: 2.25rem;
 }
 
-input.form-control::-webkit-input-placeholder {
+input.form-control::-webkit-input-placeholder,
+select.form-select::-webkit-input-placeholder {
   color: #a8a7a7;
 }
 
-input.form-control::-moz-placeholder {
+input.form-control::-moz-placeholder,
+select.form-select::-moz-placeholder {
   color: #a8a7a7;
 }
 
-input.form-control:-ms-input-placeholder {
+input.form-control:-ms-input-placeholder,
+select.form-select:-ms-input-placeholder {
   color: #a8a7a7;
 }
 
-input.form-control::-ms-input-placeholder {
+input.form-control::-ms-input-placeholder,
+select.form-select::-ms-input-placeholder {
   color: #a8a7a7;
 }
 
-input.form-control::placeholder {
+input.form-control::placeholder,
+select.form-select::placeholder {
   color: #a8a7a7;
+}
+
+.form-label {
+  color: #a8a7a7;
+  font-size: 0.875rem;
+  margin-bottom: 1.25rem;
 }
 
 .icon_input::before {
@@ -1816,6 +1964,11 @@ input.form-control::placeholder {
 .form_button.solid:disabled {
   color: #ffffff;
   background: #d9d9d9;
+}
+
+.form_button.solid.bg_light {
+  background: #ffffff;
+  color: #000000;
 }
 
 .form_button.solid[disabled] {
@@ -1919,6 +2072,7 @@ svg.send {
 /*!***********************************************************************************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!../node_modules/sass-loader/dist/cjs.js!./scss/common/components.scss ***!
   \***********************************************************************************************************************************************************************************************/
+@charset "UTF-8";
 #cover.cover {
   position: fixed;
   display: none;
@@ -2085,15 +2239,16 @@ svg.send {
 }
 
 .setting_btn {
-  width: 7.76vh;
-  height: 7.76vh;
+  height: 8.33vh;
+  /*給 Safari 以外的瀏覽器讀取*/
+  width: 8.33vw;
+  /*給 Safari 以外的瀏覽器讀取*/
+  height: calc(var(--vh, 1vh) * 8.33);
+  width: calc(var(--vh, 1vh) * 8.33);
   padding: 0;
-  letter-spacing: 0.5vh;
-  font-size: 1.65vh;
   color: #a8a7a7;
   text-align: center;
   vertical-align: middle;
-  text-indent: 0.2vh;
   background-image: -webkit-gradient(
     linear,
     left top,
@@ -2122,6 +2277,17 @@ svg.send {
     inset 0px -3px 0px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.35),
     inset 0px -3px 0px rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.08vh;
+  font-size: 1.3vh;
+  font-size: calc(var(--vh, 1vh) * 1.3);
+  text-indent: 0.08vh;
+  font-family: "Barlow Condensed", sans-serif;
+  font-family: "Oswald", sans-serif;
+}
+.setting_btn svg {
+  width: 3.6vh;
+  height: 3.6vh;
+  margin-bottom: 0.2vh;
 }
 
 .setting_bottom_circle_btn {
@@ -2139,6 +2305,17 @@ svg.send {
 
 .setting_square_btn {
   border-radius: 5px;
+}
+.setting_square_btn svg.icon.beat {
+  position: absolute;
+  height: 2.2vh;
+  /*給 Safari 以外的瀏覽器讀取*/
+  height: calc(var(--vh, 1vh) * 2.2);
+  height: 1.1vh;
+  /*給 Safari 以外的瀏覽器讀取*/
+  height: calc(var(--vh, 1vh) * 1.1);
+  top: 0.8vh;
+  right: 0;
 }
 
 .setting_btn.selected,
@@ -2167,9 +2344,13 @@ svg.send {
     #353537 99.08%
   );
   border: 1px solid #db00ff;
-  color: #db00ff;
   -webkit-box-shadow: none;
   box-shadow: none;
+  color: #db00ff;
+}
+.setting_btn.selected svg,
+.setting_btn:active svg {
+  color: inherit;
 }
 
 .simple_btn {
@@ -3054,6 +3235,87 @@ nav.nav_category .category_wrapper .nav-item {
   color: #a8a7a7;
 }
 
+.topic_head,
+.topic_head_with_icon {
+  position: relative;
+  height: 140px;
+}
+
+.title_text_item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+.title_text_item * {
+  font-size: 0.875rem;
+}
+.title_text_item i {
+  width: 14px;
+  height: 14px;
+  color: #525252;
+}
+.title_text_item .h6 {
+  color: #a8a7a7;
+}
+.title_text_item p {
+  color: #ffffff;
+  font-weight: 400;
+}
+
+.title_text_item.start {
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+}
+.title_text_item.start p {
+  margin-left: 2.125rem;
+}
+
+li.breadcrumb-item,
+li.breadcrumb-item a {
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+li.breadcrumb-item a {
+  color: #a8a7a7;
+}
+
+li.breadcrumb-item.active {
+  color: #ffffff;
+}
+
+.title_text_item .h6,
+.title_text_item p {
+  margin-bottom: 0;
+}
+
+.navFixed {
+  z-index: 10;
+  position: fixed !important;
+  top: 80px;
+  left: 0;
+  margin-top: 0;
+  min-width: 100%;
+  -webkit-transition: background 1s ease-out;
+  -o-transition: background 1s ease-out;
+  transition: background 1s ease-out;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  background: rgba(0, 0, 0, 0.6);
+}
+
 footer.footer {
   color: #a8a7a7;
   font-weight: 400;
@@ -3093,6 +3355,20 @@ footer.footer {
     position: relative;
     padding-top: 10px;
     padding-bottom: 10px;
+  }
+  .topic_head_with_icon {
+    position: relative;
+    height: 72px;
+  }
+  .topic_head_with_icon h4 {
+    font-size: 1rem;
+  }
+  .navFixed {
+    top: 50px;
+  }
+  .navFixed .nav-tabs {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 }
 
@@ -3157,6 +3433,14 @@ footer.footer {
   background-attachment: fixed;
 }
 
+.home_nav_margin {
+  margin-top: 80px;
+}
+
+.reservation_detail_nav_margin {
+  margin-top: 100px;
+}
+
 .song_nav {
   margin-top: 50px;
   margin-bottom: 5rem;
@@ -3184,6 +3468,19 @@ footer.footer {
 
 .players_list .back_navbar {
   background: transparent;
+}
+
+.container.md {
+  max-width: 800px !important;
+}
+
+@media screen and (max-width: 767px) {
+  .home_nav_margin {
+    margin-top: 50px;
+  }
+  .reservation_detail_nav_margin {
+    margin-top: 64px;
+  }
 }
 
 @media (min-width: 768px), (orientation: landscape) {
@@ -4144,30 +4441,44 @@ nav.navbar.navbar_song .nav_member_wrapper:before {
 /*!************************************************************************************************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!../node_modules/sass-loader/dist/cjs.js!./scss/components/bottom_tab_settings.scss ***!
   \************************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
 .bottom_tab.bottom_tab_settings {
-  height: calc(10.5vh + 25px);
+  height: 14.63vh;
+  /*給 Safari 以外的瀏覽器讀取*/
+  height: calc(var(--vh, 1vh) * 14.63);
 }
 .bottom_tab.bottom_tab_settings .tab_wrapper {
   -webkit-box-shadow: 0px -3px 4px rgba(0, 0, 0, 0.35);
   box-shadow: 0px -3px 4px rgba(0, 0, 0, 0.35);
 }
 .bottom_tab.bottom_tab_settings .tab_sheet {
-  width: 146px;
-  height: 25px;
+  width: 100%;
+  height: 2.8vh;
+  /*給 Safari 以外的瀏覽器讀取*/
+  height: calc(var(--vh, 1vh) * 2.8);
   background-image: url(../assets/imgs//sheet.png);
   position: absolute;
-  background-size: 100%;
   top: 0;
   right: 0;
   text-align: center;
-  padding-left: 2.5rem;
   vertical-align: middle;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.bottom_tab.bottom_tab_settings .tab_sheet span {
   line-height: 25px;
   font-size: 1.6vh;
+  position: absolute;
+  right: 15%;
+  -webkit-transform: translateX(50%);
+  -ms-transform: translateX(50%);
+  transform: translateX(50%);
 }
 .bottom_tab.bottom_tab_settings .tab_wrapper {
   background: #000000;
-  height: 10.5vh;
+  height: 11.8vh;
+  /*給 Safari 以外的瀏覽器讀取*/
+  height: calc(var(--vh, 1vh) * 11.8);
 }
 .bottom_tab.bottom_tab_settings .setting_icon_btn {
   -webkit-box-flex: 1;
@@ -4225,6 +4536,7 @@ nav.back_navbar .main_title h5 {
 /*!****************************************************************************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!../node_modules/sass-loader/dist/cjs.js!./scss/controller.scss ***!
   \****************************************************************************************************************************************************************************************/
+@charset "UTF-8";
 .controller {
   background-image: -o-linear-gradient(
     313.03deg,
@@ -4242,6 +4554,47 @@ nav.back_navbar .main_title h5 {
 }
 .controller nav.back_navbar h5 {
   font-size: 2.52vh;
+}
+.controller #evenoddBtn {
+  width: 100%;
+  margin-top: 1.5vh;
+  /*給 Safari 以外的瀏覽器讀取*/
+  margin-top: calc(var(--vh, 1vh) * 1.5);
+}
+.controller #evenoddBtn span {
+  color: #ffffff;
+  font-size: 1.8vh;
+  letter-spacing: 4px;
+  font-size: 1.8vh;
+  letter-spacing: 0.2vh;
+}
+.controller #evenoddBtn .evenoddBtnPath {
+  height: 6.87vh;
+  /*給 Safari 以外的瀏覽器讀取*/
+  height: calc(var(--vh, 1vh) * 6.87);
+  width: 100%;
+  padding-left: 7.435%;
+  padding-right: 7.435%;
+}
+.controller #evenoddBtn #evenoddBtnBg {
+  fill: url(#dark);
+}
+.controller #evenoddBtn svg.icon.smart-light {
+  height: 3vh;
+  /*給 Safari 以外的瀏覽器讀取*/
+  width: 3vw;
+  /*給 Safari 以外的瀏覽器讀取*/
+  height: calc(var(--vh, 1vh) * 3);
+  width: calc(var(--vh, 1vh) * 3);
+}
+.controller #evenoddBtn .smartLightPath {
+  fill: url(#party2);
+}
+.controller #evenoddBtn.active #evenoddBtnBg {
+  fill: url(#party);
+}
+.controller #evenoddBtn.active .smartLightPath {
+  fill: #ffffff;
 }
 .controller .microphone_mode {
   margin-top: 4.8vh;
@@ -4283,9 +4636,18 @@ nav.back_navbar .main_title h5 {
 }
 .controller .title_mt {
   margin-top: 1.1vh;
+  /*給 Safari 以外的瀏覽器讀取*/
+  margin-top: calc(var(--vh, 1vh) * 1.1);
+}
+.controller .title_mb {
+  margin-bottom: 1.1vh;
+  /*給 Safari 以外的瀏覽器讀取*/
+  margin-bottom: calc(var(--vh, 1vh) * 1.1);
 }
 .controller .btn_group_wrapper.circle_btn {
   padding-bottom: 1.1vh;
+  /*給 Safari 以外的瀏覽器讀取*/
+  padding-bottom: calc(var(--vh, 1vh) * 1.1);
 }
 .controller .btn_group_wrapper.circle_btn:after {
   width: calc(100% - 32px);
@@ -4330,13 +4692,19 @@ nav.back_navbar .main_title h5 {
 }
 
 .controller.settings * {
-  line-height: 1.5vh;
+  line-height: 2.5vh;
+  /*給 Safari 以外的瀏覽器讀取*/
+  line-height: calc(var(--vh, 1vh) * 2.5);
 }
 
 .controller.settings h6 {
-  font-size: 1.54vh;
-  margin-top: 1vh;
-  margin-bottom: 1vh;
+  font-size: 1.76vh;
+  font-size: calc(var(--vh, 1vh) * 1.76);
+}
+
+.controller.settings .row > * {
+  padding-left: 7.435%;
+  padding-right: 7.435%;
 }
 
 /*!***********************************************************************************************************************************************************************************!*\
@@ -4353,7 +4721,7 @@ nav.back_navbar .main_title h5 {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url(../assets/imgs/backgroundwave.svg);
+  background-image: url("../assets/imgs/backgroundwave.svg");
   background-color: #f1f1f1;
   background-position: center 5%, center;
   background-size: 100% auto, 100%;
@@ -4434,5 +4802,321 @@ nav.back_navbar .main_title h5 {
   }
   .desc.font_form_link {
     text-align: center;
+  }
+}
+
+/*!*****************************************************************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!../node_modules/sass-loader/dist/cjs.js!./scss/reservation.scss ***!
+  \*****************************************************************************************************************************************************************************************/
+.reservation {
+  width: 100%;
+  height: 100%;
+  background: #151515;
+}
+.reservation .main {
+  position: relative;
+  margin-bottom: 5rem;
+}
+.reservation svg.icon.reservation_success {
+  width: 50px;
+  height: 50px;
+}
+.reservation .reservation_form,
+.reservation .member_detail {
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(2.93%, #1b1b1b),
+    color-stop(30.82%, #1e1e1f),
+    color-stop(58.29%, #202021),
+    color-stop(99.08%, #232325)
+  );
+  background-image: -o-linear-gradient(
+    top,
+    #1b1b1b 2.93%,
+    #1e1e1f 30.82%,
+    #202021 58.29%,
+    #232325 99.08%
+  );
+  background-image: linear-gradient(
+    180deg,
+    #1b1b1b 2.93%,
+    #1e1e1f 30.82%,
+    #202021 58.29%,
+    #232325 99.08%
+  );
+}
+.reservation .form_button {
+  height: 40px;
+}
+.reservation .reservation_member h6 {
+  font-size: 0.875rem;
+  color: #ffffff;
+}
+.reservation .reservation_remark * {
+  font-size: 0.875rem;
+  color: #a8a7a7;
+  line-height: 2.25rem;
+}
+.reservation .reservation_remark li {
+  font-weight: 400;
+}
+.reservation .member_detail h6,
+.reservation .reservation_detail h6 {
+  color: #db00ff;
+}
+.reservation input.form-control,
+.reservation input.form-control[readonly],
+.reservation select.form-select,
+.reservation textarea.form-control {
+  color: #ffffff;
+  background-color: transparent;
+}
+.reservation input.form-control:focus,
+.reservation input.form-control[readonly]:focus,
+.reservation select.form-select:focus,
+.reservation textarea.form-control:focus {
+  border-color: #ffffff;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.reservation textarea.form-control {
+  border-color: #525252;
+}
+.reservation select.form-select {
+  background-image: url("../assets/imgs/select-arrow.png");
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAUCAYAAAADU1RxAAAACXBIWXMAACE4AAAhOAFFljFgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEKSURBVHgBzdXbDYJAEAXQizZACZjotzXYiXRgB2IlWIIdYAf6rSZgHcasMzpEQB67AxpvsuG1XE52PwD+MSmMTyPAF8LddfdH1Uk3YH8HkqEh3Ee9hwtM3DbJP8EczzCGB01Oh4JwD/cVuksQLwfwCtDFvPIwGwOLCbwMysgKJAYIKt3bKbyQz5/bUQfg8It9tqYJIN3LfEVGoto1FWkhbYBC91W+/wrtVUSHddMLLltjA6BsZvAi6X5nCIgrQHrL6QPRAKTzMxqIFiB99XGB9AFIV3NsIPThkI6xFiA97emCWKQVYIXoCekEWCOUECuAE8IRYg1wRlhCnADqMCT/LVdGhF+mBrKCMg9eW8pSr4UgDAAAAABJRU5ErkJggg==);
+  background-size: auto 20%;
+  background-repeat: no-repeat;
+  border-width: 0 0 1px 0;
+  border-color: #484848;
+  border-radius: 0;
+  padding-bottom: 0.5rem;
+}
+.reservation input.form-control::-webkit-input-placeholder {
+  color: #525252;
+}
+.reservation input.form-control::-moz-placeholder {
+  color: #525252;
+}
+.reservation input.form-control:-ms-input-placeholder {
+  color: #525252;
+}
+.reservation input.form-control::-ms-input-placeholder {
+  color: #525252;
+}
+.reservation input.form-control::placeholder {
+  color: #525252;
+}
+.reservation .input-group-text {
+  background: transparent;
+  border-color: #525252;
+  cursor: pointer;
+}
+.reservation .input-group-text i {
+  color: #ffffff;
+}
+.reservation .reservation_btn {
+  height: 110px;
+  background-image: -o-linear-gradient(
+    316.64deg,
+    #111011 15.19%,
+    #292929 84.91%
+  );
+  background-image: linear-gradient(133.36deg, #111011 15.19%, #292929 84.91%);
+  border: 1px solid #db00ff;
+  font-weight: 500;
+  color: #db00ff;
+}
+.reservation .reservation_btn svg.search-b {
+  color: #db00ff;
+}
+.reservation img.qrcode {
+  width: 112px;
+  height: 112px;
+}
+.reservation .order_card svg.icon.back {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #484848;
+  position: absolute;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.reservation .order_card.no_data a.form_button {
+  width: 200px;
+}
+.reservation .bootstrap-datetimepicker-widget {
+  -webkit-box-shadow: 6px 8px 20px 12.6885px rgba(0, 0, 0, 0.4);
+  box-shadow: 6px 8px 20px 12.6885px rgba(0, 0, 0, 0.4);
+  border: 1px solid #db00ff;
+  border-radius: 0;
+  background: rgba(21, 21, 21, 0.6);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+.reservation .bootstrap-datetimepicker-widget * {
+  color: #ffffff;
+}
+.reservation
+  .bootstrap-datetimepicker-widget
+  table
+  thead
+  tr:first-child
+  th:hover {
+  background: #000000;
+}
+.reservation .bootstrap-datetimepicker-widget table th,
+.reservation .bootstrap-datetimepicker-widget table td {
+  height: 30px;
+  line-height: 30px;
+  width: 30px;
+}
+.reservation .bootstrap-datetimepicker-widget table td span:hover,
+.reservation .bootstrap-datetimepicker-widget table td.minute:hover,
+.reservation .bootstrap-datetimepicker-widget table td.hour:hover {
+  background: #000000;
+}
+.reservation .bootstrap-datetimepicker-widget table td.day::before {
+  border-bottom-color: #ffffff;
+}
+.reservation .bootstrap-datetimepicker-widget table td.day:hover {
+  background: #000000;
+}
+.reservation .bootstrap-datetimepicker-widget table td.active,
+.reservation .bootstrap-datetimepicker-widget table td span.active {
+  background: #db00ff;
+}
+.reservation .bootstrap-datetimepicker-widget table a {
+  color: #db00ff;
+}
+.reservation .bootstrap-datetimepicker-widget.usetwentyfour td.minute,
+.reservation .bootstrap-datetimepicker-widget.usetwentyfour td.hour {
+  height: 36px;
+  line-height: 36px;
+}
+.reservation .dropdown-menu.bottom:before {
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-bottom: 14px solid #db00ff;
+  border-bottom-color: #db00ff;
+  z-index: 1;
+  top: -14px;
+}
+.reservation .dropdown-menu.top:before {
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-top: 14px solid #db00ff;
+  border-bottom-color: #db00ff;
+  z-index: 1;
+  bottom: -14px;
+}
+.reservation .reservation_search_nav {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.reservation .reservation_search_nav .nav-tabs {
+  border: none;
+}
+.reservation .reservation_search_nav .nav-tabs .nav-link {
+  border: none;
+  color: #a8a7a7;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  position: relative;
+  background: transparent;
+}
+.reservation .reservation_search_nav .nav-tabs .nav-link.active {
+  color: #db00ff;
+  font-weight: 700;
+}
+.reservation .reservation_search_nav .nav-tabs .nav-link.active:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #db00ff;
+  height: 3px;
+}
+.reservation #reservationSearchContent .tab-pane {
+  min-height: calc(100vh - 200px);
+}
+
+@media screen and (min-width: 992px) {
+  .member_detail,
+  .reservation_detail {
+    border-radius: 4px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .reservation .reservation_member {
+    background: #1f1f1f;
+  }
+  .reservation .reservation_member h6 {
+    font-size: 1rem;
+    color: #a8a7a7;
+  }
+  .reservation .reservation_info {
+    background: transparent;
+  }
+  .reservation .reservation_detail {
+    background: #232323;
+  }
+  .reservation .reservation_detail_content {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .reservation .reservation_btn {
+    height: 40px;
+    color: #ffffff;
+  }
+  .reservation .reservation_btn svg.search-b {
+    color: #ffffff;
+  }
+  .reservation.reservation_detail_history .reservation_detail_content {
+    border-bottom: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .reservation svg.icon.reservation_success {
+    width: 24px;
+    height: 24px;
+  }
+  .reservation .order_card .title_text_item.start {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .reservation .order_card svg.icon.back {
+    display: none;
+  }
+  .reservation .reservation_search_nav {
+    width: 100%;
+  }
+  .reservation .reservation_search_nav .nav-item {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    text-align: center;
+  }
+  .reservation .reservation_search_nav .nav-link {
+    width: 100%;
+  }
+  .reservation.reservation_search .topic_head {
+    height: 200px;
+  }
+  .reservation.reservation_search .reservation_search_breadcrumb {
+    top: 10px;
+    height: 30px;
   }
 }

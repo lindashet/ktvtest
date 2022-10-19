@@ -2243,8 +2243,8 @@ svg.send {
   /*給 Safari 以外的瀏覽器讀取*/
   width: 8.33vw;
   /*給 Safari 以外的瀏覽器讀取*/
-  height: calc(var(--vh, 1vh) * 8.33);
-  width: calc(var(--vh, 1vh) * 8.33);
+  height: calc(var(--vh, 1vh) * 8.73);
+  width: calc(var(--vh, 1vh) * 8.73);
   padding: 0;
   color: #a8a7a7;
   text-align: center;
@@ -4569,9 +4569,9 @@ nav.back_navbar .main_title h5 {
   letter-spacing: 0.2vh;
 }
 .controller #evenoddBtn .evenoddBtnPath {
-  height: 6.87vh;
+  height: 7.87vh;
   /*給 Safari 以外的瀏覽器讀取*/
-  height: calc(var(--vh, 1vh) * 6.87);
+  height: calc(var(--vh, 1vh) * 7.87);
   width: 100%;
   padding-left: 7.435%;
   padding-right: 7.435%;

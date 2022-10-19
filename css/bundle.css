@@ -1995,7 +1995,7 @@ select.form-select::placeholder {
 
 .form-text {
   font-size: 0.75rem;
-  color: #252525;
+  color: #ec4747;
   font-weight: 500;
 }
 
@@ -2072,6 +2072,7 @@ svg.send {
 /*!***********************************************************************************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!../node_modules/sass-loader/dist/cjs.js!./scss/common/components.scss ***!
   \***********************************************************************************************************************************************************************************************/
+@charset "UTF-8";
 #cover.cover {
   position: fixed;
   display: none;
@@ -2238,11 +2239,15 @@ svg.send {
 }
 
 .setting_btn {
-  width: 7.76vh;
-  height: 7.76vh;
+  height: 8.33vh;
+  /*給 Safari 以外的瀏覽器讀取*/
+  width: 8.33vw;
+  /*給 Safari 以外的瀏覽器讀取*/
+  height: calc(var(--vh, 1vh) * 8.33);
+  width: calc(var(--vh, 1vh) * 8.33);
   padding: 0;
   letter-spacing: 0.5vh;
-  font-size: 1.65vh;
+  font-size: 13.5px;
   color: #a8a7a7;
   text-align: center;
   vertical-align: middle;
@@ -2297,6 +2302,17 @@ svg.send {
 
 .setting_square_btn {
   border-radius: 5px;
+}
+.setting_square_btn svg.icon.beat {
+  position: absolute;
+  height: 2.2vh;
+  /*給 Safari 以外的瀏覽器讀取*/
+  height: calc(var(--vh, 1vh) * 2.2);
+  height: 1.1vh;
+  /*給 Safari 以外的瀏覽器讀取*/
+  height: calc(var(--vh, 1vh) * 1.1);
+  top: 0.8vh;
+  right: 0;
 }
 
 .setting_btn.selected,
@@ -2774,7 +2790,7 @@ nav.nav_category .category_wrapper .nav-item {
 
 .playing_card {
   background-color: #000000;
-  background-image: url(../08ed85ef17891f48ca1d.svg);
+  background-image: url(../assets/imgs/soundwave.svg);
   height: calc(7vh + 130px);
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -2812,7 +2828,7 @@ nav.nav_category .category_wrapper .nav-item {
   background-color: rgba(0, 0, 0, 0.5);
 }
 .modal .btn-close {
-  background-image: url(../698785364502d71266c1.svg);
+  background-image: url(../assets/imgs/close.svg);
 }
 
 .toast_modal {
@@ -2996,7 +3012,7 @@ nav.nav_category .category_wrapper .nav-item {
   height: 12px;
   width: 100%;
   left: 0;
-  background-image: url(../fcb30078be153d28a1fd.svg);
+  background-image: url(../assets/imgs/arrow_top.svg);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -3058,7 +3074,7 @@ nav.nav_category .category_wrapper .nav-item {
   align-content: center;
   background-color: #484848;
   height: 100%;
-  background-image: url(../cfc288dc098bbc6dfeca.svg);
+  background-image: url(../assets/imgs/search.svg);
   background-position: 7px center;
   background-repeat: no-repeat;
   background-size: 16px;
@@ -3500,11 +3516,11 @@ footer.footer {
 .home {
   width: 100%;
   height: 100%;
-  background-image: url(../f63eb6483e842a35abc3.svg),
+  background-image: url(../assets/imgs/backgroundwave.svg),
     -webkit-gradient(linear, left top, left bottom, from(#222222), color-stop(48.96%, #000000), to(#222222));
-  background-image: url(../f63eb6483e842a35abc3.svg),
+  background-image: url(../assets/imgs/backgroundwave.svg),
     -o-linear-gradient(top, #222222 0%, #000000 48.96%, #222222 100%);
-  background-image: url(../f63eb6483e842a35abc3.svg),
+  background-image: url(../assets/imgs/backgroundwave.svg),
     linear-gradient(180deg, #222222 0%, #000000 48.96%, #222222 100%);
   background-position: center 5%, center;
   background-size: 100% auto, 100%;
@@ -4017,7 +4033,8 @@ nav.navbar.navbar_song .nav_member_wrapper:before {
       #161616 76.17%,
       #0f0f0f 100%
     ),
-    url(../2434679a7584a482cc58.svg), url(../0e44bcb8e4d8463d1bfd.svg),
+    url(../assets/imgs/backgroundwavecrew.svg),
+    url(../assets/imgs/gradientbg.svg),
     -o-linear-gradient(316.64deg, #111011 15.19%, #292929 84.91%);
   background-image: linear-gradient(
       180deg,
@@ -4027,7 +4044,8 @@ nav.navbar.navbar_song .nav_member_wrapper:before {
       #161616 76.17%,
       #0f0f0f 100%
     ),
-    url(../2434679a7584a482cc58.svg), url(../0e44bcb8e4d8463d1bfd.svg),
+    url(../assets/imgs/backgroundwavecrew.svg),
+    url(../assets/imgs/gradientbg.svg),
     linear-gradient(133.36deg, #111011 15.19%, #292929 84.91%);
   background-size: 100% 80%, 1710px, 200% 160%, contain;
   background-position: center bottom, 26% 29%, center, center;
@@ -4417,8 +4435,11 @@ nav.navbar.navbar_song .nav_member_wrapper:before {
 /*!************************************************************************************************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!../node_modules/sass-loader/dist/cjs.js!./scss/components/bottom_tab_settings.scss ***!
   \************************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
 .bottom_tab.bottom_tab_settings {
-  height: calc(10.5vh + 3.6vh);
+  height: 14.63vh;
+  /*給 Safari 以外的瀏覽器讀取*/
+  height: calc(var(--vh, 1vh) * 14.63);
 }
 .bottom_tab.bottom_tab_settings .tab_wrapper {
   -webkit-box-shadow: 0px -3px 4px rgba(0, 0, 0, 0.35);
@@ -4426,7 +4447,9 @@ nav.navbar.navbar_song .nav_member_wrapper:before {
 }
 .bottom_tab.bottom_tab_settings .tab_sheet {
   width: 100%;
-  height: 3.6vh;
+  height: 2.8vh;
+  /*給 Safari 以外的瀏覽器讀取*/
+  height: calc(var(--vh, 1vh) * 2.8);
   background-image: url(../assets/imgs//sheet.png);
   position: absolute;
   top: 0;
@@ -4447,7 +4470,9 @@ nav.navbar.navbar_song .nav_member_wrapper:before {
 }
 .bottom_tab.bottom_tab_settings .tab_wrapper {
   background: #000000;
-  height: 10.5vh;
+  height: 11.8vh;
+  /*給 Safari 以外的瀏覽器讀取*/
+  height: calc(var(--vh, 1vh) * 11.8);
 }
 .bottom_tab.bottom_tab_settings .setting_icon_btn {
   -webkit-box-flex: 1;
@@ -4505,6 +4530,7 @@ nav.back_navbar .main_title h5 {
 /*!****************************************************************************************************************************************************************************************!*\
   !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!../node_modules/sass-loader/dist/cjs.js!./scss/controller.scss ***!
   \****************************************************************************************************************************************************************************************/
+@charset "UTF-8";
 .controller {
   background-image: -o-linear-gradient(
     313.03deg,
@@ -4526,6 +4552,8 @@ nav.back_navbar .main_title h5 {
 .controller #evenoddBtn {
   width: 100%;
   margin-top: 1.5vh;
+  /*給 Safari 以外的瀏覽器讀取*/
+  margin-top: calc(var(--vh, 1vh) * 1.5);
 }
 .controller #evenoddBtn span {
   font-size: 2vh;
@@ -4533,13 +4561,32 @@ nav.back_navbar .main_title h5 {
   letter-spacing: 4px;
 }
 .controller #evenoddBtn .evenoddBtnPath {
-  height: 9vh;
+  height: 6.87vh;
+  /*給 Safari 以外的瀏覽器讀取*/
+  height: calc(var(--vh, 1vh) * 6.87);
   width: 100%;
   padding-left: 7.435%;
   padding-right: 7.435%;
 }
 .controller #evenoddBtn #evenoddBtnBg {
+  fill: url(#dark);
+}
+.controller #evenoddBtn svg.icon.smart-light {
+  height: 3vh;
+  /*給 Safari 以外的瀏覽器讀取*/
+  width: 3vw;
+  /*給 Safari 以外的瀏覽器讀取*/
+  height: calc(var(--vh, 1vh) * 3);
+  width: calc(var(--vh, 1vh) * 3);
+}
+.controller #evenoddBtn .smartLightPath {
+  fill: url(#party2);
+}
+.controller #evenoddBtn.active #evenoddBtnBg {
   fill: url(#party);
+}
+.controller #evenoddBtn.active .smartLightPath {
+  fill: #ffffff;
 }
 .controller .microphone_mode {
   margin-top: 4.8vh;
@@ -4581,9 +4628,18 @@ nav.back_navbar .main_title h5 {
 }
 .controller .title_mt {
   margin-top: 1.1vh;
+  /*給 Safari 以外的瀏覽器讀取*/
+  margin-top: calc(var(--vh, 1vh) * 1.1);
+}
+.controller .title_mb {
+  margin-bottom: 1.1vh;
+  /*給 Safari 以外的瀏覽器讀取*/
+  margin-bottom: calc(var(--vh, 1vh) * 1.1);
 }
 .controller .btn_group_wrapper.circle_btn {
   padding-bottom: 1.1vh;
+  /*給 Safari 以外的瀏覽器讀取*/
+  padding-bottom: calc(var(--vh, 1vh) * 1.1);
 }
 .controller .btn_group_wrapper.circle_btn:after {
   width: calc(100% - 32px);
@@ -4628,13 +4684,14 @@ nav.back_navbar .main_title h5 {
 }
 
 .controller.settings * {
-  line-height: 1.5vh;
+  line-height: 2.5vh;
+  /*給 Safari 以外的瀏覽器讀取*/
+  line-height: calc(var(--vh, 1vh) * 2.5);
 }
 
 .controller.settings h6 {
-  font-size: 1.54vh;
-  margin-top: 1vh;
-  margin-bottom: 1vh;
+  font-size: 1.46vh;
+  font-size: calc(var(--vh, 1vh) * 1.46);
 }
 
 .controller.settings .row > * {
@@ -4656,16 +4713,13 @@ nav.back_navbar .main_title h5 {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url(../f63eb6483e842a35abc3.svg);
+  background-image: url("../assets/imgs/backgroundwave.svg");
   background-color: #f1f1f1;
   background-position: center 5%, center;
   background-size: 100% auto, 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
   opacity: 0.4;
-}
-.sign #evenoddBtn {
-  fill: url(#party);
 }
 .sign .main.container {
   margin-top: 200px;
@@ -4823,7 +4877,7 @@ nav.back_navbar .main_title h5 {
   border-color: #525252;
 }
 .reservation select.form-select {
-  background-image: url("../assets/imgs/select-arrow.png");
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAUCAYAAAADU1RxAAAACXBIWXMAACE4AAAhOAFFljFgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEKSURBVHgBzdXbDYJAEAXQizZACZjotzXYiXRgB2IlWIIdYAf6rSZgHcasMzpEQB67AxpvsuG1XE52PwD+MSmMTyPAF8LddfdH1Uk3YH8HkqEh3Ee9hwtM3DbJP8EczzCGB01Oh4JwD/cVuksQLwfwCtDFvPIwGwOLCbwMysgKJAYIKt3bKbyQz5/bUQfg8It9tqYJIN3LfEVGoto1FWkhbYBC91W+/wrtVUSHddMLLltjA6BsZvAi6X5nCIgrQHrL6QPRAKTzMxqIFiB99XGB9AFIV3NsIPThkI6xFiA97emCWKQVYIXoCekEWCOUECuAE8IRYg1wRlhCnADqMCT/LVdGhF+mBrKCMg9eW8pSr4UgDAAAAABJRU5ErkJggg==);
   background-size: auto 20%;
   background-repeat: no-repeat;
   border-width: 0 0 1px 0;

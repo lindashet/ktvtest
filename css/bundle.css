@@ -4690,8 +4690,8 @@ nav.back_navbar .main_title h5 {
 }
 
 .controller.settings h6 {
-  font-size: 1.46vh;
-  font-size: calc(var(--vh, 1vh) * 1.46);
+  font-size: 1.76vh;
+  font-size: calc(var(--vh, 1vh) * 1.76);
 }
 
 .controller.settings .row > * {

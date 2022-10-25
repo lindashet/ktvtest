@@ -1971,6 +1971,11 @@ select.form-select::placeholder {
   color: #000000;
 }
 
+.form_button.solid.bg_party {
+  background: #db00ff;
+  color: #000000;
+}
+
 .form_button.solid[disabled] {
   color: #ffffff;
   background: #d9d9d9;
@@ -2239,9 +2244,9 @@ svg.send {
 }
 
 .setting_btn {
-  height: 8.33vh;
+  height: 8.73vh;
   /*給 Safari 以外的瀏覽器讀取*/
-  width: 8.33vw;
+  width: 8.73vw;
   /*給 Safari 以外的瀏覽器讀取*/
   height: calc(var(--vh, 1vh) * 8.73);
   width: calc(var(--vh, 1vh) * 8.73);
@@ -2522,6 +2527,7 @@ svg.send {
 
 .stroke_btn,
 .modal_list_btn.stroke_btn {
+  display: block;
   padding-top: 0.375rem;
   padding-bottom: 0.375rem;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -2543,6 +2549,10 @@ svg.send {
   color: #db00ff;
 }
 
+.period_btn.stroke_btn {
+  border-color: #a8a7a7;
+}
+
 .stroke_btn.selected,
 .modal_list_btn.stroke_btn.selected {
   background-image: -o-linear-gradient(
@@ -2553,6 +2563,12 @@ svg.send {
   background-image: linear-gradient(133.36deg, #111011 15.19%, #292929 84.91%);
   border: 1px solid #db00ff;
   color: #db00ff;
+}
+
+.stroke_btn.disabled,
+.modal_list_btn.stroke_btn.disabled {
+  border-color: #484848;
+  color: #525252;
 }
 
 nav.nav_category {
@@ -3370,6 +3386,13 @@ footer.footer {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
   }
+  .period_confirm {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+  }
 }
 
 @media screen and (max-width: 390px) {
@@ -3413,14 +3436,17 @@ footer.footer {
   .volume_btn:hover svg {
     color: #db00ff;
   }
-  .stroke_btn:hover,
-  .modal_list_btn.stroke_btn:hover {
+  .stroke_btn:not(.disabled):hover,
+  .modal_list_btn.stroke_btn:not(.disabled):hover {
     border: 1px solid #db00ff;
     color: #db00ff;
   }
-  .stroke_btn:hover svg.icon,
-  .modal_list_btn.stroke_btn:hover svg.icon {
+  .stroke_btn:not(.disabled):hover svg.icon,
+  .modal_list_btn.stroke_btn:not(.disabled):hover svg.icon {
     color: #db00ff;
+  }
+  .period_btn.stroke_btn.disabled:hover {
+    cursor: not-allowed;
   }
 }
 

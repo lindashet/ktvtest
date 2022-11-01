@@ -78,7 +78,7 @@ $(document).ready(function () {
         `<button class="modal_list_btn stroke_btn mt_10" id="modal-list-${i}"> ${list[i].title} </button>`
       );
       if (titleIndex == i) {
-        $(".back_navbar h5").text(list[i].title);
+        $(".back_navbar h6").text(list[i].title);
         $(`#backNavModal #modal-list-${i}`).addClass("selected");
       }
     }
@@ -91,7 +91,7 @@ $(document).ready(function () {
 
     $("#backNavModal .modal_list_btn").removeClass("selected");
     $(`#backNavModal #modal-list-${targetItemId}`).addClass("selected");
-    $(".back_navbar h5").text(targetItemText);
+    $(".back_navbar h6").text(targetItemText);
 
     $("#backNavModal").modal("hide");
   });

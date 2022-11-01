@@ -17,7 +17,7 @@
   <script type="text/javascript" src="f81c312385c632dd0720.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/eonasdan-bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
   <title>ONCOR</title>
-  <body class="controller volume song_page" ontouchstart="">
+  <body class="song_category_list song_page song_bg" ontouchstart="">
     <header>
       <nav class="back_navbar fixed-top d-flex align-items-center">
         <div class="container-fluid p-0 d-flex align-items-center pos_r">
@@ -26,7 +26,7 @@
               <use xlink:href="#back"></use>
             </svg>
           </button>
-          <h6 class="flex-grow-1">音量</h6>
+          <h6 class="flex-grow-1">搜尋</h6>
           <div class="nav_member_wrapper d-flex align-items-center">
             <div class="toast_lang_wrapper">
               <button class="lang" id="lang_btn">
@@ -68,59 +68,48 @@
         </div>
       </nav>
     </header>
-    <div class="main container container-md">
-      <div class="row justify-content-center">
-        <div class="volume_controller volume" id="volume">
-          <button class="volume_btn" id="volumeMinus">
-            <svg class="icon minus" aria-hidden="true">
-              <use xlink:href="#minus"></use>
-            </svg>
-          </button>
-          <div class="progress_wrapper">
-            <h6 class="font_sub_gray">音量</h6>
-            <div class="dot_wrapper flex_center mt_12">
-              <div class="dot active"></div>
-              <div class="dot active"></div>
-              <div class="dot active"></div>
-              <div class="dot active"></div>
-              <div class="dot active"></div>
-              <div class="dot active"></div>
-              <div class="dot"></div>
-              <div class="dot"></div>
-              <div class="dot"></div>
-              <div class="dot"></div>
-              <div class="dot"></div>
-            </div>
-          </div>
-          <button class="volume_btn" id="volumePlus">
-            <svg class="icon plus" aria-hidden="true">
-              <use xlink:href="#plus"></use>
-            </svg>
-          </button>
-        </div>
-        <div class="microphone_mode text-center">
-          <h6 class="font_sub_party">重低音</h6>
-          <div class="microphone_mode_btn_wrapper flex_center">
-            <button class="stroke_btn selected">關
-            </button>
-            <button class="stroke_btn">弱
-            </button>
-          </div>
-          <div class="microphone_mode_btn_wrapper flex_center">
-            <button class="stroke_btn">中
-            </button>
-            <button class="stroke_btn">強
-            </button>
-          </div>
+    <div class="main container-fluid p_0 song_nav_margin">
+      <div class="container">
+        <h5 class="font_title_light">搜尋</h5>
+        <div class="row">
+          <div class="col-4 mt_12"><a class="ratio ratio-2x1" href="singer_list.html?cate=5&amp;title=1">
+              <div class="ktv_search_img_card flex_between_center"><img class="img_card w-auto h-100" src="assets/imgs/search_male_singer.png" alt="">
+                <div class="flex_center flex-grow-1">
+                  <h6>男歌手</h6>
+                </div>
+              </div></a></div>
+          <div class="col-4 mt_12"><a class="ratio ratio-2x1" href="singer_list.html?cate=5&amp;title=0">
+              <div class="ktv_search_img_card flex_between_center"><img class="img_card w-auto h-100" src="assets/imgs/search_female_singer.png" alt="">
+                <div class="flex_center flex-grow-1">
+                  <h6>女歌手</h6>
+                </div>
+              </div></a></div>
+          <div class="col-4 mt_12"><a class="ratio ratio-2x1" href="singer_list.html?cate=5&amp;title=2">
+              <div class="ktv_search_img_card flex_between_center"><img class="img_card w-auto h-100" src="assets/imgs/search_group.png" alt="">
+                <div class="flex_center flex-grow-1">
+                  <h6>團體</h6>
+                </div>
+              </div></a></div>
+          <div class="col-4 mt_12"><a class="ratio ratio-2x1" href="search_music.html?cate=5&amp;title=3">
+              <div class="ktv_search_img_card flex_between_center"><img class="img_card w-auto h-100" src="assets/imgs/search_song.png" alt="">
+                <div class="flex_center flex-grow-1">
+                  <h6>歌曲</h6>
+                </div>
+              </div></a></div>
+          <div class="col-4 mt_12"><a class="ratio ratio-2x1" href="english_keywords.html">
+              <div class="ktv_search_img_card flex_between_center"><img class="img_card w-auto h-100" src="assets/imgs/search_song.png" alt="">
+                <div class="flex_center flex-grow-1">
+                  <h6>英文<span class="d-block">關鍵字</span></h6>
+                </div>
+              </div></a></div>
         </div>
       </div>
     </div>
-    <div class="cover" id="cover"></div>
     <div class="bottom_tab bottom_tab_sub">
       <div class="tab_wrapper"><a class="active_tab d-flex flex-column align-items-center" role="button" href="song.html" id="home">
           <svg class="icon mr_m_0" aria-hidden="true">
             <use xlink:href="#home"></use>
-          </svg><span>回主頁</span></a><a class="active_tab d-flex flex-column align-items-center" role="button" href="song_category_list.html" id="music">
+          </svg><span>回主頁</span></a><a class="active_tab d-flex flex-column align-items-center selected" role="button" href="song_category_list.html" id="music">
           <svg class="icon mr_m_0" aria-hidden="true">
             <use xlink:href="#music"></use>
           </svg><span>歌曲</span></a><a class="active_tab request_song d-flex flex-column align-items-center" role="button" href="players_list.html" id="home">
@@ -132,6 +121,7 @@
           </div></a>
       </div>
     </div>
+    <div class="cover" id="cover"></div>
   </body>
   <script src="9ab00be9aa2c52820ef4.js"></script>
 <script defer="defer" src="bundle.js"></script><link href="./css/bundle.css" rel="stylesheet"></head>

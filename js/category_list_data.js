@@ -16,7 +16,7 @@ $(document).ready(function () {
   $("#backNavModal .modal_list_btn").click(function (e) {
     let targetItemText = $(this).text();
 
-    $(".main_title h5").text(targetItemText);
+    $(".main_title h6").text(targetItemText);
 
     $("#backNavModal").modal("hide");
   });

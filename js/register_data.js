@@ -14,21 +14,18 @@ $(document).ready(function () {
   $("#nextBtn").click(function () {
     $(".register_step_1").addClass("d-none");
     $(".register_step_2").removeClass("d-none");
-    console.log("step 2");
   });
 
   //點擊驗證按鈕
   $("#verifyBtn").click(function () {
     $(".register_step_2").addClass("d-none");
     $(".register_step_3").removeClass("d-none");
-    console.log("step 3");
   });
 
   //點擊註冊按鈕
   $("#registerBtn").click(function () {
     $(".register_step_3").addClass("d-none");
     $(".register_step_4").removeClass("d-none");
-    console.log("step 4");
   });
 
   //偵測input已填寫內容，顯示驗證碼區塊
@@ -58,8 +55,30 @@ $(document).ready(function () {
   });
 
   //偵測input已填寫內容，registerBtn 切換為可點擊
+  $("#nameInput").bind("input propertychange", function (evt) {
+    if (
+      $("#nameInput").val().length > 0 &&
+      $("#birthdayInput").val().length > 0 &&
+      $("#passwordInput").val().length > 0 &&
+      $("#passwordRepeatInput").val().length > 0
+    ) {
+      $("#registerBtn").removeAttr("disabled");
+    }
+  });
+  $("#birthdayInput").bind("input propertychange", function (evt) {
+    if (
+      $("#nameInput").val().length > 0 &&
+      $("#birthdayInput").val().length > 0 &&
+      $("#passwordInput").val().length > 0 &&
+      $("#passwordRepeatInput").val().length > 0
+    ) {
+      $("#registerBtn").removeAttr("disabled");
+    }
+  });
   $("#passwordInput").bind("input propertychange", function (evt) {
     if (
+      $("#nameInput").val().length > 0 &&
+      $("#birthdayInput").val().length > 0 &&
       $("#passwordInput").val().length > 0 &&
       $("#passwordRepeatInput").val().length > 0
     ) {
@@ -69,6 +88,8 @@ $(document).ready(function () {
 
   $("#passwordRepeatInput").bind("input propertychange", function (evt) {
     if (
+      $("#nameInput").val().length > 0 &&
+      $("#birthdayInput").val().length > 0 &&
       $("#passwordInput").val().length > 0 &&
       $("#passwordRepeatInput").val().length > 0
     ) {

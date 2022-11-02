@@ -1,8 +1,100 @@
 //app.js
 $(document).ready(function () {
+  lazyload();
+
+  //Toast Text 提示漸入
+  function ShowToastText(text) {
+    $(".toast_text_msg").text(text);
+    $(".toast_text_msg").fadeIn();
+    setTimeout(function () {
+      $(".toast_text_msg").fadeOut();
+    }, 800);
+  }
+
   //回上頁
   $("#backToPre").on("click", () => {
     history.back();
+  });
+
+  //打開點餐車
+  $("#goToCartBtn").click(function () {
+    $("#cartModal").modal("show");
+  });
+  $("#cart_btn").click(function () {
+    $("#cartModal").modal("show");
+  });
+
+  //點餐紀錄-展開詳細內容按鈕
+  $(".show_meals_btn").click(function () {
+    $(".order_record_item_wrapper.ellipsis").slideToggle(500, function () {
+      if ($(".show_meals_btn").hasClass("expand")) {
+        $(".show_meals_btn").removeClass("expand");
+        $(".show_meals_btn span").text("SEE MORE");
+      } else {
+        $(".order_record_item_wrapper.ellipsis").removeClass("d-none");
+        $(".show_meals_btn").addClass("expand");
+        $(".show_meals_btn span").text("COLLAPSE");
+      }
+    });
+  });
+  //點擊AC主廚設計icon
+  $(".ac.mark_icon").click(function (event) {
+    $("#ACModal").modal("show");
+    event.stopPropagation();
+  });
+
+  //送出餐點按鈕
+  $("#sendOrderBtn").click(function () {
+    $("#cartModal").modal("hide");
+    ShowToastText("點餐成功");
+  });
+
+  //藥丸頁籤分頁操作
+  //選中頁籤
+  $('a[data-bs-toggle="tab"]').on("show.bs.tab", function (e) {
+    let targetItemId = e.target.id.split("-")[0];
+    if (targetItemId == "cartTab") {
+      $(".cartTab_footer").show();
+      $(".cartTab2_footer").hide();
+    } else {
+      $(".cartTab_footer").hide();
+      $(".cartTab2_footer").show();
+    }
+  });
+
+  //點餐快速加入按鈕
+  $(".add_btn").click(function (event) {
+    if ($(".go_to_cart_wrapper").hasClass("d-none")) {
+      $(".go_to_cart_wrapper").removeClass("d-none");
+    }
+
+    ShowToastText("餐點新增成功");
+    event.stopPropagation();
+  });
+
+  //點餐詳細頁加入按鈕
+  $("#addMealBtn").click(function () {
+    $("#orderDetailModal").modal("hide");
+    if ($(".go_to_cart_wrapper").hasClass("d-none")) {
+      $(".go_to_cart_wrapper").removeClass("d-none");
+    }
+    ShowToastText("餐點新增成功");
+  });
+
+  //點擊餐點 - 展開詳細頁
+  $(".menu_item").click(function () {
+    $("#orderDetailModal").modal("show");
+  });
+
+  //計數器 Counter
+  var count = 1;
+  $(".counter .minus_btn").click(function () {
+    count--;
+    $(".counter span").text(count);
+  });
+  $(".counter .plus_btn").click(function () {
+    count++;
+    $(".counter span").text(count);
   });
 
   //環控頁面 元素高度等比例設定
@@ -23,6 +115,19 @@ $(document).ready(function () {
   });
 
   $(window).scroll(function () {
+    if ($(this).scrollTop() > 144) {
+      /* 要滑動到選單的距離 */
+      $(".menu_category_navbar").addClass("scrollspy"); /* 幫選單加上固定效果 */
+      $("#navbar_menu").addClass("scrollspy"); /* 幫選單加上固定效果 */
+      $(".scrollspy_menu").addClass("scrollspy"); /* 幫選單加上固定效果 */
+    } else {
+      $(".menu_category_navbar").removeClass(
+        "scrollspy"
+      ); /* 幫選單加上固定效果 */
+      $("#navbar_menu").removeClass("scrollspy"); /* 幫選單加上固定效果 */
+      $(".scrollspy_menu").removeClass("scrollspy"); /* 幫選單加上固定效果 */
+    }
+
     if (
       ($(document).width() > 767 && $(this).scrollTop() > 140) ||
       ($(document).width() < 768 && $(this).scrollTop() > 200)
@@ -53,15 +158,25 @@ $(document).ready(function () {
 
   //語言切換動作
   //點擊外圍關閉語言視窗
+  //點擊外圍關閉會員中心視窗
   $(document).click(function () {
     if ($(".toast_lang_wrapper").hasClass("active")) {
       $(".toast_lang_wrapper").removeClass("active");
       $("#cover").hide();
     }
+    if ($(".toast_member_wrapper").hasClass("active")) {
+      $(".toast_member_wrapper").removeClass("active");
+      $("#cover").hide();
+    }
   });
 
   //阻止冒泡事件
-  $(".toast_lang_wrapper").click(function () {
+  $(".toast_lang_wrapper").click(function (event) {
+    $(".toast_member_wrapper").removeClass("active"); //關閉
+    event.stopPropagation();
+  });
+  $(".toast_member_wrapper").click(function (event) {
+    $(".toast_lang_wrapper").removeClass("active"); //關閉
     event.stopPropagation();
   });
 
@@ -74,9 +189,32 @@ $(document).ready(function () {
     }
   });
 
+  //點擊會員中心按鈕
+  $("#member_btn").click(function () {
+    if ($(".toast_member_wrapper").hasClass("active")) {
+      ToastMemberToggle(false);
+    } else {
+      ToastMemberToggle(true);
+    }
+  });
+
   $("#cover").click(function () {
     ToastLangToggle(false);
+    ToastMemberToggle(false);
   });
+
+  //會員中心視窗開關
+  function ToastMemberToggle(isOpen) {
+    $(".toast_member_wrapper").click(function () {
+      if (isOpen) {
+        $(".toast_member_wrapper").addClass("active");
+        $("#cover").show();
+      } else {
+        $(".toast_member_wrapper").removeClass("active");
+        $("#cover").hide();
+      }
+    });
+  }
 
   //語言視窗開關
   function ToastLangToggle(isOpen) {
@@ -90,6 +228,13 @@ $(document).ready(function () {
       }
     });
   }
+
+  // 修改密碼
+  $("#resetPasswordBtn").click(function () {
+    $(".resetPasswordModalText").text("會員密碼修改成功！");
+    $("#resetPasswordModal").modal("show");
+  });
+
   // 取消訂位
   $("#reservationCancelBtn").click(function () {
     messageModal("您的訂位已取消");
@@ -104,7 +249,6 @@ $(document).ready(function () {
   //messageModal 點擊 confirm 按鈕
   $("#messageModal #comfirmBtn").click(function () {
     $("#messageModal").modal("hide");
-    console.log("click");
     window.location.href = "reservation_search.html";
   });
 

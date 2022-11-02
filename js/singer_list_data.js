@@ -6,6 +6,8 @@ $(document).ready(function () {
     { title: "FEMALE ARTISTS", id: "female", img: "KTV-default" },
     { title: "MALE ARTISTS", id: "male", img: "KTV-default" },
     { title: "GROUP ARTISTS", id: "group", img: "KTV-default" },
+    { title: "SONG TITLES", id: "song", img: "KTV-default" },
+    { title: "ENG. KEYWORD", id: "english_keywords", img: "KTV-default" },
   ];
 
   //取得分類標題
@@ -14,7 +16,9 @@ $(document).ready(function () {
 
   function getTitle() {
     //被選中的導覽分類
-    $(".back_navbar h5").text(list[titleIndex].title);
+    if (titleIndex < 3) {
+      $(".back_navbar h6").text(list[titleIndex].title);
+    }
     $(`#backNavModal #modal-list-${list[titleIndex].id}`).addClass("selected");
   }
 
@@ -23,10 +27,26 @@ $(document).ready(function () {
     let targetItemText = $(this).text();
     let targetItemId = e.target.id.split("-")[2];
 
-    $("#backNavModal .modal_list_btn").removeClass("selected");
-    $(`#backNavModal #modal-list-${targetItemId}`).addClass("selected");
-    $(".back_navbar h5").text(targetItemText);
-
+    if (targetItemId == "male") {
+      window.location.replace("singer_list.html?cate=5&title=1");
+      $("#backNavModal .modal_list_btn").removeClass("selected");
+      $(`#backNavModal #modal-list-${targetItemId}`).addClass("selected");
+      $(".back_navbar h6").text(targetItemText);
+    } else if (targetItemId == "female") {
+      window.location.replace("singer_list.html?cate=5&title=0");
+      $("#backNavModal .modal_list_btn").removeClass("selected");
+      $(`#backNavModal #modal-list-${targetItemId}`).addClass("selected");
+      $(".back_navbar h6").text(targetItemText);
+    } else if (targetItemId == "group") {
+      window.location.replace("singer_list.html?cate=5&title=2");
+      $("#backNavModal .modal_list_btn").removeClass("selected");
+      $(`#backNavModal #modal-list-${targetItemId}`).addClass("selected");
+      $(".back_navbar h6").text(targetItemText);
+    } else if (targetItemId == "song") {
+      window.location.replace("search_music.html?cate=5&title=3");
+    } else if (targetItemId == "english_keywords") {
+      window.location.replace("english_keywords.html?cate=5&title=4");
+    }
     $("#backNavModal").modal("hide");
   });
 
@@ -51,17 +71,25 @@ $(document).ready(function () {
         setScrollWrapperHeight(".zhuyin_keyboard", ".scroll_wrapper_zhuyin");
       }, 100);
     }
+
+    if (targetItemId == "number") {
+      window.setTimeout(() => {
+        setScrollWrapperHeight(".number_keyboard", ".scroll_wrapper_number");
+      }, 100);
+    }
   });
 
   //keyboard 動態改變 ScrollWrapper 高度
   //進入畫面時設定 ScrollWrapper 高度
   setScrollWrapperHeight(".zhuyin_keyboard", ".scroll_wrapper_zhuyin");
   setScrollWrapperHeight(".english_keyboard", ".scroll_wrapper_english");
+  setScrollWrapperHeight(".number_keyboard", ".scroll_wrapper_number");
 
   $(window).resize(function () {
     //Screen size 改變時設定 ScrollWrapper 高度
     setScrollWrapperHeight(".zhuyin_keyboard", ".scroll_wrapper_zhuyin");
     setScrollWrapperHeight(".english_keyboard", ".scroll_wrapper_english");
+    setScrollWrapperHeight(".number_keyboard", ".scroll_wrapper_number");
   });
 
   function setScrollWrapperHeight(keyboard, scrollWrapper) {

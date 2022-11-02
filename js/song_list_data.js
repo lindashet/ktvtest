@@ -5,6 +5,7 @@ $(document).ready(function () {
     { title: "MANDARIN", img: "KTV-1-NewRelease-01" },
     { title: "TAIWANESE", img: "KTV-1-NewRelease-02" },
     { title: "ENGLISH", img: "KTV-1-NewRelease-03" },
+    { title: "CANTONESE", img: "cantonese" },
     { title: "OTHERS", img: "KTV-1-NewRelease-08" },
   ];
   const rankingKtvImgCards = [
@@ -21,22 +22,22 @@ $(document).ready(function () {
     { title: "ULTRA 2022", img: "KTV-4-Party-01" },
     { title: "EDC 2022", img: "KTV-4-Party-02" },
   ];
-const djKtvImgCards = [
-  { title: "BUBBLE", img: "BUBBLE_theLOOP_1200x1200-2" },
-  { title: "CYNDI", img: "CYNDI_theLOOP_1200x1200-2" },
-  { title: "EYCK", img: "EYCK_theLOOP_1200x1200" },
-  { title: "GIN", img: "GIN_theLOOP_1200x1200" },
-  { title: "RARA", img: "RARA_theLOOP_1200x1200" },
-  { title: "RAYRAY", img: "RAYRAY_theLOOP_1200x1200-2" },
-  { title: "REASON", img: "REASON_theLOOP_1200x1200-2" },
-  { title: "SHORTY", img: "SHORTY_theLOOP_1200x1200" },
-  { title: "T-TIME", img: "T-TIME_theLOOP_1200x1200" },
-  { title: "USAL", img: "USAL_theLOOP_1200x1200" },
-  { title: "VONIK & BELL", img: "VONIK_BELL_theLOOP_1200x1200" },
-  { title: "VONIK", img: "VONIK_theLOOP_1200x1200" },
-  { title: "WADE", img: "WADE_theLOOP_1200x1200" },
-  { title: "ZEINT", img: "ZEINT_theLOOP_1200x1200" },
-];
+  const djKtvImgCards = [
+    { title: "BUBBLE", img: "BUBBLE_theLOOP_1200x1200-2" },
+    { title: "CYNDI", img: "CYNDI_theLOOP_1200x1200-2" },
+    { title: "EYCK", img: "EYCK_theLOOP_1200x1200" },
+    { title: "GIN", img: "GIN_theLOOP_1200x1200" },
+    { title: "RARA", img: "RARA_theLOOP_1200x1200" },
+    { title: "RAYRAY", img: "RAYRAY_theLOOP_1200x1200-2" },
+    { title: "REASON", img: "REASON_theLOOP_1200x1200-2" },
+    { title: "SHORTY", img: "SHORTY_theLOOP_1200x1200" },
+    { title: "T-TIME", img: "T-TIME_theLOOP_1200x1200" },
+    { title: "USAL", img: "USAL_theLOOP_1200x1200" },
+    { title: "VONIK & BELL", img: "VONIK_BELL_theLOOP_1200x1200" },
+    { title: "VONIK", img: "VONIK_theLOOP_1200x1200" },
+    { title: "WADE", img: "WADE_theLOOP_1200x1200" },
+    { title: "ZEINT", img: "ZEINT_theLOOP_1200x1200" },
+  ];
 
   var list = [];
   var cate = "";
@@ -76,7 +77,7 @@ const djKtvImgCards = [
         `<button class="modal_list_btn stroke_btn mt_10" id="modal-list-${i}"> ${list[i].title} </button>`
       );
       if (titleIndex == i) {
-        $(".back_navbar h5").text(list[i].title);
+        $(".back_navbar h6").text(list[i].title);
         $(`#backNavModal #modal-list-${i}`).addClass("selected");
       }
     }
@@ -89,7 +90,7 @@ const djKtvImgCards = [
 
     $("#backNavModal .modal_list_btn").removeClass("selected");
     $(`#backNavModal #modal-list-${targetItemId}`).addClass("selected");
-    $(".back_navbar h5").text(targetItemText);
+    $(".back_navbar h6").text(targetItemText);
 
     $("#backNavModal").modal("hide");
   });

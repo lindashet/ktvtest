@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <meta name="theme-color" content="#000">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&amp;family=Roboto&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/eonasdan-bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+  <link href="./css/bundle.css" rel="stylesheet">
+  <title>ONCOR</title>
+  </head>
+  <body class="order order_page order_drink pos_r" data-spy="scroll" tabindex="0">
+    <header>
+      <nav class="navbar navbar_order fixed-top">
+        <div class="container-fluid justify-content-between justify-content-md-start pos_r">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+            <svg class="icon navbar-toggler-icon menu" aria-hidden="true">
+              <use xlink:href="#menu"></use>
+            </svg>
+            <svg class="icon navbar-toggler-icon close" aria-hidden="true">
+              <use xlink:href="#close"></use>
+            </svg>
+          </button>
+          <div class="collapse navbar-collapse ml_50 ml_m_0" id="navbarToggler">
+            <ul class="navbar-nav me-auto">
+                  <li class="nav-item py_24 mx_16 mx_m_0"><a class="nav-link p_0" href="index.html">HOME</a></li>
+                  <li class="nav-item py_24 mx_16 mx_m_0"><a class="nav-link p_0" href="reservation.html">RSVP</a></li>
+                  <li class="nav-item py_24 mx_16 mx_m_0"><a class="nav-link p_0" href="order.html">MENU</a></li>
+                  <li class="nav-item py_24 mx_16 mx_m_0"><a class="nav-link p_0" href="song.html">SONG QUEUE</a></li>
+            </ul>
+            <footer class="footer d-md-none fixed-bottom text-center mb_20">© 2022  ONCOR</footer>
+          </div>
+          <div class="nav_member_wrapper d-flex align-items-center flex-grow-1">
+            <div class="toast_lang_wrapper">
+              <button class="lang" id="lang_btn">
+                <svg class="icon lang mr_16 mr_m_0" aria-hidden="true">
+                  <use xlink:href="#lang"></use>
+                </svg>
+              </button>
+              <div class="toast_modal toast_lang">
+                <ul>
+                                    <li class="lang_item tw"><a class="d-flex justify-content-between align-items-center" href="../tw/song.html"><span>Chinese</span>
+                                        <svg class="icon check" aria-hidden="true">
+                                          <use xlink:href="#check"></use>
+                                        </svg></a></li>
+                                    <li class="lang_item en selected"><a class="d-flex justify-content-between align-items-center" href="../en/song.html"><span>English</span>
+                                        <svg class="icon check" aria-hidden="true">
+                                          <use xlink:href="#check"></use>
+                                        </svg></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="sign_wrapper">
+              <div class="toast_member_wrapper"><a class="avator pr_8 ml_16 ml_m_0 d-flex align-items-center" id="member_btn" role="button"><img src="assets/imgs/avator.jpg"><span class="ml_10 d-none d-lg-block">NAME</span></a>
+                <div class="toast_modal toast_member">
+                  <ul>
+                    <li class="text-center"><span class="lightgray">MEMBER CENTER</span></li>
+                    <div class="divider" style="margin: 0"></div>
+                    <li class="text-center"><a href="edit_profile.html"><span>EDIT PROFILE</span></a></li>
+                    <div class="divider" style="margin: 0"></div>
+                    <li class="text-center"><a href="index.html"><span>LOGOUT</span></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="nav_active_wrapper d-flex align-items-center">
+            <button class="pos_r mr_8" id="cart_btn">
+                  <svg class="icon cart" aria-hidden="true">
+                    <use xlink:href="#cart"></use>
+                  </svg><span class="pos_a badge rounded-pill">3</span>
+            </button><a class="active_tab d-flex flex-column align-items-center" id="microphone" role="button" href="song.html">
+                          <svg class="icon mr_m_0" aria-hidden="true">
+                            <use xlink:href="#microphone"></use>
+                          </svg><span>SONG</span></a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="main order_nav_margin"><img class="menu_category cover_img" src="assets/imgs/menu/menu_drink.png">
+      <nav class="menu_category_navbar flex_between_center px_12"><span class="disablegray ls_20">CATEGORY</span>
+        <div class="dropdown text-center"><a class="nav-link dropdown-toggle light ls_20" id="navbarDarkDropdownMenuLink" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">SOFT DRINKS</a>
+          <ul class="toast_modal dropdown-menu dropdown-menu-dark px_16" aria-labelledby="navbarDarkDropdownMenuLink">
+            <li class="py_8"><a class="dropdown-item" href="order_meal.html">FOOD</a>
+            </li>
+            <div class="divider"></div>
+            <li class="py_8"><a class="dropdown-item" href="order_wine.html">HARD DRINKS</a>
+            </li>
+            <div class="divider"></div>
+            <li class="py_8"><a class="dropdown-item party" href="order_drink.html">SOFT DRINKS</a>
+            </li>
+          </ul>
+        </div>
+        <div class="spacer"></div>
+      </nav>
+      <nav class="navbar navbar-light bg-light" id="navbar_menu">
+        <ul class="nav nav-pills">
+          <li class="nav-item"><a class="nav-link" id="drinkCate-0" href="#drink_category0">COFFEE &amp; TEA</a></li>
+          <li class="nav-item"><a class="nav-link" id="drinkCate-1" href="#drink_category1">JUICE &amp; WATER</a></li>
+          <li class="nav-item"><a class="nav-link" id="drinkCate-2" href="#drink_category2">SPARKING </a></li>
+        </ul>
+      </nav>
+      <div class="scrollspy_menu pb_80">
+        <div class="menu_wrapper" id="drink_category0">
+          <h4 class="light pos_r divider_pseu pb_10 mx_16">COFFEE &amp; TEA</h4>
+          <div class="menu_item_wrapper mt_12">
+            <div class="menu_item flex_center pointer">
+              <div class="menu_item_img pos_r"><img class="lazyload" src="assets/imgs/lazyload2.png" data-src="assets/imgs/menu/玉山烏龍茶.png">
+              </div>
+              <div class="menu_item_content">
+                <h4 class="title">SOFT DRINKS
+                </h4>
+                <div class="content">Brief introduction up to two lines. Brief introduction up to two lines.</div>
+                <div class="price">$200
+                </div>
+              </div>
+              <button class="add_btn ml_4">
+                    <svg class="icon add-circle" aria-hidden="true">
+                      <use xlink:href="#add-circle"></use>
+                    </svg>
+              </button>
+            </div>
+            <div class="menu_item flex_center pointer">
+              <div class="menu_item_img pos_r"><img class="lazyload" src="assets/imgs/lazyload2.png" data-src="assets/imgs/menu/玉山烏龍茶.png">
+              </div>
+              <div class="menu_item_content">
+                <h4 class="title">SOFT DRINKS（ADDED）
+                </h4>
+                <div class="content"></div>
+                <div class="price">$200
+                  <div class="badge badge_solid">X1</div>
+                </div>
+              </div>
+              <button class="add_btn ml_4">
+                    <svg class="icon add-circle" aria-hidden="true">
+                      <use xlink:href="#add-circle"></use>
+                    </svg>
+              </button>
+            </div>
+            <div class="menu_item flex_center pointer">
+              <div class="menu_item_img pos_r"><img class="lazyload" src="assets/imgs/lazyload2.png" data-src="assets/imgs/menu/玉山烏龍茶.png">
+                    <svg class="icon ice mark_icon" aria-hidden="true">
+                      <use xlink:href="#ice"></use>
+                    </svg>
+              </div>
+              <div class="menu_item_content">
+                <h4 class="title">SOFT DRINKS（ICE)
+                </h4>
+                <div class="content"></div>
+                <div class="price">$200
+                </div>
+              </div>
+              <button class="add_btn ml_4">
+                    <svg class="icon add-circle" aria-hidden="true">
+                      <use xlink:href="#add-circle"></use>
+                    </svg>
+              </button>
+            </div>
+            <div class="menu_item flex_center pointer">
+              <div class="menu_item_img pos_r"><img class="lazyload" src="assets/imgs/lazyload2.png" data-src="assets/imgs/menu/玉山烏龍茶.png">
+                    <svg class="icon hot mark_icon" aria-hidden="true">
+                      <use xlink:href="#hot"></use>
+                    </svg>
+              </div>
+              <div class="menu_item_content">
+                <h4 class="title">SOFT DRINKS（HOT)
+                </h4>
+                <div class="content"></div>
+                <div class="price">$200
+                </div>
+              </div>
+              <button class="add_btn ml_4">
+                    <svg class="icon add-circle" aria-hidden="true">
+                      <use xlink:href="#add-circle"></use>
+                    </svg>
+              </button>
+            </div>
+          </div>
+          <div class="divider_pseu pos_r mx_16"></div>
+        </div>
+        <div class="menu_wrapper" id="drink_category1">
+          <h4 class="light pos_r divider_pseu pb_10 mx_16">JUICE &amp; WATER</h4>
+          <div class="menu_item_wrapper mt_12">
+            <div class="menu_item flex_center pointer">
+              <div class="menu_item_img pos_r"><img class="lazyload" src="assets/imgs/lazyload2.png" data-src="assets/imgs/menu/玉山烏龍茶.png">
+              </div>
+              <div class="menu_item_content">
+                <h4 class="title">SOFT DRINKS
+                </h4>
+                <div class="content">Brief introduction up to two lines. Brief introduction up to two lines.</div>
+                <div class="price">$200
+                </div>
+              </div>
+              <button class="add_btn ml_4">
+                    <svg class="icon add-circle" aria-hidden="true">
+                      <use xlink:href="#add-circle"></use>
+                    </svg>
+              </button>
+            </div>
+            <div class="menu_item flex_center pointer">
+              <div class="menu_item_img pos_r"><img class="lazyload" src="assets/imgs/lazyload2.png" data-src="assets/imgs/menu/玉山烏龍茶.png">
+              </div>
+              <div class="menu_item_content">
+                <h4 class="title">SOFT DRINKS（ADDED）
+                </h4>
+                <div class="content"></div>
+                <div class="price">$200
+                  <div class="badge badge_solid">X1</div>
+                </div>
+              </div>
+              <button class="add_btn ml_4">
+                    <svg class="icon add-circle" aria-hidden="true">
+                      <use xlink:href="#add-circle"></use>
+                    </svg>
+              </button>
+            </div>
+            <div class="menu_item flex_center pointer">
+              <div class="menu_item_img pos_r"><img class="lazyload" src="assets/imgs/lazyload2.png" data-src="assets/imgs/menu/玉山烏龍茶.png">
+                    <svg class="icon ice mark_icon" aria-hidden="true">
+                      <use xlink:href="#ice"></use>
+                    </svg>
+              </div>
+              <div class="menu_item_content">
+                <h4 class="title">SOFT DRINKS（ICE)
+                </h4>
+                <div class="content"></div>
+                <div class="price">$200
+                </div>
+              </div>
+              <button class="add_btn ml_4">
+                    <svg class="icon add-circle" aria-hidden="true">
+                      <use xlink:href="#add-circle"></use>
+                    </svg>
+              </button>
+            </div>
+            <div class="menu_item flex_center pointer">
+              <div class="menu_item_img pos_r"><img class="lazyload" src="assets/imgs/lazyload2.png" data-src="assets/imgs/menu/玉山烏龍茶.png">
+                    <svg class="icon hot mark_icon" aria-hidden="true">
+                      <use xlink:href="#hot"></use>
+                    </svg>
+              </div>
+              <div class="menu_item_content">
+                <h4 class="title">SOFT DRINKS（HOT)
+                </h4>
+                <div class="content"></div>
+                <div class="price">$200
+                </div>
+              </div>
+              <button class="add_btn ml_4">
+                    <svg class="icon add-circle" aria-hidden="true">
+                      <use xlink:href="#add-circle"></use>
+                    </svg>
+              </button>
+            </div>
+          </div>
+          <div class="divider_pseu pos_r mx_16"></div>
+        </div>
+        <div class="menu_wrapper" id="drink_category2">
+          <h4 class="light pos_r divider_pseu pb_10 mx_16">SPARKING </h4>
+          <div class="menu_item_wrapper mt_12">
+            <div class="menu_item flex_center pointer">
+              <div class="menu_item_img pos_r"><img class="lazyload" src="assets/imgs/lazyload2.png" data-src="assets/imgs/menu/玉山烏龍茶.png">
+              </div>
+              <div class="menu_item_content">
+                <h4 class="title">SOFT DRINKS
+                </h4>
+                <div class="content">Brief introduction up to two lines. Brief introduction up to two lines.</div>
+                <div class="price">$200
+                </div>
+              </div>
+              <button class="add_btn ml_4">
+                    <svg class="icon add-circle" aria-hidden="true">
+                      <use xlink:href="#add-circle"></use>
+                    </svg>
+              </button>
+            </div>
+            <div class="menu_item flex_center pointer">
+              <div class="menu_item_img pos_r"><img class="lazyload" src="assets/imgs/lazyload2.png" data-src="assets/imgs/menu/玉山烏龍茶.png">
+              </div>
+              <div class="menu_item_content">
+                <h4 class="title">SOFT DRINKS（ADDED）
+                </h4>
+                <div class="content"></div>
+                <div class="price">$200
+                  <div class="badge badge_solid">X1</div>
+                </div>
+              </div>
+              <button class="add_btn ml_4">
+                    <svg class="icon add-circle" aria-hidden="true">
+                      <use xlink:href="#add-circle"></use>
+                    </svg>
+              </button>
+            </div>
+            <div class="menu_item flex_center pointer">
+              <div class="menu_item_img pos_r"><img class="lazyload" src="assets/imgs/lazyload2.png" data-src="assets/imgs/menu/玉山烏龍茶.png">
+                    <svg class="icon ice mark_icon" aria-hidden="true">
+                      <use xlink:href="#ice"></use>
+                    </svg>
+              </div>
+              <div class="menu_item_content">
+                <h4 class="title">SOFT DRINKS（ICE)
+                </h4>
+                <div class="content"></div>
+                <div class="price">$200
+                </div>
+              </div>
+              <button class="add_btn ml_4">
+                    <svg class="icon add-circle" aria-hidden="true">
+                      <use xlink:href="#add-circle"></use>
+                    </svg>
+              </button>
+            </div>
+            <div class="menu_item flex_center pointer">
+              <div class="menu_item_img pos_r"><img class="lazyload" src="assets/imgs/lazyload2.png" data-src="assets/imgs/menu/玉山烏龍茶.png">
+                    <svg class="icon hot mark_icon" aria-hidden="true">
+                      <use xlink:href="#hot"></use>
+                    </svg>
+              </div>
+              <div class="menu_item_content">
+                <h4 class="title">SOFT DRINKS（HOT)
+                </h4>
+                <div class="content"></div>
+                <div class="price">$200
+                </div>
+              </div>
+              <button class="add_btn ml_4">
+                    <svg class="icon add-circle" aria-hidden="true">
+                      <use xlink:href="#add-circle"></use>
+                    </svg>
+              </button>
+            </div>
+          </div>
+          <div class="divider_pseu pos_r mx_16"></div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer container d-none d-md-flex flex_center">© 2022  ONCOR</footer>
+    <div class="go_to_cart_wrapper bg-dark py_16 px_28 d-none">
+      <button class="form_button md solid bg_party" id="goToCartBtn">CART(1)</button>
+      <div class="toast_text_msg px_20 py_4"></div>
+    </div>
+    <div class="cover" id="cover"></div>
+    <div class="modal" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable m-0" style="height: 100%; max-width: 100%">
+        <div class="modal-content toast_modal modal_list" style="height: 100%">
+          <div class="modal-header d-block">
+            <div class="flex_between_center pos_r w-100">
+              <h4 class="modal-title fs-5 fw-normal ls_20 lightgray pos_center">CART</h4><a class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></a>
+            </div>
+            <div class="cart_nav mt_30">
+              <nav class="nav" id="myTab" role="tablist"><a class="flex-fill text-center ls_20 nav-link stroke_btn mr_4 active" id="cartTab-tab" data-bs-toggle="tab" data-bs-target="#cartTab" type="button" role="tab" aria-controls="cartTab" aria-selected="true">PENDING</a><a class="flex-fill text-center ls_20 nav-link stroke_btn ml_4" id="cartTab2-tab" data-bs-toggle="tab" data-bs-target="#cartTab2" type="button" role="tab" aria-controls="cartTab2" aria-selected="false">RECORD</a>
+              </nav>
+            </div>
+          </div>
+          <div class="modal-body d-flex flex-column">
+            <div class="tab-content" id="cartNavContent">
+              <div class="tab-pane pt_20 pb_40 fade show active" id="cartTab" role="tabpanel" aria-labelledby="cartTab-tab">
+                <div class="fs-5 light text-center mt_50">餐車內沒有餐點</div>
+              </div>
+              <div class="tab-pane pb_40 fade" id="cartTab2" role="tabpanel" aria-labelledby="cartTab2-tab">
+                <div class="row"> 
+                  <div class="col-12 mt_24">
+                    <div class="order_record pos_r divider_pseu pb_24"> 
+                      <div class="flex_between_center"> 
+                        <div class="time light fw_m">PM 8:03</div>
+                        <div class="meal_amount lightgray border border_dark_gray fs_s fw-normal px_4 ml_12">3 MEALS</div>
+                        <div class="reocrd_status fw_m flex-grow-1 text-end ls_20 party">正在出餐</div>
+                      </div>
+                      <div class="fw-normal fs_s lightgray mt_16">TOTAL $1,620</div>
+                      <ul class="order_record_item_wrapper p_12 mt_20">
+                        <li class="order_record_item flex_between_center my_16">
+                          <div class="title light fw_m fs_s">媽媽的水餃</div>
+                          <div class="badge badge_solid">X1</div>
+                          <div class="meal_status fw-normal fs_s ls_20 purple">PREPARING</div>
+                        </li>
+                        <li class="order_record_item flex_between_center my_16">
+                          <div class="title light fw_m fs_s">老滷脆皮排骨炒飯</div>
+                          <div class="badge badge_solid">X1</div>
+                          <div class="meal_status fw-normal fs_s ls_20 purple">PREPARING</div>
+                        </li>
+                        <li class="order_record_item flex_between_center my_16">
+                          <div class="title light fw_m fs_s">大紅袍炭香紅燒牛肉麵</div>
+                          <div class="badge badge_solid bg_ashgray">X1</div>
+                          <div class="meal_status fw-normal fs_s ls_20 ashgray">ARRIVED</div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-12 mt_24">
+                    <div class="order_record pos_r divider_pseu pb_24"> 
+                      <div class="flex_between_center"> 
+                        <div class="time light fw_m">PM 7:15</div>
+                        <div class="meal_amount lightgray border border_dark_gray fs_s fw-normal px_4 ml_12">6 MEALS</div>
+                        <div class="reocrd_status fw_m flex-grow-1 text-end ls_20 light">出餐完畢</div>
+                      </div>
+                      <div class="fw-normal fs_s lightgray mt_16">共 $24,430</div>
+                      <ul class="order_record_item_wrapper p_12 mt_20">
+                        <li class="order_record_item flex_between_center my_16">
+                          <div class="title light fw_m fs_s">三合一黑松露涼麵</div>
+                          <div class="badge badge_solid bg_ashgray">X2</div>
+                          <div class="meal_status fw-normal fs_s ls_20 ashgray">ARRIVED</div>
+                        </li>
+                        <li class="order_record_item flex_between_center my_16">
+                          <div class="title light fw_m fs_s">青花椒澄清湯四寶牛肉麵</div>
+                          <div class="badge badge_solid bg_ashgray">X1</div>
+                          <div class="meal_status fw-normal fs_s ls_20 ashgray">ARRIVED</div>
+                        </li>
+                        <li class="order_record_item flex_between_center my_16">
+                          <div class="title light fw_m fs_s">波茉莉經典皇家香檳（6罐瓶）</div>
+                          <div class="badge badge_solid bg_ashgray">X1</div>
+                          <div class="meal_status fw-normal fs_s ls_20 ashgray">ARRIVED</div>
+                        </li>
+                      </ul>
+                      <ul class="order_record_item_wrapper ellipsis" style="display: none;">
+                        <li class="order_record_item flex_between_center my_16">
+                          <div class="title light fw_m fs_s">鬆餅甜筒霜淇淋（巧克力）</div>
+                          <div class="badge badge_solid bg_ashgray">X1</div>
+                          <div class="meal_status fw-normal fs_s ls_20 ashgray">ARRIVED</div>
+                        </li>
+                        <li class="order_record_item flex_between_center my_16">
+                          <div class="title light fw_m fs_s">鬆餅甜筒霜淇淋（燕麥葡萄乾）</div>
+                          <div class="badge badge_solid bg_ashgray">X1</div>
+                          <div class="meal_status fw-normal fs_s ls_20 ashgray">ARRIVED</div>
+                        </li>
+                      </ul>
+                      <button class="show_meals_btn stroke_btn py-1 w-100"><span class="fs_s">SEE MORE</span>
+                            <svg class="icon arrow-bottom-gray ml_8" aria-hidden="true">
+                              <use xlink:href="#arrow-bottom-gray"></use>
+                            </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer bg-dark d-block">
+            <div class="cartTab_footer">
+              <div class="flex_between_center">
+                <div class="party">TOTAL</div>
+                <div class="party">$0</div>
+              </div>
+              <div class="order_actions d-flex g-1 mt_20">
+                <button class="form_button md border_light_gray light mr_8" data-bs-dismiss="modal" aria-label="Close">CANCEL</button>
+                <button class="form_button md solid bg_party ml_8" id="sendOrderBtn">CONFIRM</button>
+              </div>
+            </div>
+            <div class="cartTab2_footer" style="display:none">
+              <button class="form_button md border_light_gray light mr_8" data-bs-dismiss="modal" aria-label="Close">CLOSE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="orderDetailModal" tabindex="-1" aria-labelledby="orderDetailModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable m-0" style="height: 100%; max-width: 100%">
+        <div class="modal-content toast_modal border-0 modal_order_detail" style="height: 100%">
+          <div class="modal-body pos_r d-flex flex-column p-0"><img class="order_detail_img cover_img" src="assets/imgs/menu/玉山烏龍茶.png">
+                <svg class="icon ice mark_icon" aria-hidden="true">
+                  <use xlink:href="#ice"></use>
+                </svg>
+            <div class="gradient_mask detail"></div><a class="btn-close fixed-top" type="button" data-bs-dismiss="modal" aria-label="Close"></a>
+            <div class="order_detail_content pt_30 px_20">
+              <div class="font_title_light">OOLONG TEA（Jug）
+                    <svg class="icon star" aria-hidden="true">
+                      <use xlink:href="#star"></use>
+                    </svg>
+              </div>
+              <div class="font_title_light mt_10">$200</div>
+              <div class="divider mt_20"></div>
+            </div>
+            <div class="caculation px_20 pb_50">
+              <div class="divider"></div>
+              <div class="flex_center mt_24">
+                <div class="counter flex_between_center flex-shrink-0 ml_12">
+                  <button class="minus_btn">
+                        <svg class="icon minus_circle" aria-hidden="true">
+                          <use xlink:href="#minus_circle"></use>
+                        </svg>
+                  </button><span class="light">1</span>
+                  <button class="plus_btn">
+                        <svg class="icon plus_circle" aria-hidden="true">
+                          <use xlink:href="#plus_circle"></use>
+                        </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer bg-dark d-block">
+            <div class="order_actions d-flex g-1">
+              <button class="form_button md solid bg_light ml_8" id="addMealBtn">ADD TO CART(1)<span class="fs_s">・$200</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="ACModal" tabindex="-1" aria-labelledby="ACModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content toast_modal modal_order_ac">
+          <div class="modal-body pos_r d-flex flex-column p-0"><img class="order_detail_img cover_img" src="assets/imgs/menu/AC.png">
+            <div class="gradient_mask main"></div>
+            <div class="pos_a w-100 h-100 py_16 px_16 d-flex align-items-end">
+                  <svg class="icon ac" aria-hidden="true">
+                    <use xlink:href="#ac"></use>
+                  </svg>
+              <div class="fs-6 fw-normal light mb_4 ml_12">
+                有此標示菜品為主廚江振誠所設計</div>
+            </div><a class="btn-close pos_a" type="button" data-bs-dismiss="modal" aria-label="Close"></a>
+          </div>
+          <div class="modal-body mt_24">
+            <div class="fs_s fw-normal light">
+              「ONCOR是一個製造歡樂的地方，什麼樣的食物能夠拉近彼此距離？製造更多的歡樂？這是這次菜單設計最主要的核心價值。」 - 江振誠</div>
+          </div>
+          <div class="modal-footer d-flex border-0">
+            <button class="stroke_btn mt_10" id="closeBtn" data-bs-dismiss="modal">CLOSE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/app.js"></script>
+    <script src="js/scrollspy.js"></script>
+    <script defer="defer" src="bundle.js"></script>
+</body>

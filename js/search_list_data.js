@@ -1,13 +1,19 @@
 //search_list_data.js
 
 $(document).ready(function () {
-  //langSetting == "en"
-  const list = [
-    { title: "MANDARIN ZHUYIN", id: "zhuyin", img: "KTV-default" },
-    { title: "WORD COUNT", id: "word", img: "KTV-default" },
-    { title: "ENGLISH PINYIN", id: "english", img: "KTV-default" },
-    { title: "LAUNGUAGE", id: "lang", img: "KTV-default" },
-  ];
+  //取得分類標題
+  var titleIndex = Number(getUrlQuery("title"));
+  getTitle();
+
+  function getTitle() {
+    //被選中的導覽分類
+    if (titleIndex == 4) {
+      //langSetting == 'tw'
+      $(".back_navbar span").text("英文關鍵字");
+      //langSetting == 'en'
+      $(".back_navbar span").text("ENG. KEYWORD");
+    }
+  }
 
   //藥丸分類視窗按鈕預選 index 1
   $("#categoryModal .modal_list_btn:first-child").addClass("selected");
@@ -24,11 +30,13 @@ $(document).ready(function () {
   //進入畫面時設定 ScrollWrapper 高度
   setScrollWrapperHeight(".zhuyin_keyboard", ".scroll_wrapper_zhuyin");
   setScrollWrapperHeight(".english_keyboard", ".scroll_wrapper_english");
+  setScrollWrapperHeight(".number_keyboard", ".scroll_wrapper_number");
 
   $(window).resize(function () {
     //Screen size 改變時設定 ScrollWrapper 高度
     setScrollWrapperHeight(".zhuyin_keyboard", ".scroll_wrapper_zhuyin");
     setScrollWrapperHeight(".english_keyboard", ".scroll_wrapper_english");
+    setScrollWrapperHeight(".number_keyboard", ".scroll_wrapper_number");
   });
 
   function setScrollWrapperHeight(keyboard, scrollWrapper) {

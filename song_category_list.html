@@ -9,26 +9,63 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&amp;family=Roboto&amp;display=swap" rel="stylesheet">
-  <link href="./css/bundle.css" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/eonasdan-bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+  <link href="./css/bundle.css" rel="stylesheet">
   <title>ONCOR</title>
+  </head>
   <body class="song_category_list song_page song_bg" ontouchstart="">
     <header>
       <nav class="back_navbar fixed-top d-flex align-items-center">
-        <div class="container-fluid p-0 d-flex justify-content-between align-items-center pos_r">
+        <div class="container-fluid p-0 d-flex align-items-center pos_r">
           <button class="navbar-toggler" id="backToPre" type="button">
             <svg class="icon back" aria-hidden="true">
               <use xlink:href="#back"></use>
             </svg>
           </button>
-          <h5 class="pos_center">PLAYLISTS</h5>
-          <div class="search_song_wrapper d-flex justify-content-end flex-grow-1"><a class="singer_search" href="search_singer.html" type="button">
-              <svg class="icon lang mr_16 mr_m_0" aria-hidden="true">
-                <use xlink:href="#singer-search"></use>
-              </svg></a><a class="music_search" href="search_music.html" type="button">
-              <svg class="icon lang mr_16 mr_m_0" aria-hidden="true">
-                <use xlink:href="#music-search"></use>
-              </svg></a></div>
+          <h6 class="flex-grow-1">PLAYLISTS</h6>
+          <div class="nav_member_wrapper d-flex align-items-center">
+            <div class="toast_lang_wrapper">
+              <button class="lang" id="lang_btn">
+                <svg class="icon lang mr_16 mr_m_0" aria-hidden="true">
+                  <use xlink:href="#lang"></use>
+                </svg>
+              </button>
+              <div class="toast_modal toast_lang">
+                <ul>
+                  <li class="lang_item tw"><a class="d-flex justify-content-between align-items-center" href="../tw/index.html"><span>Chinese</span>
+                      <svg class="icon check" aria-hidden="true">
+                        <use xlink:href="#check"></use>
+                      </svg></a></li>
+                  <li class="lang_item en selected"><a class="d-flex justify-content-between align-items-center" href="../en/index.html"><span>English</span>
+                      <svg class="icon check" aria-hidden="true">
+                        <use xlink:href="#check"></use>
+                      </svg></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="sign_wrapper">
+              <div class="toast_member_wrapper"><a class="avator pr_8 ml_16 ml_m_0 d-flex align-items-center" id="member_btn" role="button"><img src="assets/imgs/avator.jpg"><span class="ml_10 d-none d-lg-block">NAME</span></a>
+                <div class="toast_modal toast_member">
+                  <ul>
+                    <li class="text-center"><span class="lightgray">MEMBER CENTER</span></li>
+                    <div class="divider" style="margin: 0"></div>
+                    <li class="text-center"><a href="edit_profile.html"><span>EDIT PROFILE</span></a></li>
+                    <div class="divider" style="margin: 0"></div>
+                    <li class="text-center"><a href="index.html"><span>LOGOUT</span></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="party ml_8 mr_12 border-bottom border-2 border_party">401</div><a class="border-start border-1 border_dark_gray" id="search_btn" href="search.html">
+              <svg class="icon search-b pr_4 ml_4" aria-hidden="true">
+                <use xlink:href="#search-b"></use>
+              </svg></a>
+          </div>
         </div>
       </nav>
     </header>
@@ -63,79 +100,79 @@
         <div class="tab-content" id="pills-tabContent">
           <div class="tab-pane fade show active" id="pills-new" role="tabpanel" aria-labelledby="pliis-newtab">
             <h5 class="font_title_light">NEW RELEASES</h5>
-            <div class="row"><a class="ktv_img_card mt_12 col-4" href="song_list.html?cate=0&amp;title=0"><img class="img_card" src="assets/imgs/covers//KTV-1-NewRelease-01.png" alt="">
-                <h6>MANDARIN</h6></a><a class="ktv_img_card mt_12 col-4" href="song_list.html?cate=0&amp;title=1"><img class="img_card" src="assets/imgs/covers//KTV-1-NewRelease-02.png" alt="">
-                <h6>TAIWANESE</h6></a><a class="ktv_img_card mt_12 col-4" href="song_list.html?cate=0&amp;title=2"><img class="img_card" src="assets/imgs/covers//KTV-1-NewRelease-03.png" alt="">
-                <h6>ENGLISH</h6></a><a class="ktv_img_card mt_12 col-4" href="song_list.html?cate=0&amp;title=3"><img class="img_card" src="assets/imgs/covers//KTV-1-NewRelease-08.png" alt="">
+            <div class="row"><a class="ktv_img_card mt_12 col-4" href="song_list.html?cate=0&amp;title=0"><img class="img_card" src="assets/imgs/covers/KTV-1-NewRelease-01.png" alt="">
+                <h6>MANDARIN</h6></a><a class="ktv_img_card mt_12 col-4" href="song_list.html?cate=0&amp;title=1"><img class="img_card" src="assets/imgs/covers/KTV-1-NewRelease-02.png" alt="">
+                <h6>TAIWANESE</h6></a><a class="ktv_img_card mt_12 col-4" href="song_list.html?cate=0&amp;title=2"><img class="img_card" src="assets/imgs/covers/KTV-1-NewRelease-03.png" alt="">
+                <h6>ENGLISH</h6></a><a class="ktv_img_card mt_12 col-4" href="song_list.html?cate=0&amp;title=3"><img class="img_card" src="assets/imgs/covers/KTV-1-NewRelease-08.png" alt="">
                 <h6>OTHERS</h6></a>
             </div>
           </div>
           <div class="tab-pane fade" id="pills-ranking" role="tabpanel" aria-labelledby="pliis-rankingtab">
             <h5 class="font_title_light">CHARTS</h5>
-            <div class="row"><a class="ktv_img_card mt_12 col-4" href="song_list.html?cate=1&amp;title=0"><img class="img_card" src="assets/imgs/covers//new-ranking.png" alt="">
-                <h6>NEW RELEASE</h6></a><a class="ktv_img_card mt_12 col-4" href="song_list.html?cate=1&amp;title=1"><img class="img_card" src="assets/imgs/covers//chinese-ranking.png" alt="">
-                <h6>MANDARIN</h6></a><a class="ktv_img_card mt_12 col-4" href="song_list.html?cate=1&amp;title=2"><img class="img_card" src="assets/imgs/covers//taiwanese-ranking.png" alt="">
-                <h6>TAIWANESE</h6></a><a class="ktv_img_card mt_12 col-4" href="song_list.html?cate=1&amp;title=3"><img class="img_card" src="assets/imgs/covers//english-ranking.png" alt="">
-                <h6>ENGLISH</h6></a><a class="ktv_img_card mt_12 col-4" href="song_list.html?cate=1&amp;title=4"><img class="img_card" src="assets/imgs/covers//cantonese.png" alt="">
-                <h6>CANTONESE</h6></a><a class="ktv_img_card mt_12 col-4" href="song_list.html?cate=1&amp;title=5"><img class="img_card" src="assets/imgs/covers//japanese-ranking.png" alt="">
+            <div class="row"><a class="ktv_img_card mt_12 col-4" href="song_list.html?cate=1&amp;title=0"><img class="img_card" src="assets/imgs/covers/new-ranking.png" alt="">
+                <h6>NEW RELEASE</h6></a><a class="ktv_img_card mt_12 col-4" href="song_list.html?cate=1&amp;title=1"><img class="img_card" src="assets/imgs/covers/chinese-ranking.png" alt="">
+                <h6>MANDARIN</h6></a><a class="ktv_img_card mt_12 col-4" href="song_list.html?cate=1&amp;title=2"><img class="img_card" src="assets/imgs/covers/taiwanese-ranking.png" alt="">
+                <h6>TAIWANESE</h6></a><a class="ktv_img_card mt_12 col-4" href="song_list.html?cate=1&amp;title=3"><img class="img_card" src="assets/imgs/covers/english-ranking.png" alt="">
+                <h6>ENGLISH</h6></a><a class="ktv_img_card mt_12 col-4" href="song_list.html?cate=1&amp;title=4"><img class="img_card" src="assets/imgs/covers/cantonese.png" alt="">
+                <h6>CANTONESE</h6></a><a class="ktv_img_card mt_12 col-4" href="song_list.html?cate=1&amp;title=5"><img class="img_card" src="assets/imgs/covers/japanese-ranking.png" alt="">
                 <h6>J-POP</h6></a>
             </div>
           </div>
           <div class="tab-pane fade" id="pills-theme" role="tabpanel" aria-labelledby="pliis-themetab">
             <h5 class="font_title_light">PLAYLISTS</h5>
-            <div class="row"><a class="ktv_img_card mt_12 col-4" href="theme_list.html?cate=2&amp;title=0"><img class="img_card" src="assets/imgs/covers//KTV-2-Themes-01_4.png" alt="">
-                <h6>DUET</h6></a><a class="ktv_img_card mt_12 col-4" href="theme_list.html?cate=2&amp;title=1"><img class="img_card" src="assets/imgs/covers//KTV-default.png" alt="">
-                <h6>KKBOX華語年中榜</h6></a><a class="ktv_img_card mt_12 col-4" href="theme_list.html?cate=2&amp;title=2"><img class="img_card" src="assets/imgs/covers//KTV-2-Themes-03_3.png" alt="">
-                <h6>TEENYBOPPER</h6></a><a class="ktv_img_card mt_12 col-4" href="theme_list.html?cate=2&amp;title=3"><img class="img_card" src="assets/imgs/covers//KTV-2-Themes-04_3.png" alt="">
-                <h6>LGBTQ+ PRIDE</h6></a><a class="ktv_img_card mt_12 col-4" href="theme_list.html?cate=2&amp;title=4"><img class="img_card" src="assets/imgs/covers//KTV-2-Themes-05_5.png" alt="">
-                <h6>GIRLS NIGHT OUT</h6></a><a class="ktv_img_card mt_12 col-4" href="theme_list.html?cate=2&amp;title=5"><img class="img_card" src="assets/imgs/covers//KTV-2-Themes-06_3.png" alt="">
-                <h6>FAMILY FIRST</h6></a><a class="ktv_img_card mt_12 col-4" href="theme_list.html?cate=2&amp;title=6"><img class="img_card" src="assets/imgs/covers//KTV-2-Themes-07_3.png" alt="">
-                <h6>HIS STORIES</h6></a><a class="ktv_img_card mt_12 col-4" href="theme_list.html?cate=2&amp;title=7"><img class="img_card" src="assets/imgs/covers//KTV-2-Themes-08_6.png" alt="">
-                <h6>HER SECRETS</h6></a><a class="ktv_img_card mt_12 col-4" href="theme_list.html?cate=2&amp;title=8"><img class="img_card" src="assets/imgs/covers//KTV-2-Themes-11_5.png" alt="">
-                <h6>TAIWAN HIP HOP</h6></a><a class="ktv_img_card mt_12 col-4" href="theme_list.html?cate=2&amp;title=9"><img class="img_card" src="assets/imgs/covers//KTV-2-Themes-12_4.png" alt="">
-                <h6>TAIWAN BANDS</h6></a><a class="ktv_img_card mt_12 col-4" href="theme_list.html?cate=2&amp;title=10"><img class="img_card" src="assets/imgs/covers//KTV-2-Themes-09_8.png" alt="">
-                <h6>TIKTOK MANIAC</h6></a><a class="ktv_img_card mt_12 col-4" href="theme_list.html?cate=2&amp;title=11"><img class="img_card" src="assets/imgs/covers//KTV-2-Themes-10 _5.png" alt="">
-                <h6>SING-ALONGS</h6></a><a class="ktv_img_card mt_12 col-4" href="theme_list.html?cate=2&amp;title=12"><img class="img_card" src="assets/imgs/covers//KTV-2-Themes-13_3.png" alt="">
-                <h6>PARTY TIME</h6></a><a class="ktv_img_card mt_12 col-4" href="theme_list.html?cate=2&amp;title=13"><img class="img_card" src="assets/imgs/covers//KTV-2-Themes-14_5.png" alt="">
-                <h6>BOTTOMS UP!</h6></a><a class="ktv_img_card mt_12 col-4" href="theme_list.html?cate=2&amp;title=14"><img class="img_card" src="assets/imgs/covers//KTV-2-Themes-15_5.png" alt="">
-                <h6>MEMES</h6></a><a class="ktv_img_card mt_12 col-4" href="theme_list.html?cate=2&amp;title=15"><img class="img_card" src="assets/imgs/covers//KTV-2-Themes-16_5.png" alt="">
-                <h6>RELEASE YOUR RAGE</h6></a><a class="ktv_img_card mt_12 col-4" href="theme_list.html?cate=2&amp;title=16"><img class="img_card" src="assets/imgs/covers//KTV-2-Themes-17_5.png" alt="">
-                <h6>BIRTHDAY BASH</h6></a><a class="ktv_img_card mt_12 col-4" href="theme_list.html?cate=2&amp;title=17"><img class="img_card" src="assets/imgs/covers//KTV-2-Themes-19_3.png" alt="">
-                <h6>TV &amp; MOVIE THEME SONGS</h6></a><a class="ktv_img_card mt_12 col-4" href="theme_list.html?cate=2&amp;title=18"><img class="img_card" src="assets/imgs/covers//KTV-2-Themes-18_5.png" alt="">
-                <h6>GRADUATION</h6></a><a class="ktv_img_card mt_12 col-4" href="theme_list.html?cate=2&amp;title=19"><img class="img_card" src="assets/imgs/covers//KTV-2-Themes-20_5.png" alt="">
-                <h6>SING! CHINA HITS</h6></a><a class="ktv_img_card mt_12 col-4" href="theme_list.html?cate=2&amp;title=20"><img class="img_card" src="assets/imgs/covers//KTV-2-Themes-21_5.png" alt="">
-                <h6>BEST OF GOLDEN MUSIC AWARDS</h6></a><a class="ktv_img_card mt_12 col-4" href="theme_list.html?cate=2&amp;title=21"><img class="img_card" src="assets/imgs/covers//KTV-2-Themes-22_5.png" alt="">
-                <h6>LIVE</h6></a><a class="ktv_img_card mt_12 col-4" href="theme_list.html?cate=2&amp;title=22"><img class="img_card" src="assets/imgs/covers//KTV-3-Best of-04_5.png" alt="">
-                <h6>80'S CLASSICS</h6></a><a class="ktv_img_card mt_12 col-4" href="theme_list.html?cate=2&amp;title=23"><img class="img_card" src="assets/imgs/covers//KTV-3-Best of-05_5.png" alt="">
-                <h6>90'S CLASSICS</h6></a><a class="ktv_img_card mt_12 col-4" href="theme_list.html?cate=2&amp;title=24"><img class="img_card" src="assets/imgs/covers//KTV-3-Best of-06_5.png" alt="">
-                <h6>00'S CLASSICS</h6></a><a class="ktv_img_card mt_12 col-4" href="theme_list.html?cate=2&amp;title=25"><img class="img_card" src="assets/imgs/covers//KTV-2-Themes-02_2.png" alt="">
+            <div class="row"><a class="ktv_img_card mt_12 col-4" href="theme_list.html?cate=2&amp;title=0"><img class="img_card" src="assets/imgs/covers/KTV-2-Themes-01_4.png" alt="">
+                <h6>DUET</h6></a><a class="ktv_img_card mt_12 col-4" href="theme_list.html?cate=2&amp;title=1"><img class="img_card" src="assets/imgs/covers/KTV-default.png" alt="">
+                <h6>KKBOX華語年中榜</h6></a><a class="ktv_img_card mt_12 col-4" href="theme_list.html?cate=2&amp;title=2"><img class="img_card" src="assets/imgs/covers/KTV-2-Themes-03_3.png" alt="">
+                <h6>TEENYBOPPER</h6></a><a class="ktv_img_card mt_12 col-4" href="theme_list.html?cate=2&amp;title=3"><img class="img_card" src="assets/imgs/covers/KTV-2-Themes-04_3.png" alt="">
+                <h6>LGBTQ+ PRIDE</h6></a><a class="ktv_img_card mt_12 col-4" href="theme_list.html?cate=2&amp;title=4"><img class="img_card" src="assets/imgs/covers/KTV-2-Themes-05_5.png" alt="">
+                <h6>GIRLS NIGHT OUT</h6></a><a class="ktv_img_card mt_12 col-4" href="theme_list.html?cate=2&amp;title=5"><img class="img_card" src="assets/imgs/covers/KTV-2-Themes-06_3.png" alt="">
+                <h6>FAMILY FIRST</h6></a><a class="ktv_img_card mt_12 col-4" href="theme_list.html?cate=2&amp;title=6"><img class="img_card" src="assets/imgs/covers/KTV-2-Themes-07_3.png" alt="">
+                <h6>HIS STORIES</h6></a><a class="ktv_img_card mt_12 col-4" href="theme_list.html?cate=2&amp;title=7"><img class="img_card" src="assets/imgs/covers/KTV-2-Themes-08_6.png" alt="">
+                <h6>HER SECRETS</h6></a><a class="ktv_img_card mt_12 col-4" href="theme_list.html?cate=2&amp;title=8"><img class="img_card" src="assets/imgs/covers/KTV-2-Themes-11_5.png" alt="">
+                <h6>TAIWAN HIP HOP</h6></a><a class="ktv_img_card mt_12 col-4" href="theme_list.html?cate=2&amp;title=9"><img class="img_card" src="assets/imgs/covers/KTV-2-Themes-12_4.png" alt="">
+                <h6>TAIWAN BANDS</h6></a><a class="ktv_img_card mt_12 col-4" href="theme_list.html?cate=2&amp;title=10"><img class="img_card" src="assets/imgs/covers/KTV-2-Themes-09_8.png" alt="">
+                <h6>TIKTOK MANIAC</h6></a><a class="ktv_img_card mt_12 col-4" href="theme_list.html?cate=2&amp;title=11"><img class="img_card" src="assets/imgs/covers/KTV-2-Themes-10 _5.png" alt="">
+                <h6>SING-ALONGS</h6></a><a class="ktv_img_card mt_12 col-4" href="theme_list.html?cate=2&amp;title=12"><img class="img_card" src="assets/imgs/covers/KTV-2-Themes-13_3.png" alt="">
+                <h6>PARTY TIME</h6></a><a class="ktv_img_card mt_12 col-4" href="theme_list.html?cate=2&amp;title=13"><img class="img_card" src="assets/imgs/covers/KTV-2-Themes-14_5.png" alt="">
+                <h6>BOTTOMS UP!</h6></a><a class="ktv_img_card mt_12 col-4" href="theme_list.html?cate=2&amp;title=14"><img class="img_card" src="assets/imgs/covers/KTV-2-Themes-15_5.png" alt="">
+                <h6>MEMES</h6></a><a class="ktv_img_card mt_12 col-4" href="theme_list.html?cate=2&amp;title=15"><img class="img_card" src="assets/imgs/covers/KTV-2-Themes-16_5.png" alt="">
+                <h6>RELEASE YOUR RAGE</h6></a><a class="ktv_img_card mt_12 col-4" href="theme_list.html?cate=2&amp;title=16"><img class="img_card" src="assets/imgs/covers/KTV-2-Themes-17_5.png" alt="">
+                <h6>BIRTHDAY BASH</h6></a><a class="ktv_img_card mt_12 col-4" href="theme_list.html?cate=2&amp;title=17"><img class="img_card" src="assets/imgs/covers/KTV-2-Themes-19_3.png" alt="">
+                <h6>TV &amp; MOVIE THEME SONGS</h6></a><a class="ktv_img_card mt_12 col-4" href="theme_list.html?cate=2&amp;title=18"><img class="img_card" src="assets/imgs/covers/KTV-2-Themes-18_5.png" alt="">
+                <h6>GRADUATION</h6></a><a class="ktv_img_card mt_12 col-4" href="theme_list.html?cate=2&amp;title=19"><img class="img_card" src="assets/imgs/covers/KTV-2-Themes-20_5.png" alt="">
+                <h6>SING! CHINA HITS</h6></a><a class="ktv_img_card mt_12 col-4" href="theme_list.html?cate=2&amp;title=20"><img class="img_card" src="assets/imgs/covers/KTV-2-Themes-21_5.png" alt="">
+                <h6>BEST OF GOLDEN MUSIC AWARDS</h6></a><a class="ktv_img_card mt_12 col-4" href="theme_list.html?cate=2&amp;title=21"><img class="img_card" src="assets/imgs/covers/KTV-2-Themes-22_5.png" alt="">
+                <h6>LIVE</h6></a><a class="ktv_img_card mt_12 col-4" href="theme_list.html?cate=2&amp;title=22"><img class="img_card" src="assets/imgs/covers/KTV-3-Best of-04_5.png" alt="">
+                <h6>80'S CLASSICS</h6></a><a class="ktv_img_card mt_12 col-4" href="theme_list.html?cate=2&amp;title=23"><img class="img_card" src="assets/imgs/covers/KTV-3-Best of-05_5.png" alt="">
+                <h6>90'S CLASSICS</h6></a><a class="ktv_img_card mt_12 col-4" href="theme_list.html?cate=2&amp;title=24"><img class="img_card" src="assets/imgs/covers/KTV-3-Best of-06_5.png" alt="">
+                <h6>00'S CLASSICS</h6></a><a class="ktv_img_card mt_12 col-4" href="theme_list.html?cate=2&amp;title=25"><img class="img_card" src="assets/imgs/covers/KTV-2-Themes-02_2.png" alt="">
                 <h6>SANCTUARY OF SADNESS</h6></a>
             </div>
           </div>
           <div class="tab-pane fade" id="pills-party" role="tabpanel" aria-labelledby="pliis-partytab">
             <h5 class="font_title_light">PARTY UP</h5>
-            <div class="row"><a class="ktv_img_card mt_12 col-4" href="song_list.html?cate=3&amp;title=0"><img class="img_card" src="assets/imgs/covers//KTV-4-Party-03.png" alt="">
-                <h6>TOMARROWLAND 2022</h6></a><a class="ktv_img_card mt_12 col-4" href="song_list.html?cate=3&amp;title=1"><img class="img_card" src="assets/imgs/covers//KTV-4-Party-01.png" alt="">
-                <h6>ULTRA 2022</h6></a><a class="ktv_img_card mt_12 col-4" href="song_list.html?cate=3&amp;title=2"><img class="img_card" src="assets/imgs/covers//KTV-4-Party-02.png" alt="">
+            <div class="row"><a class="ktv_img_card mt_12 col-4" href="song_list.html?cate=3&amp;title=0"><img class="img_card" src="assets/imgs/covers/KTV-4-Party-03.png" alt="">
+                <h6>TOMARROWLAND 2022</h6></a><a class="ktv_img_card mt_12 col-4" href="song_list.html?cate=3&amp;title=1"><img class="img_card" src="assets/imgs/covers/KTV-4-Party-01.png" alt="">
+                <h6>ULTRA 2022</h6></a><a class="ktv_img_card mt_12 col-4" href="song_list.html?cate=3&amp;title=2"><img class="img_card" src="assets/imgs/covers/KTV-4-Party-02.png" alt="">
                 <h6>EDC 2022</h6></a>
             </div>
           </div>
           <div class="tab-pane fade" id="pills-dj" role="tabpanel" aria-labelledby="pliis-djtab">
             <h5 class="font_title_light">theLOOP LIVE COLLECTION</h5>
-            <div class="row"><a class="ktv_img_card mt_12 col-4" href="song_list.html?cate=4&amp;title=0"><img class="img_card" src="assets/imgs/djs//BUBBLE_theLOOP_1200x1200-2.png" alt="">
-                <h6>BUBBLE</h6></a><a class="ktv_img_card mt_12 col-4" href="song_list.html?cate=4&amp;title=1"><img class="img_card" src="assets/imgs/djs//CYNDI_theLOOP_1200x1200-2.png" alt="">
-                <h6>CYNDI</h6></a><a class="ktv_img_card mt_12 col-4" href="song_list.html?cate=4&amp;title=2"><img class="img_card" src="assets/imgs/djs//EYCK_theLOOP_1200x1200.png" alt="">
-                <h6>EYCK</h6></a><a class="ktv_img_card mt_12 col-4" href="song_list.html?cate=4&amp;title=3"><img class="img_card" src="assets/imgs/djs//GIN_theLOOP_1200x1200.png" alt="">
-                <h6>GIN</h6></a><a class="ktv_img_card mt_12 col-4" href="song_list.html?cate=4&amp;title=4"><img class="img_card" src="assets/imgs/djs//RARA_theLOOP_1200x1200.png" alt="">
-                <h6>RARA</h6></a><a class="ktv_img_card mt_12 col-4" href="song_list.html?cate=4&amp;title=5"><img class="img_card" src="assets/imgs/djs//RAYRAY_theLOOP_1200x1200-2.png" alt="">
-                <h6>RAYRAY</h6></a><a class="ktv_img_card mt_12 col-4" href="song_list.html?cate=4&amp;title=6"><img class="img_card" src="assets/imgs/djs//REASON_theLOOP_1200x1200-2.png" alt="">
-                <h6>REASON</h6></a><a class="ktv_img_card mt_12 col-4" href="song_list.html?cate=4&amp;title=7"><img class="img_card" src="assets/imgs/djs//SHORTY_theLOOP_1200x1200.png" alt="">
-                <h6>SHORTY</h6></a><a class="ktv_img_card mt_12 col-4" href="song_list.html?cate=4&amp;title=8"><img class="img_card" src="assets/imgs/djs//T-TIME_theLOOP_1200x1200.png" alt="">
-                <h6>T-TIME</h6></a><a class="ktv_img_card mt_12 col-4" href="song_list.html?cate=4&amp;title=9"><img class="img_card" src="assets/imgs/djs//USAL_theLOOP_1200x1200.png" alt="">
-                <h6>USAL</h6></a><a class="ktv_img_card mt_12 col-4" href="song_list.html?cate=4&amp;title=10"><img class="img_card" src="assets/imgs/djs//VONIK_BELL_theLOOP_1200x1200.png" alt="">
-                <h6>VONIK &amp; BELL</h6></a><a class="ktv_img_card mt_12 col-4" href="song_list.html?cate=4&amp;title=11"><img class="img_card" src="assets/imgs/djs//VONIK_theLOOP_1200x1200.png" alt="">
-                <h6>VONIK</h6></a><a class="ktv_img_card mt_12 col-4" href="song_list.html?cate=4&amp;title=12"><img class="img_card" src="assets/imgs/djs//WADE_theLOOP_1200x1200.png" alt="">
-                <h6>WADE</h6></a><a class="ktv_img_card mt_12 col-4" href="song_list.html?cate=4&amp;title=13"><img class="img_card" src="assets/imgs/djs//ZEINT_theLOOP_1200x1200.png" alt="">
+            <div class="row"><a class="ktv_img_card mt_12 col-4" href="song_list.html?cate=4&amp;title=0"><img class="img_card" src="assets/imgs/djs/BUBBLE_theLOOP_1200x1200-2.png" alt="">
+                <h6>BUBBLE</h6></a><a class="ktv_img_card mt_12 col-4" href="song_list.html?cate=4&amp;title=1"><img class="img_card" src="assets/imgs/djs/CYNDI_theLOOP_1200x1200-2.png" alt="">
+                <h6>CYNDI</h6></a><a class="ktv_img_card mt_12 col-4" href="song_list.html?cate=4&amp;title=2"><img class="img_card" src="assets/imgs/djs/EYCK_theLOOP_1200x1200.png" alt="">
+                <h6>EYCK</h6></a><a class="ktv_img_card mt_12 col-4" href="song_list.html?cate=4&amp;title=3"><img class="img_card" src="assets/imgs/djs/GIN_theLOOP_1200x1200.png" alt="">
+                <h6>GIN</h6></a><a class="ktv_img_card mt_12 col-4" href="song_list.html?cate=4&amp;title=4"><img class="img_card" src="assets/imgs/djs/RARA_theLOOP_1200x1200.png" alt="">
+                <h6>RARA</h6></a><a class="ktv_img_card mt_12 col-4" href="song_list.html?cate=4&amp;title=5"><img class="img_card" src="assets/imgs/djs/RAYRAY_theLOOP_1200x1200-2.png" alt="">
+                <h6>RAYRAY</h6></a><a class="ktv_img_card mt_12 col-4" href="song_list.html?cate=4&amp;title=6"><img class="img_card" src="assets/imgs/djs/REASON_theLOOP_1200x1200-2.png" alt="">
+                <h6>REASON</h6></a><a class="ktv_img_card mt_12 col-4" href="song_list.html?cate=4&amp;title=7"><img class="img_card" src="assets/imgs/djs/SHORTY_theLOOP_1200x1200.png" alt="">
+                <h6>SHORTY</h6></a><a class="ktv_img_card mt_12 col-4" href="song_list.html?cate=4&amp;title=8"><img class="img_card" src="assets/imgs/djs/T-TIME_theLOOP_1200x1200.png" alt="">
+                <h6>T-TIME</h6></a><a class="ktv_img_card mt_12 col-4" href="song_list.html?cate=4&amp;title=9"><img class="img_card" src="assets/imgs/djs/USAL_theLOOP_1200x1200.png" alt="">
+                <h6>USAL</h6></a><a class="ktv_img_card mt_12 col-4" href="song_list.html?cate=4&amp;title=10"><img class="img_card" src="assets/imgs/djs/VONIK_BELL_theLOOP_1200x1200.png" alt="">
+                <h6>VONIK &amp; BELL</h6></a><a class="ktv_img_card mt_12 col-4" href="song_list.html?cate=4&amp;title=11"><img class="img_card" src="assets/imgs/djs/VONIK_theLOOP_1200x1200.png" alt="">
+                <h6>VONIK</h6></a><a class="ktv_img_card mt_12 col-4" href="song_list.html?cate=4&amp;title=12"><img class="img_card" src="assets/imgs/djs/WADE_theLOOP_1200x1200.png" alt="">
+                <h6>WADE</h6></a><a class="ktv_img_card mt_12 col-4" href="song_list.html?cate=4&amp;title=13"><img class="img_card" src="assets/imgs/djs/ZEINT_theLOOP_1200x1200.png" alt="">
                 <h6>ZEINT</h6></a>
             </div>
           </div>
@@ -175,11 +212,8 @@
         </div>
       </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/eonasdan-bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
-    <script defer="defer" src="bundle.js"></script>
+    <div class="cover" id="cover"></div>
     <script src="js/app.js"></script>
     <script src="js/category_list_data.js"></script>
+    <script defer="defer" src="bundle.js"></script>
   </body>

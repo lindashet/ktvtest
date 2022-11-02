@@ -35,7 +35,7 @@ $(document).ready(function () {
 
   function getTitle() {
     //被選中的導覽分類
-    $(".back_navbar h5").text(list[titleIndex].title);
+    $(".back_navbar h6").text(list[titleIndex].title);
     $(`#backNavModal #modal-list-${titleIndex}`).addClass("selected");
   }
 
@@ -46,7 +46,7 @@ $(document).ready(function () {
 
     $("#backNavModal .modal_list_btn").removeClass("selected");
     $(`#backNavModal #modal-list-${targetItemId}`).addClass("selected");
-    $(".back_navbar h5").text(targetItemText);
+    $(".back_navbar h6").text(targetItemText);
 
     $("#backNavModal").modal("hide");
   });

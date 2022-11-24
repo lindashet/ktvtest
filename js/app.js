@@ -16,6 +16,26 @@ $(document).ready(function () {
     history.back();
   });
 
+  //展開存酒明細
+  $(".wine_stock_detail_btn").click(function () {
+    if ($(this).parent().hasClass("expand")) {
+      $(this).parent().removeClass("expand");
+      $(this).children("span").text("查看存酒明細");
+    } else {
+      $(this).parent().addClass("expand");
+      $(this).children("span").text("收合");
+    }
+  });
+
+  //點擊取酒按鈕
+  $(".detail_item_take_out").click(function () {
+    $("#takeOutModal").modal("show");
+  });
+  $("#takeOutModal #comfirmBtn").click(function () {
+    $("#takeOutModal").modal("hide");
+    window.location.href = "wine_stock_qrcode.html";
+  });
+
   //打開點餐車
   $("#goToCartBtn").click(function () {
     $("#cartModal").modal("show");
@@ -128,6 +148,17 @@ $(document).ready(function () {
       $(".scrollspy_menu").removeClass("scrollspy"); /* 幫選單加上固定效果 */
     }
 
+    if ($(document).width() < 768 && $(this).scrollTop() > 215) {
+      /* 要滑動到選單的距離 */
+      $(".member_center_m_menu_navbar").addClass(
+        "navFixed"
+      ); /* 幫選單加上固定效果 */
+    } else {
+      $(".member_center_m_menu_navbar").removeClass(
+        "navFixed"
+      ); /* 移除選單固定效果 */
+    }
+
     if (
       ($(document).width() > 767 && $(this).scrollTop() > 140) ||
       ($(document).width() < 768 && $(this).scrollTop() > 200)
@@ -136,6 +167,16 @@ $(document).ready(function () {
       $("#ReservationSearchTab").addClass("navFixed"); /* 幫選單加上固定效果 */
     } else {
       $("#ReservationSearchTab").removeClass("navFixed"); /* 移除選單固定效果 */
+    }
+
+    if (
+      ($(document).width() > 767 && $(this).scrollTop() > 140) ||
+      ($(document).width() < 768 && $(this).scrollTop() > 200)
+    ) {
+      /* 要滑動到選單的距離 */
+      $("#WineStockTab").addClass("navFixed"); /* 幫選單加上固定效果 */
+    } else {
+      $("#WineStockTab").removeClass("navFixed"); /* 移除選單固定效果 */
     }
 
     if (

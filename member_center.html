@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <meta name="theme-color" content="#000">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&amp;family=Roboto&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/eonasdan-bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+  <link href="./css/bundle.css" rel="stylesheet">
+  <title>ONCOR</title>
+  </head>
+  <body class="member_center">
+    <nav class="navbar navbar_home fixed-top navbar-expand-md">
+      <div class="container-fluid justify-content-between justify-content-md-start pos_r">
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+          <svg class="icon navbar-toggler-icon menu" aria-hidden="true">
+            <use xlink:href="#menu"></use>
+          </svg>
+          <svg class="icon navbar-toggler-icon close" aria-hidden="true">
+            <use xlink:href="#close"></use>
+          </svg>
+        </button><a class="navbar-brand" href="index.html"> 
+          <svg class="icon logo" aria-hidden="true">
+            <use xlink:href="#logo"></use>
+          </svg></a>
+        <div class="collapse navbar-collapse ml_50 ml_m_0" id="navbarToggler">
+          <ul class="navbar-nav me-auto">
+                <li class="nav-item py_24 mx_16 mx_m_0"><a class="nav-link p_0" href="index.html">HOME</a></li>
+                <li class="nav-item py_24 mx_16 mx_m_0"><a class="nav-link p_0" href="reservation.html">RSVP</a></li>
+                <li class="nav-item py_24 mx_16 mx_m_0"><a class="nav-link p_0" href="order.html">MENU</a></li>
+                <li class="nav-item py_24 mx_16 mx_m_0"><a class="nav-link p_0" href="song.html">SONG QUEUE</a></li>
+          </ul>
+        </div>
+        <div class="nav_member_wrapper d-flex align-items-center">
+          <div class="toast_lang_wrapper">
+            <button class="lang" id="lang_btn">
+              <svg class="icon lang mr_16 mr_m_0" aria-hidden="true">
+                <use xlink:href="#lang"></use>
+              </svg>
+            </button>
+            <div class="toast_modal toast_lang">
+              <ul>
+                <li class="lang_item tw"><a class="d-flex justify-content-between align-items-center" href="../tw/index.html"><span>Chinese</span>
+                    <svg class="icon check" aria-hidden="true">
+                      <use xlink:href="#check"></use>
+                    </svg></a></li>
+                <li class="lang_item en selected"><a class="d-flex justify-content-between align-items-center" href="../en/index.html"><span>English</span>
+                    <svg class="icon check" aria-hidden="true">
+                      <use xlink:href="#check"></use>
+                    </svg></a></li>
+              </ul>
+            </div>
+          </div>
+              <div class="sign_wrapper">
+                <div class="toast_member_wrapper"><a class="avator pr_8 ml_16 ml_m_0 d-flex align-items-center" id="member_btn" role="button"><img src="assets/imgs/avator.jpg"><span class="ml_10 d-none d-lg-block">NAME</span></a>
+                  <div class="toast_modal toast_member">
+                    <ul>
+                      <li class="text-center"><span class="lightgray">MEMBER CENTER</span></li>
+                      <div class="divider" style="margin-bottom: 0; margin-top: 10px"></div>
+                      <li class="text-center"><a href="member_center.html?cate=1"><span>MY ACCOUNT</span></a></li>
+                      <li class="text-center"><a href="reservation_search.html"><span>RESERVATION</span></a></li>
+                      <li class="text-center"><a href="wine_stock.html"><span>WINE STOCK</span></a></li>
+                      <li class="text-center"><a href="member_center.html?cate=4"><span>EDIT PROFILE</span></a></li>
+                      <li class="text-center"><a href="member_center.html?cate=5"><span>CHANGE PASSWORD</span></a></li>
+                      <div class="divider" style="margin-bottom: 0; margin-top: 10px"></div>
+                      <li class="text-center mb_10"><a href="index.html"><span>LOGOUT</span></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+        </div>
+      </div>
+    </nav>
+    <div class="main home_nav_margin">
+          <section class="topic_head container-fluid bg_dark_30 divider_bottom">
+            <h6 class="light pos_center pb_10">MEMBER CENTER</h6>
+            <div class="container-lg w-100 h-100 pos_r">
+                  <nav class="reservation_search_breadcrumb pos_a bottom-0 left-0" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a class="fs_m_xs" href="index.html">HOME</a></li>
+                      <li class="breadcrumb-item fs_m_xs active" aria-current="page">MEMBER CENTER</li>
+                    </ol>
+                  </nav>
+            </div>
+          </section>
+      <div class="container-fluid container-md g-0 d-flex flex-column flex-md-row mt_30 mt_m_0">
+        <aside class="member_center_menu d-flex align-items-center flex-column">
+          <input class="d-none" type="file" id="uploadAvator">
+          <div class="avator_wrapper bg_linear_party_purple circle pos_r" id="uploadBtn" type="button">
+            <div class="circle w-100 h-100 flex_center bg-dark"><img class="avator" src="assets/imgs/avator.jpg"></div>
+            <div class="avator_edit circle pos_a flex_center"><i class="fas fa-pen fa-xs light"></i>
+            </div>
+          </div>
+          <div class="fs_s mt_12 fw-normal light">HI, JAMIE LIN</div>
+          <ul class="MemberCenterTab nav mt_30 d-none d-md-block" role="tablist">
+            <li class="nav-item member_center_menu_tab nav-tabs" role="presentation">
+              <button class="nav-link active" id="MemberCenterAccountTab-tab" data-bs-toggle="tab" data-bs-target="#MemberCenterAccountTab" type="button" role="tab" aria-controls="MemberCenterAccountTab" aria-selected="true">
+                    <svg class="icon account mr_16" aria-hidden="true">
+                      <use xlink:href="#account"></use>
+                    </svg>MY ACCOUNT
+              </button>
+            </li>
+            <li class="nav-item member_center_menu_tab"><a class="nav-link" href="reservation_search.html">
+                    <svg class="icon booking-2 mr_16" aria-hidden="true">
+                      <use xlink:href="#booking-2"></use>
+                    </svg>RESERVATION</a>
+            </li>
+            <li class="nav-item member_center_menu_tab"><a class="nav-link" href="wine_stock.html">
+                    <svg class="icon wine mr_16" aria-hidden="true">
+                      <use xlink:href="#wine"></use>
+                    </svg>WINE STOCK</a>
+            </li>
+            <li class="nav-item member_center_menu_tab" role="presentation">
+              <button class="nav-link" id="MemberCenterEditTab-tab" data-bs-toggle="tab" data-bs-target="#MemberCenterEditTab" type="button" role="tab" aria-controls="MemberCenterEditTab" aria-selected="false">
+                    <svg class="icon member-edit mr_16" aria-hidden="true">
+                      <use xlink:href="#member-edit"></use>
+                    </svg>EDIT PROFILE
+              </button>
+            </li>
+            <li class="nav-item member_center_menu_tab" role="presentation">
+              <button class="nav-link" id="MemberCenterEditPwdTab-tab" data-bs-toggle="tab" data-bs-target="#MemberCenterEditPwdTab" type="button" role="tab" aria-controls="MemberCenterEditPwdTab" aria-selected="false">
+                    <svg class="icon key mr_16" aria-hidden="true">
+                      <use xlink:href="#key"></use>
+                    </svg>CHANGE PASSWORD
+              </button>
+            </li>
+            <li class="nav-item member_center_menu_tab" role="presentation">
+              <button class="nav-link" id="MemberCenterTermsTab-tab" data-bs-toggle="tab" data-bs-target="#MemberCenterTermsTab" type="button" role="tab" aria-controls="MemberCenterTermsTab" aria-selected="false">
+                    <svg class="icon info mr_16" aria-hidden="true">
+                      <use xlink:href="#info"></use>
+                    </svg>PRIVACY TERMS
+              </button>
+            </li>
+          </ul>
+          <div class="w-100 px_40"><a class="logout_btn form_button md solid bg_light mt_50 mt_m_0" type="button" href="index.html"><i class="fas fa-power-off lightgray mr_8 d-md-none"></i>LOGOUT</a>
+          </div>
+        </aside>
+        <nav class="member_center_m_menu_navbar flex_between_center px_12 d-md-none">
+          <div class="dropdown flex-grow-1"><a class="nav-link dropdown-toggle light ls_20 pos_r" id="navbarDropdownMemberCenterMenu" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <svg class="icon account mr_16 mb-1" aria-hidden="true">
+                    <use xlink:href="#account"></use>
+                  </svg>MY ACCOUNT</a>
+            <ul class="nav MemberCenterTab toast_modal dropdown-menu dropdown-menu-dark flex-column px_16" aria-labelledby="navbarDropdownMemberCenterMenu" role="tablist">
+              <li class="py_8 nav-item" role="presentation">
+                <button class="dropdown-item active" id="MemberCenterAccountTab-tab" data-bs-toggle="tab" data-bs-target="#MemberCenterAccountTab" type="button" role="tab" aria-controls="MemberCenterAccountTab" aria-selected="true">
+                      <svg class="icon account mr_16" aria-hidden="true">
+                        <use xlink:href="#account"></use>
+                      </svg>MY ACCOUNT
+                </button>
+                <div class="divider mt_12"></div>
+              </li>
+              <li class="py_8 nav-item"><a class="dropdown-item" href="reservation_search.html">
+                      <svg class="icon booking-2 mr_16" aria-hidden="true">
+                        <use xlink:href="#booking-2"></use>
+                      </svg>RESERVATION</a>
+                <div class="divider mt_12"></div>
+              </li>
+              <li class="py_8 nav-item"><a class="dropdown-item" href="wine_stock.html">
+                      <svg class="icon wine mr_16" aria-hidden="true">
+                        <use xlink:href="#wine"></use>
+                      </svg>WINE STOCK</a>
+                <div class="divider mt_12"></div>
+              </li>
+              <li class="py_8 nav-item" role="presentation">
+                <button class="dropdown-item" id="MemberCenterEditTab-tab" data-bs-toggle="tab" data-bs-target="#MemberCenterEditTab" type="button" role="tab" aria-controls="MemberCenterEditTab" aria-selected="false">
+                      <svg class="icon member-edit mr_16" aria-hidden="true">
+                        <use xlink:href="#member-edit"></use>
+                      </svg>EDIT PROFILE
+                </button>
+                <div class="divider mt_12"></div>
+              </li>
+              <li class="py_8 nav-item" role="presentation">
+                <button class="dropdown-item" id="MemberCenterEditPwdTab-tab" data-bs-toggle="tab" data-bs-target="#MemberCenterEditPwdTab" type="button" role="tab" aria-controls="MemberCenterEditPwdTab" aria-selected="false">
+                      <svg class="icon key mr_16" aria-hidden="true">
+                        <use xlink:href="#key"></use>
+                      </svg>CHANGE PASSWORD
+                </button>
+                <div class="divider mt_12"></div>
+              </li>
+              <li class="py_8 nav-item" role="presentation">
+                <button class="dropdown-item" id="MemberCenterTermsTab-tab" data-bs-toggle="tab" data-bs-target="#MemberCenterTermsTab" type="button" role="tab" aria-controls="MemberCenterTermsTab" aria-selected="false">
+                      <svg class="icon info mr_16" aria-hidden="true">
+                        <use xlink:href="#info"></use>
+                      </svg>PRIVACY TERMS
+                </button>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class="member_center_main">
+          <div class="tab-content" id="MemberCenterTab">
+            <div class="tab-pane fade show active" id="MemberCenterAccountTab" role="tabpanel" aria-labelledby="MemberCenterAccountTab-tab">
+                  <div class="member_center_header flex_between_center">
+                    <h6 class="fw-bold">MY ACCOUNT</h6>
+                    <div class="form_button md solid bg_linear_dark_button w-auto" id="toMemberEditBtn" type="button">EDIT PROFILE</div>
+                  </div>
+              <div class="member_center_body">
+                <div class="account_info">
+                  <div class="account_info_title">NAME</div>
+                  <div class="account_info_text">JAMIE LIN</div>
+                </div>
+                <div class="account_info">
+                  <div class="account_info_title">ACCOUNT</div>
+                  <div class="account_info_text">F22222****</div>
+                </div>
+                <div class="account_info">
+                  <div class="account_info_title">SEX</div>
+                  <div class="account_info_text">女性</div>
+                </div>
+                <div class="account_info">
+                  <div class="account_info_title">BIRTHDAY</div>
+                  <div class="account_info_text">1991/ 01/01</div>
+                </div>
+                <div class="account_info">
+                  <div class="account_info_title">PHONE NUMBER</div>
+                  <div class="account_info_text">0922222222</div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="MemberCenterEditTab" role="tabpanel" aria-labelledby="MemberCenterEditTab-tab">
+                  <div class="member_center_header flex_between_center">
+                    <h5 class="text-center text-md-start flex-grow-1">EDIT PROFILE</h5>
+                  </div>
+              <div class="member_center_body">
+                <form class="row member_edit justify-content-between align-items-start">
+                  <div class="member_edit_wrapper col-12 col-lg-5">
+                    <div class="pos_r">
+                      <label class="form-label deep">NAME</label>
+                      <p class="lightgray">JAMIE LIN</p>
+                    </div>
+                    <div class="pos_r mt_20">
+                      <label class="form-label deep">ACCOUNT</label>
+                      <p class="lightgray">F22222****</p>
+                    </div>
+                    <div class="pos_r mt_20">
+                      <label class="form-label deep" for="MemberEditSexInput">SEX</label>
+                      <select class="form-select" id="MemberEditSexInput">
+                        <option selected="selected">SELECT</option>
+                        <option value="1">MALE</option>
+                        <option value="2">FEMALE</option>
+                        <option value="3">OTHER</option>
+                      </select>
+                    </div>
+                    <div class="pos_r mt_20">
+                      <label class="form-label deep" for="MemberEditBirthdayInput">BIRTHDAY</label>
+                      <input class="form-control" id="MemberEditBirthdayInput" type="text" placeholder="ex.0800201">
+                    </div>
+                    <button class="form_button md solid mt_20" id="resetMemberInfoBtn" type="button">CONFIRM</button>
+                  </div>
+                  <div class="divider_disablegray col-12 d-lg-none mt_50 mb_40"></div>
+                  <div class="phone_edit_card col-12 col-lg-6">
+                    <label class="form-label deep">PHONE NUMBER</label>
+                    <div class="phone_edit_btn_wrapper flex_between_center">
+                      <p class="lightgray">0922222222</p><a class="form_button md solid bg_linear_dark_button rounded w-auto" id="phoneEditBtn">EDIT</a>
+                    </div>
+                    <div class="phone_new_wrapper d-none">
+                      <div class="pos_r mt_20">
+                        <label class="form-label deep" for="newPhoneInput">NEW PHONE NUMBER</label>
+                        <input class="form-control" id="newPhoneInput" type="text" placeholder="ENTER PHONE NUMBER">
+                      </div>
+                      <div class="pos_r mt_20">
+                        <label class="form-label deep" for="verifyCodeInput">VERIFY CODE</label>
+                        <input class="form-control" id="verifyCodeInput" type="text" placeholder="ENTER CODE">
+                      </div>
+                      <div class="mt_40 flex_between_center">
+                        <button class="form_button md stroke mr_8" id="cancelPhoneEditBtn" type="button">CANCEL</button>
+                        <button class="form_button md solid ml_8" id="verifyPhoneEditBtn" type="button">VERIFY</button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="MemberCenterEditPwdTab" role="tabpanel" aria-labelledby="MemberCenterEditPwdTab-tab">
+                  <div class="member_center_header flex_between_center">
+                    <h5 class="text-center text-md-start flex-grow-1">CHANGE PASSWORD</h5>
+                  </div>
+              <div class="member_center_body">
+                <form class="password_edit">
+                  <div class="pos_r">
+                    <label class="form-label deep" for="passwordInput">OLD PASSWORD</label>
+                    <input class="form-control" id="passwordInput" type="password" placeholder="ENTER OLD PASSWORD">
+                  </div>
+                  <div class="pos_r mt_20">
+                    <label class="form-label deep" for="newPasswordInput">NEW PASSWORD</label>
+                    <input class="form-control" id="newPasswordInput" type="password" placeholder="ENTER NEW PASSWORD">
+                  </div>
+                  <div class="pos_r mt_20">
+                    <label class="form-label deep" for="passwordRepeatInput">CONFIRM PASSWORD</label>
+                    <input class="form-control" id="passwordRepeatInput" type="password" placeholder="ENTER CONFIRM PASSWORD">
+                  </div>
+                  <div class="text-start mt_40 mb_12">
+                    <div class="form-text">Password is too short.</div>
+                  </div>
+                  <button class="form_button md solid" id="resetPasswordBtn" type="button">CONFIRM</button>
+                </form>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="MemberCenterTermsTab" role="tabpanel" aria-labelledby="MemberCenterTermsTab-tab">
+                  <div class="member_center_header flex_between_center">
+                    <h5 class="text-center text-md-start flex-grow-1">PRIVACY TERMS</h5>
+                  </div>
+              <div class="member_center_body">
+                <div class="terms_content">You are very welcome to visit ONCHOR (hereinafter referred to as this website). In order to allow you to use the services and information of this website with peace of mind, we hereby explain to you the privacy protection policy of this website to protect your rights and interests, please Read the following:<br><br>1. Scope of application of the privacy protection policy<br>Privacy protection policy content, including how this website handles personally identifiable information collected when you use the website services. The privacy protection policy does not apply to related linked websites other than this website, nor does it apply to persons not entrusted or involved in the management of this website.<br><br>2. Collection, processing and utilization of personal data<br>• When you visit this website or use the functional services provided by this website, we will, depending on the nature of the service function, ask you to provide the necessary personal data, and process and use your personal data within the scope of the specific purpose; This website will not use personal data for other purposes with your written consent.<br>• When you use interactive functions such as service mailboxes and questionnaires, this website will retain the name, email address, contact information and usage time you provided.<br>• During normal browsing, the server will record relevant actions by itself, including the IP address of your connected device, usage time, browser used, browsing and click data records, etc., as a reference for us to improve website services According to this, this record is an internal application and will never be released to the public.<br>• In order to provide accurate services, we will conduct statistics and analysis on the content of the questionnaires collected, and present the statistical data or explanatory text of the analysis results. Except for internal research, we will publish the statistical data and explanatory text as necessary, but not Information relating to a specific individual.<br>• You may at any time make a request to us to correct or delete erroneous or incomplete personal data collected on this website.<br><br>3. Data Protection<br>• The host of this website is equipped with firewalls, anti-virus systems and other related information security equipment and necessary security protection measures. To protect the website and your personal data, strict protection measures are adopted. Only authorized personnel can access you. The relevant processing personnel have signed confidentiality contracts. Anyone who violates the confidentiality obligations will be subject to relevant legal sanctions.<br>• If it is necessary to entrust other units to provide services due to business needs, this website will also strictly require them to abide by their confidentiality obligations, and take necessary inspection procedures to confirm that they will actually comply.<br><br>4. External Links of the Website<br>The pages of this website provide web links to other websites, and you can also click to enter other websites through the links provided by this website. However, the linked website does not apply the privacy protection policy of this website, and you must refer to the privacy protection policy in the linked website.<br><br>5. Policy on sharing personal data with third parties<br>This website will never provide, exchange, rent or sell any of your personal data to other individuals, groups, private companies or public agencies, unless there is a legal basis or contractual obligation.<br>The circumstance of the proviso in the preceding paragraph includes but is not limited to:<br>• With your written consent.<br>• By law.<br>• To avoid danger to your life, body, liberty or property.<br>• Cooperate with public agencies or academic research institutions, which is necessary for statistical or academic research based on public interest, and the data is processed by the provider or the collector cannot identify a specific party according to the way of disclosure.<br>• When your behavior on the website violates the terms of service or may damage or impede the rights and interests of the website and other users or cause damage to anyone, the website management unit will disclose your personal data for the purpose of identifying, contacting or taking legal action necessary for action.<br>• In favor of your interests.<br>• When this website entrusts a manufacturer to assist in the collection, processing or use of your personal information, it will be responsible for the supervision and management of the outsourced manufacturer or individual.<br><br>6. Use of Cookies<br>In order to provide you with the best service, this website will place and access our cookies on your computer. If you do not want to accept the writing of cookies, you can set the privacy level in the function items of the browser you are using If it is high, the writing of cookies can be rejected, but some functions of the website may not be executed properly.<br><br>7. Amendment to Privacy Protection Policy<br>The privacy protection policy of this website will be revised at any time in response to demand, and the revised terms will be published on the website.<br></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer container d-none d-md-flex flex_center">© 2022  ONCOR</footer>
+    <div class="cover" id="cover"></div>
+    <div class="modal" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content toast_modal modal_list">
+          <div class="modal-header"><a class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></a></div>
+          <div class="modal-body d-flex flex-column">
+            <p class="light fw-normal text-center mt_30 successModalText"></p>
+          </div>
+          <div class="modal-footer d-flex">
+            <button class="stroke_btn mt_10" id="comfirmBtn" data-bs-dismiss="modal">OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/app.js"></script>
+    <script src="js/member_center_data.js"></script>
+    <script defer="defer" src="bundle.js"></script>
+  </body>
